@@ -7,7 +7,7 @@ body{
   background-color: black;
   overflow: hidden;
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   padding: 6px;
   margin: 0;
 }
@@ -37,13 +37,14 @@ div a {
 input{
   width: 200px;
   padding-left: 10px;
-  margin-left: 100px;
+  margin-left: 0;
 }
 
 .title{
   margin-left: 20px;
+  margin-right: 170px;
   font-family: cursive;
-  font-size: 16px;
+  font-size: 19px;
   padding: 5px;
 }
 
@@ -51,4 +52,57 @@ input{
   input{
     width: 300px;
   }
+}
+
+.menu-bar{
+  position: relative;
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  background: #f5f5f5;
+  border: 1px solid #a3a3a3;
+  padding-top: 20px;
+}
+
+.menu-bar h2{
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-bar a{
+  color: #616161;
+  display: block;
+  font-size: 19px;
+  text-align: left;
+  padding-left: 30px;
+  font-family: sans-serif;
+}
+
+.menu-bar a:hover{
+  color: black;
+}
+
+.menu-bar .active-link{
+  color: black;
+}
+
+
+.survey-box{
+  position: relative;
+  background: #f5f5f5;
+  border: 1px solid #a3a3a3;
+  display: block;
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.survey-box input{
+  margin-right: 5px;
+  padding: 5px;
 }
