@@ -40,4 +40,5 @@ body{
 .wrapper .navbar ul li a{
     color: #bdbd41;
     display: block;
+    font-size: 20px;
 }
