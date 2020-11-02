@@ -34,8 +34,8 @@ body{
 
 .wrapper .navbar ul li{
     padding: 20px;
-    border-bottom: 1px solid rgb(192, 192, 80);
-    border-top: 1px solid rgb(192, 192, 80);
+    border-bottom: 1px solid rgb(0, 0,0);
+    border-top: 1px solid rgb(0, 0, 0);
 }
 .wrapper .navbar ul li a{
     color: #bdbd41;
