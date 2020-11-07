@@ -51,7 +51,7 @@ div a {
 }
 
 @media (min-width: 800px){
-  input{
+  .nav input{
     width: 300px;
   }
 }
