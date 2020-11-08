@@ -64,6 +64,7 @@ div a {
   background: #f5f5f5;
   border: 1px solid #a3a3a3;
   padding-top: 20px;
+  /* filter: blur(4px); */
 }
 
 .menu-bar h2{
@@ -93,12 +94,14 @@ div a {
 
 .main-survey{
   background-color: #ffffff;
-  width: 800px;
+  width: 50%;
   height: 600px;
-  margin-left: 400px;
   padding: 30px;
   padding-left: 40px;
   margin-top: 40px;
+  margin-left: 400px;
+  margin: 0 auto;
+  overflow: auto;
 }
 
 .main-survey .survey-title{
@@ -108,7 +111,7 @@ div a {
 }
 
 .main-survey .survey-area1{
-  width: 770px;
+  width: 90%;
   height: 100px;
   border-color: #616161;
   border-radius: 5px;
@@ -118,6 +121,7 @@ div a {
 .main-survey .survey-content{
   font-style: italic;
   color: #616161;
+  width: 95%;
 }
 
 .main-survey .checkbox{
@@ -138,4 +142,32 @@ div a {
 .radio-item{
   display: inline-block;
   padding: 20px 30px 20px 30px;
+}
+
+.rest{
+  margin-left: 220px;
+  padding: 0;
+  height: 50%;
+  width: 100%-180px;
+  margin-top: 40px;
+}
+
+.page{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.back-button{
+  color: #616161;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.submit-button{
+  color: #616161;
+  text-decoration: underline;
+  float: right;
+  margin-right: 10px;
 }
