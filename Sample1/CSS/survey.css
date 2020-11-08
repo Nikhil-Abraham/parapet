@@ -11,6 +11,7 @@ body{
   font-size: 15px;
   padding: 6px;
   margin: 0;
+  width: 100%;
 }
 
 .nav > div{
@@ -122,4 +123,19 @@ div a {
 .main-survey .checkbox{
   display: inline-block;
   color: #616161;
+}
+
+.checkbox-item{
+  display: inline-block;
+  padding: 20px 30px 20px 30px;
+}
+
+.main-survey .radio-button{
+  display: inline-block;
+  color: #616161;
+}
+
+.radio-item{
+  display: inline-block;
+  padding: 20px 30px 20px 30px;
 }
