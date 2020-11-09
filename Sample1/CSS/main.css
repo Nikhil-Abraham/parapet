@@ -5,10 +5,7 @@ body{
 }
 
 .nav{
-<<<<<<< HEAD
-=======
   /* position: fixed; */
->>>>>>> parent of 63cf7d8 (Fixed main feed bugs and pagging and slignment issues along with placement of nav and manu bar)
   background-color: black;
   overflow: hidden;
   font-family: sans-serif;
@@ -93,17 +90,14 @@ input{
   color: black;
 }
 
-<<<<<<< HEAD
-=======
 .survey-area{
   width: 20%;
   float: right;
 }
->>>>>>> parent of 63cf7d8 (Fixed main feed bugs and pagging and slignment issues along with placement of nav and manu bar)
 
 .survey-box{
   color: #666666;
-  position: relative;
+  position: absolute;
   background: #ffffff;
   border: 1px solid #a3a3a3;
   display: block;
@@ -181,8 +175,6 @@ input{
   float: right;
   text-decoration: none;
 }
-<<<<<<< HEAD
-=======
 
 .feed-area{
   float: left;
@@ -258,4 +250,3 @@ input{
   font-style: italic;
   margin-left: 10px;
 }
->>>>>>> parent of 63cf7d8 (Fixed main feed bugs and pagging and slignment issues along with placement of nav and manu bar)
