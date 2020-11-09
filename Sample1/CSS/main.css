@@ -5,13 +5,15 @@ body{
 }
 
 .nav{
-  /* position: fixed; */
+  position: fixed;
   background-color: black;
   overflow: hidden;
   font-family: sans-serif;
   font-size: 15px;
-  padding: 6px;
+  padding: 10px;
   margin: 0;
+  width: 100%;
+  z-index: +1;
 }
 
 .nav > div{
@@ -30,6 +32,7 @@ div a {
 .link-action{
   float: right;
   margin-top: 4px;
+  padding-right: 20px;
 }
 .link-action > a:hover{
   background-color: white;
@@ -63,7 +66,9 @@ input{
   height: 100%;
   background: #f5f5f5;
   border: 1px solid #a3a3a3;
-  padding-top: 20px;
+  padding-top: 60px;
+  
+  /* filter: opacity(30%); */
 }
 
 .menu-bar h2{
@@ -91,13 +96,15 @@ input{
 }
 
 .survey-area{
+  margin-top: 30px;
+  margin-right: 10px;
   width: 20%;
   float: right;
 }
 
 .survey-box{
   color: #666666;
-  position: relative;
+  position: fixed;
   background: #ffffff;
   border: 1px solid #a3a3a3;
   display: block;
@@ -182,7 +189,8 @@ input{
   padding: 0;
   height: 50%;
   width: 64%;
-  margin-top: 40px;
+  margin-top: 80px;
+
 }
 
 .feed-item{
