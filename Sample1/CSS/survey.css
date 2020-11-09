@@ -5,6 +5,7 @@ body{
 }
 
 .nav{
+  position: fixed;
   background-color: black;
   overflow: hidden;
   font-family: sans-serif;
@@ -12,6 +13,7 @@ body{
   padding: 6px;
   margin: 0;
   width: 100%;
+  z-index: +1;
 }
 
 .nav > div{
@@ -30,7 +32,9 @@ div a {
 .link-action{
   float: right;
   margin-top: 4px;
+  padding-right: 10px;
 }
+
 .link-action > a:hover{
   background-color: white;
   color: black;
@@ -58,12 +62,12 @@ div a {
 }
 
 .menu-bar{
-  position: absolute;
+  position: fixed;
   width: 220px;
   height: 100%;
   background: #f5f5f5;
   border: 1px solid #a3a3a3;
-  padding-top: 20px;
+  padding-top: 60px;
   /* filter: blur(4px); */
 }
 
@@ -98,7 +102,7 @@ div a {
   height: 600px;
   padding: 30px;
   padding-left: 40px;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-left: 400px;
   margin: 0 auto;
   overflow: auto;
@@ -149,7 +153,7 @@ div a {
   padding: 0;
   height: 50%;
   width: 100%-180px;
-  margin-top: 40px;
+  padding-top: 80px;
 }
 
 .page{
