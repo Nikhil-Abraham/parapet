@@ -1,15 +1,61 @@
+@font-face{
+  font-family: infinite_stroke;
+  src: url("../Assets/Infinite_Stroke.otf");
+}
+@font-face{
+  font-family: california;
+  src: url("../Assets/California.otf");
+}
+@font-face{
+  font-family: golden_hill;
+  src: url("../Assets/GoldenHillsDEMO.ttf");
+}
+@font-face{
+  font-family: blacklist;
+  src: url("../Assets/The\ Blacklist.ttf");
+}
+@font-face{
+  font-family: dolce_vita;
+  src: url("../Assets/Dolce\ Vita.ttf");
+}
+@font-face{
+  font-family: roboto;
+  src: url("../Assets/Roboto-Light.ttf");
+}
+
 body{
   height: 100%;
   margin: 0;
-
+  color: #777;
 }
 
 .bgimg-1{
   opacity: 0.65;
-  background-image: url("../Assets/bg1.jpg");
   position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bgimg-1{
+  background-image: url("../Assets/bg1.jpg");
+  min-height: 100%;
+}
+
+.caption{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border{
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  font-family: golden_hill;
 }
