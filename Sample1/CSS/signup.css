@@ -46,14 +46,15 @@ body{
     color: black;
     font-family: golden_hill ;
     font-weight: 600;
-    margin-top: 150px;
-    font-size: 50px;
+    margin-top: 130px;
+    font-size: 40px;
   
   }
   .box h2
   {
     color: black;
     font-weight: 500;
+    font-size: 20px;
   }
   .box input[type="text"],.box input[type = "password"],.box input[type = "password"]
   {

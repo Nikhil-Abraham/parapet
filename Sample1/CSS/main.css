@@ -70,6 +70,7 @@ input{
   height: 20px;
   padding-left: 10px;
   margin-left: 0;
+  /* border-radius: 10px; */
 }
 
 .title{

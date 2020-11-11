@@ -1,3 +1,28 @@
+@font-face{
+  font-family: infinite_stroke;
+  src: url("../Assets/Infinite_Stroke.otf");
+}
+@font-face{
+  font-family: california;
+  src: url("../Assets/California.otf");
+}
+@font-face{
+  font-family: golden_hill;
+  src: url("../Assets/GoldenHillsDEMO.ttf");
+}
+@font-face{
+  font-family: blacklist;
+  src: url("../Assets/The\ Blacklist.ttf");
+}
+@font-face{
+  font-family: dolce_vita;
+  src: url("../Assets/Dolce\ Vita.ttf");
+}
+@font-face{
+  font-family: roboto;
+  src: url("../Assets/Roboto-Light.ttf");
+}
+
 body{
   padding: 0;
   margin: 0;
@@ -16,6 +41,7 @@ body{
   padding: 6px;
   margin: 0;
 }
+
 .nav > div{
   display: inline-block;
 }
@@ -34,42 +60,41 @@ div a {
   margin-top: 4px;
   padding-right: 10px;
 }
-
 .link-action > a:hover{
   background-color: white;
   color: black;
 }
 
-.nav input{
-  margin-top: 3px;
+input{
   width: 200px;
   height: 20px;
   padding-left: 10px;
   margin-left: 0;
+  /* border-radius: 10px; */
 }
 
 .title{
   margin-left: 20px;
   margin-right: 170px;
-  font-family: cursive;
-  font-size: 19px;
+  font-family: golden_hill;
+  font-size: 27px;
   padding: 5px;
 }
 
 @media (min-width: 800px){
-  .nav input{
+  input{
     width: 300px;
   }
 }
 
 .menu-bar{
   position: fixed;
+  margin-top: 40px;
   width: 220px;
   height: 100%;
   background: #f5f5f5;
   border: 1px solid #a3a3a3;
-  padding-top: 60px;
-  /* filter: blur(4px); */
+  padding-top: 30px;
 }
 
 .menu-bar h2{
@@ -82,10 +107,10 @@ div a {
 .menu-bar a{
   color: #616161;
   display: block;
-  font-size: 19px;
+  font-size: 22px;
   text-align: left;
   padding-left: 30px;
-  font-family: sans-serif;
+  font-family: roboto;
 }
 
 .menu-bar a:hover{
@@ -95,6 +120,7 @@ div a {
 .menu-bar .active-link{
   color: black;
 }
+
 
 
 .main-survey{
