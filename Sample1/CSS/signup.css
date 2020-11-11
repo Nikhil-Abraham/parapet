@@ -1,0 +1,63 @@
+@font-face{
+    font-family: infinite_stroke;
+    src: url("../Assets/Infinite_Stroke.otf");
+}
+@font-face{
+    font-family: california;
+    src: url("../Assets/California.otf");
+}
+@font-face{
+    font-family: golden_hill;
+    src: url("../Assets/GoldenHillsDEMO.ttf");
+}
+@font-face{
+    font-family: blacklist;
+    src: url("../Assets/The\ Blacklist.ttf");
+}
+@font-face{
+    font-family: dolce_vita;
+    src: url("../Assets/Dolce\ Vita.ttf");
+}
+@font-face{
+    font-family: roboto;
+    src: url("../Assets/Roboto-Light.ttf");
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: white;
+}
+
+@media (max-width: 700px){
+    body{
+        background-color: red;
+    }
+}
+
+
+.Center{
+    width: 240px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.Center h2{
+    text-align: center;
+    font-family: golden_hill;
+}
+
+.Login-Box{
+    padding: 1em;
+    background: white;
+    text-align: center;
+    border: 0.5px solid black;
+
+}
+
+.TextBox{
+    padding: 3px;
+    font-family: Amertha;
+} 
