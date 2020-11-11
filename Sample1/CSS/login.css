@@ -92,7 +92,3 @@ h1
   transition: 0.25s;
   cursor: pointer;
 }
-.box input[type="submit"]:hover
-{
-  width: 200px;
-}
