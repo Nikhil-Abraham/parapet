@@ -1,0 +1,15 @@
+body{
+  height: 100%;
+  margin: 0;
+
+}
+
+.bgimg-1{
+  opacity: 0.65;
+  background-image: url("../Assets/bg1.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
