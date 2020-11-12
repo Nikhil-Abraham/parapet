@@ -34,3 +34,19 @@
   font-family: brightons;
   src: url("../Assets/Brightons.otf");
 }
+@font-face{
+  font-family: vogue;
+  src: url("../Assets/Vogue.ttf");
+}
+@font-face{
+  font-family: lemon_milk;
+  src: url("../Assets/LEMONMILK-Regular.otf");
+}
+@font-face{
+  font-family: billy;
+  src: url("../Assets/Billy\ Signature.otf");
+}
+@font-face{
+  font-family: loui_george;
+  src: url("../Assets/Louis\ George\ Cafe.ttf");
+}
