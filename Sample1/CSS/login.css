@@ -1,28 +1,3 @@
-@font-face{
-  font-family: infinite_stroke;
-  src: url("../Assets/Infinite_Stroke.otf");
-}
-@font-face{
-  font-family: california;
-  src: url("../Assets/California.otf");
-}
-@font-face{
-  font-family: golden_hill;
-  src: url("../Assets/GoldenHillsDEMO.ttf");
-}
-@font-face{
-  font-family: blacklist;
-  src: url("../Assets/The\ Blacklist.ttf");
-}
-@font-face{
-  font-family: dolce_vita;
-  src: url("../Assets/Dolce\ Vita.ttf");
-}
-@font-face{
-  font-family: roboto;
-  src: url("../Assets/Roboto-Light.ttf");
-}
-
 body{
   margin: 0;
   padding: 0;
