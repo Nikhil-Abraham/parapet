@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>login page</title>
-  <link rel="stylesheet" href="Sample1/CSS/fonts.css" type="text/css">
-  <link rel="stylesheet" href=Sample1/CSS/login.css type="text/css">
+  <link rel="stylesheet" href="fonts.css" type="text/css">
+  <link rel="stylesheet" href="login.css" type="text/css">
   <script defer type="text/javascript" src="login.js"></script>
 </head>
 <body>
   <h1>Parapet</h1>
-  <form class ="box" action="mbrpage.html" method="POST" id="form">
+  <form class ="box" action="test.htm" id="form" onsubmit="return validate()">
   <h2>Login </h2>
   <input type="text" id="email" placeholder="Username">
   <div id="email_error">Please fill up your email</div>
   <input type="password" id="password" placeholder="Password">
   <div id="password_error">Please fill up your password</div>
-  <input type="submit"  value="Login" id="login-submit" onclick="validate()" >
+  <input type="submit"  value="Login" id="login-submit">
   </form>
 </body>
 </html>

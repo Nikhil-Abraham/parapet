@@ -47,7 +47,6 @@ h1
   transition: 0.25s;
 
 }
-
 .box input[type="text"]:focus,.box input[type = "password"]:focus
 {
   width: 280px;
@@ -66,7 +65,7 @@ h1
   padding: 14px 40px;
   outline: none;
   color: white;
-  border-radius: 30px;
+  border-radius: 20px;
   transition: 0.25s;
   cursor: pointer;
 }
@@ -75,6 +74,10 @@ h1
   margin-top: 20px;
 }
 
-#email, #password{
-  border: 1px solid grey;
+#email_error{
+  display: none;
+}
+
+#password_error{
+  display: none;
 }
