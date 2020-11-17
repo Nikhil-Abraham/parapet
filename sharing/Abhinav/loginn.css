@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background : white;
+  }
+
+  .h1
+  {
+    text-align: center;
+    color: black;
+    font-family: brightons;
+    font-weight: 600;
+    margin-top: 130px;
+    font-size: 40px;
+    margin-right: 100px;
+  }
+  
+  .form
+  {
+    width: 300px;
+    height: 300px;
+    padding: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+    border: 2px solid black;
+  }
+
+  .form h2
+  {
+    color: black;
+    font-weight: 500;
+  }
+  .form input[type="text"],.form input[type = "password"]
+  {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: grey;
+    border-radius: 20px;
+    transition: 0.25s;
+  
+  }
+  .form input[type="text"]:focus,.form input[type = "password"]:focus
+  {
+    width: 280px;
+    border-color: gray;
+  }
+  .form button
+  {
+    font-size: 18px;
+    border: 0;
+    background: black;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    border-color: black;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .form input{
+    padding-top: 50px;
+    margin-top: 20px;
+  }
+
+  .formelements.success input {
+      border-color: #2ecc71;
+  }
+
+  .formelements.error input {
+      border-color: red;
+  }
+
+  .formelements i {
+    position: absolute;
+    top: 14px;
+    right: 53px;
+    padding-bottom: 30px;
+    visibility: hidden;
+  }
+
+  .formelements.success i.fa-check {
+      visibility: visible;
+      color: #2ecc71;
+  }
+
+  .formelements small{
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      visibility: hidden;
+      font-size: 10px
+  }
+
+  .formelements.error small{
+      visibility: visible;
+      color: red;
+  }
+
+  .formelements{
+      margin-bottom: 30px;
+      position: relative;
+  }
