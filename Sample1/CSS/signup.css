@@ -7,7 +7,7 @@ body{
   .box
   {
     width: 300px;
-    padding: 40px;
+    padding: 20px 40px 20px 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,7 +22,7 @@ body{
     color: black;
     font-family: brightons;
     font-weight: 600;
-    margin-top: 130px;
+    margin-top: 80px;
     font-size: 40px;
   
   }
