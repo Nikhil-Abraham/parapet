@@ -34,10 +34,12 @@ div a {
   float: right;
   margin-top: 4px;
   padding-right: 10px;
+  font-family: roboto;
 }
 .link-action > a:hover{
   background-color: white;
   color: black;
+  font-family: roboto;
 }
 
 input{
@@ -286,20 +288,18 @@ input{
 
 .post-text-area{
   height: 65px;
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 10px;
+  width: 98%;
   font-family: roboto;
-  font-style: italic;
-  font-size: 20px;
-  border-radius: 9px;
+  font-size: 17px;
+  font-family: roboto;
+  border-radius: 3px;
 }
 
 .post-submit{
   float: right;
-  margin-top: 50px;
-  width: 80px;
-  height: 30px;
+  margin-top: 10px;
+  width: 90px;
+  height: 40px;
   background: #000000;
   border-radius: 16px;
   border-color: #808080;
