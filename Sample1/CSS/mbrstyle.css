@@ -286,6 +286,14 @@ input{
   background: white;
 }
 
+h1 {
+  font-family: roboto;
+  font-size: 20px;
+  float: left;
+  margin-top: -10px;
+  text-transform: bold;
+}
+
 .post-text-area{
   height: 65px;
   width: 98%;
@@ -297,13 +305,13 @@ input{
 
 .post-submit{
   float: right;
-  margin-top: 10px;
-  width: 90px;
-  height: 40px;
+  margin-top: 0px;
+  width: 80px;
+  height: 30px;
   background: #000000;
-  border-radius: 16px;
+  border-radius: 3px;
   border-color: #808080;
   color: #ffffff;
   font-size: 13px;
-  font-family: lemon_milk;
+  font-family: roboto;
 }
