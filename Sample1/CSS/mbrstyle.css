@@ -216,6 +216,10 @@ input{
 
 }
 
+.feed-title > a{
+  color: black;
+}
+
 .logo{
   display: inline-block;
   height: 40px;
