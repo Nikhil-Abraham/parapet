@@ -252,6 +252,7 @@ input{
   font-size: 25px;
   margin-top: -20px;
   color: black;
+  font-family: roboto;
 }
 
 .follow{
@@ -269,7 +270,7 @@ input{
   padding: 10px;
 }
 
-.feed-image > img {
+.feed-image > a > img {
   width: 100%;
   height: 100%;
 }
