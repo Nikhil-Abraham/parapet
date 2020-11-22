@@ -238,8 +238,20 @@ input{
   display: inline-block;
   font-size: larger;
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: roboto;
+  margin-left: 0px;
+  color: #000000;
+  font-size: 20px;
+}
+
+.in-feed-title {
+  font-family: roboto;
+  font-weight: bold;
   margin-left: 20px;
+  display: inline-block;
+  font-size: 25px;
+  margin-top: -20px;
+  color: black;
 }
 
 .follow{
@@ -268,6 +280,7 @@ input{
   font-style: italic;
   margin-left: 10px;
   margin-bottom: 10px;
+  padding-top: 10px;
 }
 
 .text-areaaaa{
