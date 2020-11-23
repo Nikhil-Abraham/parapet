@@ -1,4 +1,4 @@
-body{
+/* body{
   padding: 0;
   margin: 0;
   background-color: #e7e7e7;
@@ -177,13 +177,15 @@ input{
 .menu-bar .active-link{
   color: black;
 }
+
+
 .title{
   margin-left: 20px;
   margin-right: 170px;
   font-family: brightons;
   font-size: 27px;
   padding: 5px;
-}
+} */
 
 
 
