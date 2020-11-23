@@ -155,6 +155,17 @@
   font-family: roboto;
 }
 
+.in-feed-title2 {
+  font-family: roboto;
+  font-weight: bold;
+  margin-left: 20px;
+  display: inline-block;
+  font-size: 25px;
+  margin-top: -20px;
+  color: black;
+  font-family: roboto;
+}
+
 .follow{
   color: #616161;
   float: right;
