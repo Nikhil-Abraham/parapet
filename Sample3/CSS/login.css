@@ -3,28 +3,36 @@ body{
   padding: 0;
   font-family: sans-serif;
   background : white;
+  background-attachment: fixed;
+  width: 100vh;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Assets/lg-bg1.jpg);
 }
 .box
 {
-  width: 300px;
+  width: 250px;
   height: 300px;
   padding: 40px;
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 70%;
   transform: translate(-50%,-50%);
   background: white;
   text-align: center;
-  border: 2px solid black;
+  filter: opacity(0.90);
 }
 h1
 {
+  position: absolute;
+  left: 15%;
+  top: 16%;
   text-align: center;
   color: #281c18;
   font-family: brightons;
   font-weight: 600;
-  margin-top: 130px;
-  font-size: 40px;
+  font-size: 60px;
 }
 .box h2
 {
@@ -48,11 +56,11 @@ h1
 
 }
 
-.box input[type="text"]:focus,.box input[type = "password"]:focus
+/* .box input[type="text"]:focus,.box input[type = "password"]:focus
 {
   width: 280px;
   border-color: gray;
-}
+} */
 .box input[type="submit"]
 {
   font-size: 16px;
@@ -78,3 +86,13 @@ h1
 #email, #password{
   border: 1px solid grey;
 }
+/* 
+.bg{
+  position: relative;
+  background-attachment: fixed;
+  width: 100vh;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Assets/lg-bg1.jpg);
+} */
