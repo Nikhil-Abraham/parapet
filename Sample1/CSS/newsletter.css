@@ -82,3 +82,51 @@ body {
   border: solid 0.5px #616161;
   margin-left: 162px;
 }
+
+.nwsltr-title{
+  font-size: 20px;
+}
+
+
+.post-area{
+  padding: 20px;
+  width: 95%;
+  margin: 0 auto;
+  top: 5px;
+  height: 60px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  margin-left: 162px;
+  border: 1px solid rgb(110, 110, 110);
+  background: white;
+}
+
+h1 {
+  font-family: roboto;
+  font-size: 20px;
+  float: left;
+  margin-top: -10px;
+  text-transform: bold;
+}
+
+.post-text-area{
+  font-family: roboto;
+  font-size: 17px;
+  font-family: roboto;
+  border-radius: 3px;
+  padding: 3px;
+  width: 80%;
+}
+
+.post-submit{
+  float: right;
+  margin-top: 0px;
+  width: 80px;
+  height: 30px;
+  background: #281c18;
+  border-radius: 3px;
+  border-color: #808080;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: sans-serif;
+}
