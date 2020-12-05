@@ -1,31 +1,35 @@
-.box {
+@import './variables';
+
+.box
+{
   width: 300px;
   padding: 20px 40px 20px 40px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   background: white;
   text-align: center;
   border: 2px solid black;
 }
-
-h1 {
+h1
+{
   text-align: center;
   color: #281c18;
   font-family: brightons;
   font-weight: 600;
   margin-top: 80px;
   font-size: 40px;
-}
 
-.box h2 {
+}
+.box h2
+{
   color: black;
   font-weight: 500;
   font-size: 20px;
 }
-
-.box input[type=text], .box input[type=password], .box input[type=password] {
+.box input[type="text"],.box input[type = "password"],.box input[type = "password"]
+{
   border: 0;
   background: none;
   display: block;
@@ -38,14 +42,15 @@ h1 {
   color: grey;
   border-radius: 20px;
   transition: 0.25s;
-}
 
-.box input[type=text]:focus, .box input[type=password]:focus, .box input[type=password]:focus {
+}
+.box input[type="text"]:focus,.box input[type = "password"]:focus,.box input[type = "password"]:focus
+{
   width: 280px;
   border-color: gray;
 }
-
-.box input[type=submit] {
+.box input[type="submit"]
+{
   font-size: 17px;
   border: 0;
   background: black;
@@ -60,5 +65,3 @@ h1 {
   border-radius: 20px;
   cursor: pointer;
 }
-
-/*# sourceMappingURL=signup.css.map */

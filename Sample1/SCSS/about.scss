@@ -1,4 +1,6 @@
-body {
+@import './variables';
+
+body{
   margin: 0;
   padding: 0;
   transform-style: preserve-3d;
@@ -6,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 
-.box-1, .box-2, .box-3 {
+.box-1, .box-2, .box-3{
   position: relative;
   background-attachment: fixed;
   width: 100%;
@@ -15,7 +17,7 @@ body {
   background-position: center;
 }
 
-.box-1 {
+.box-1{
   background-image: url(../Assets/bgimg1.jpg);
   opacity: 0.84;
   height: 100vh;
@@ -25,7 +27,8 @@ body {
   width: 100%;
 }
 
-.box-1 .caption {
+
+.box-1 .caption{
   position: absolute;
   left: 0;
   top: 50%;
@@ -34,7 +37,7 @@ body {
   color: #000;
 }
 
-.caption span.border {
+.caption span.border{
   font-family: brightons;
   font-size: 50px;
   padding: 10px 30px 10px 30px;
@@ -44,16 +47,16 @@ body {
   text-align: center;
 }
 
-.content-block {
+.content-block{
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  height: 400px;
+  height: 400px;   
   padding: 20px;
 }
 
-.content-block .about {
+.content-block .about{
   order: 1;
   font-size: 40px;
   width: 30%;
@@ -69,11 +72,11 @@ body {
   width: 1px;
   border-left: 1px solid gray;
   min-height: 200px;
-  /*display: inline-block;*/
+  /*display: inline-block;*/    
   /*margin: 0 auto;*/
 }
 
-.content-block .discription {
+.content-block .discription{
   order: 3;
   color: #777;
   text-align: left;
@@ -82,13 +85,13 @@ body {
   width: 50%;
 }
 
-.box-2 {
+.box-2{
   background-image: url("../Assets/bgimg2.jpg");
   height: 500px;
   opacity: 0.85;
 }
 
-.heading {
+.heading{
   position: absolute;
   width: 100%;
   text-align: center;
@@ -98,20 +101,20 @@ body {
   font-size: 30px;
 }
 
-.heading span.heading-text {
+.heading span.heading-text{
   background-color: black;
   padding: 20px;
 }
 
-.links {
+.links{
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  filter: opacity(0.8);
+  filter: opacity(0.80);
 }
 
-.links .signup-link {
+.links .signup-link{
   order: 1;
   display: inline-block;
   text-decoration: none;
@@ -126,8 +129,7 @@ body {
   font-family: loui_george;
   margin-left: 30px;
 }
-
-.links .login-link {
+.links .login-link{
   order: 2;
   display: inline-block;
   text-decoration: none;
@@ -142,28 +144,28 @@ body {
   font-family: loui_george;
 }
 
-.content-block2 {
+
+.content-block2{
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  height: 100px;
+  height: 100px;   
   padding: 20px;
   background-color: #ffffff;
   overflow: hidden;
 }
-
-ul {
+ul{
   position: relative;
   display: flex;
   flex-direction: row;
 }
 
-ul li {
+ul li{
   list-style: none;
 }
 
-ul li a {
+ul li a{
   position: relative;
   display: inline-block;
   padding: 10px 60px;
@@ -176,19 +178,19 @@ ul li a {
   z-index: 1;
 }
 
-ul:hover li a {
+ul:hover li a{
   opacity: 0;
 }
 
-ul li a:hover {
+ul li a:hover{
   transform: scale(1.4);
   z-index: 10000;
-  background: #bebebe;
+  background: rgb(190, 190, 190);
   opacity: 1;
 }
 
-ul li a::before {
-  content: "";
+ul li a::before{
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -197,10 +199,8 @@ ul li a::before {
   background: linear-gradient();
 }
 
-.box-3 {
+.box-3{
   background-image: url("../Assets/bgimg3.jpg");
   height: 600px;
   opacity: 0.85;
 }
-
-/*# sourceMappingURL=about.css.map */

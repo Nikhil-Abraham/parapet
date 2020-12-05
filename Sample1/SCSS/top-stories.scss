@@ -1,4 +1,10 @@
-.clip-area {
+@import './variables';
+
+
+
+
+
+.clip-area{
   padding-top: 50px;
   background-color: white;
   float: left;
@@ -7,9 +13,11 @@
   height: 50%;
   width: 62%;
   margin-top: 80px;
+  
 }
 
-.clip {
+
+.clip{
   margin: 0 auto;
   display: block;
   width: 90%;
@@ -17,7 +25,8 @@
   margin-top: 80px;
 }
 
-.clip-area h2 {
+.clip-area h2{
+
   font-size: larger;
   font-weight: bold;
   font-family: roboto;
@@ -28,4 +37,3 @@
   margin-left: 40px;
 }
 
-/*# sourceMappingURL=top-stories.css.map */

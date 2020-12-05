@@ -1,8 +1,12 @@
+@import './variables';
+
+
 body {
   font-family: Arial;
   padding: 0px;
-  background: #FAFAFA;
+  background: #f1f1f1;
 }
+
 
 .header {
   padding: 20px;
@@ -11,10 +15,12 @@ body {
   background: white;
 }
 
-.leftcolumn {
+
+.leftcolumn { 
   float: left;
   width: 100%;
 }
+
 
 .rightcolumn {
   float: left;
@@ -22,11 +28,14 @@ body {
   padding-left: 20px;
 }
 
+
 .fakeimg {
+  
   width: 80%;
   padding: 20px;
   height: 100%;
 }
+
 
 .card {
   background-color: white;
@@ -34,11 +43,13 @@ body {
   margin-top: 20px;
 }
 
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 
 .footer {
   padding: 20px;
@@ -49,13 +60,12 @@ body {
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
+  .leftcolumn, .rightcolumn { 
     width: 100%;
     padding: 0;
   }
 }
-
-.feedarea {
+.feedarea{
   /* background-color: cyan; */
   padding-top: 50px;
   float: left;
@@ -65,61 +75,12 @@ body {
   width: 62%;
   margin-top: 80px;
 }
-
-.containerarea {
+.containerarea{
   margin-top: 40px;
   width: 95%;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   border: solid 0.5px #616161;
   margin-left: 162px;
 }
-
-.nwsltr-title {
-  font-size: 20px;
-}
-
-.post-area {
-  padding: 20px;
-  width: 95%;
-  margin: 0 auto;
-  top: 5px;
-  height: 60px;
-  margin-top: 50px;
-  margin-bottom: 60px;
-  margin-left: 162px;
-  border: 1px solid #6e6e6e;
-  background: white;
-}
-
-h1 {
-  font-family: roboto;
-  font-size: 20px;
-  float: left;
-  margin-top: -10px;
-  text-transform: bold;
-}
-
-.post-text-area {
-  font-family: roboto;
-  font-size: 17px;
-  font-family: roboto;
-  border-radius: 3px;
-  padding: 3px;
-  width: 80%;
-}
-
-.post-submit {
-  float: right;
-  margin-top: 0px;
-  width: 80px;
-  height: 30px;
-  background: #281c18;
-  border-radius: 3px;
-  border-color: #808080;
-  color: #ffffff;
-  font-size: 13px;
-  font-family: sans-serif;
-}
-/*# sourceMappingURL=newsletter.css.map */
