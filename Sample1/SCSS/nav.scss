@@ -1,0 +1,242 @@
+@import './variables';
+
+*{
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url("../Assets/bg-new1.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+li, a, button {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #edf0f1;
+}
+
+header{
+  z-index: +1;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 10%;
+  background-color: $grey-accent;
+  position: fixed;
+  width: 80%;
+}
+
+.title{
+  cursor: pointer;
+  font-family: brightons;
+  font-size: 27px;
+  padding: 5px;
+  color: white;
+  margin-right: auto;
+}
+
+.nav__links{
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+  color: #0088a9;
+}
+
+button {
+  padding: 5px 20px;
+  background-color: rgba(0,136,169,1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-left: 20px;
+}
+
+button:hover{
+  background-color: rgba(0,136,169,0.8);
+}
+
+
+
+
+            // Feed Styles
+
+
+
+.feed-area{
+  /* background-color: cyan; */
+  padding-top: 50px;
+  float: left;
+  padding: 0;
+  height: 50%;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.feed-item{
+  margin-top: 40px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255,0.98);
+  padding: 20px;
+  border: solid 0.5px #adadad;
+  margin-bottom: 50px;
+}
+
+.feed-title{
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+
+}
+
+.feed-title > a{
+  color: black;
+}
+
+.logo{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.logo > img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.org-title{
+  display: inline-block;
+  font-size: larger;
+  font-weight: bold;
+  font-family: roboto;
+  margin-left: 0px;
+  color: #000000;
+  font-size: 20px;
+}
+
+.in-feed-title {
+  font-family: roboto;
+  font-weight: bold;
+  margin-left: 20px;
+  display: inline-block;
+  font-size: 25px;
+  margin-top: -20px;
+  color: black;
+  font-family: roboto;
+}
+
+.in-feed-title2 {
+  font-family: roboto;
+  font-weight: bold;
+  margin-left: 20px;
+  display: inline-block;
+  font-size: 25px;
+  margin-top: -20px;
+  color: black;
+  font-family: roboto;
+}
+
+.follow{
+  color: #616161;
+  float: right;
+  text-decoration: underline;
+  padding: 2px;
+  font-family: sans-serif;
+  font-size: small;
+  margin-top: 10px;
+}
+
+.feed-image{
+  height: 350px;
+  padding: 10px;
+}
+
+.feed-image > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.feed-text{
+  color: #666666;
+  font-family: sans-serif;
+  font-style: italic;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.text-areaaaa{
+  width: 760px;
+  height: 120px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+.post-area{
+  padding: 20px;
+  width: 88%;
+  margin: 0 auto;
+  top: 5px;
+  height: 120px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(110, 110, 110);
+  background: white;
+}
+
+h1 {
+  font-family: roboto;
+  font-size: 20px;
+  float: left;
+  margin-top: -10px;
+  text-transform: bold;
+}
+
+.post-text-area{
+  height: 65px;
+  width: 98%;
+  font-family: roboto;
+  font-size: 17px;
+  font-family: roboto;
+  border-radius: 3px;
+}
+
+.post-submit{
+  float: right;
+  margin-top: 0px;
+  width: 80px;
+  height: 30px;
+  background: #281c18;
+  border-radius: 3px;
+  border-color: #808080;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: sans-serif;
+}
