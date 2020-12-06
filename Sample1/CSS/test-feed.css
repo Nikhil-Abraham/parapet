@@ -1,0 +1,22 @@
+.feed-area {
+  padding-top: 110px;
+}
+
+.feed__container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  width: 60%;
+  height: 80vh;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: black;
+  height: 150px;
+  width: 30%;
+  margin: 20px;
+}
+
+/*# sourceMappingURL=test-feed.css.map */
