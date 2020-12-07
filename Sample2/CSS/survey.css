@@ -1,102 +1,4 @@
-body{
-  padding: 0;
-  margin: 0;
-  background-color: #e7e7e7;
-}
-
-.nav{
-  position: fixed;
-  width: 100%;
-  height: 35px;
-  z-index: +1;
-  background-color: black;
-  overflow: hidden;
-  font-family: sans-serif;
-  font-size: 15px;
-  padding: 6px;
-  margin: 0;
-}
-
-.nav > div{
-  display: inline-block;
-}
-
-.nav .nav-title{
-  color: white;
-}
-
-div a {
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
-.link-action{
-  float: right;
-  margin-top: 4px;
-  padding-right: 10px;
-}
-.link-action > a:hover{
-  background-color: white;
-  color: black;
-}
-
-input{
-  width: 200px;
-  height: 20px;
-  padding-left: 10px;
-  margin-left: 0;
-  /* border-radius: 10px; */
-}
-
-@media (min-width: 800px){
-  input{
-    width: 300px;
-  }
-}
-
-.menu-bar{
-  position: fixed;
-  margin-top: 40px;
-  width: 220px;
-  height: 100%;
-  background: #f5f5f5;
-  border: 1px solid #a3a3a3;
-  padding-top: 30px;
-}
-
-.menu-bar h2{
-  color: #000000;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.menu-bar a{
-  color: #616161;
-  display: block;
-  font-size: 22px;
-  text-align: left;
-  padding-left: 30px;
-  font-family: roboto;
-}
-
-.menu-bar a:hover{
-  color: black;
-}
-
-.menu-bar .active-link{
-  color: black;
-}
-
-.title{
-  margin-left: 20px;
-  margin-right: 170px;
-  font-family: brightons;
-  font-size: 27px;
-  padding: 5px;
-}
-
-.main-survey{
+.main-survey {
   background-color: #ffffff;
   width: 50%;
   height: 600px;
@@ -108,13 +10,13 @@ input{
   overflow: auto;
 }
 
-.main-survey .survey-title{
+.main-survey .survey-title {
   font-size: larger;
   font-family: sans-serif;
   font-weight: bold;
 }
 
-.main-survey .survey-area1{
+.main-survey .survey-area1 {
   width: 90%;
   height: 100px;
   border-color: #616161;
@@ -122,18 +24,18 @@ input{
   margin-top: 20px;
 }
 
-.main-survey .survey-content{
+.main-survey .survey-content {
   font-style: italic;
   color: #616161;
   width: 95%;
 }
 
-.checkbox{
+.checkbox {
   width: 100%;
   text-align: center;
 }
 
-.checkbox-item{
+.checkbox-item {
   padding: 5px;
   display: flex;
   width: 25%;
@@ -141,13 +43,12 @@ input{
   color: #616161;
 }
 
-
-.radio-button{
+.radio-button {
   width: 100%;
   text-align: center;
 }
 
-.radio-item{
+.radio-item {
   padding: 5px;
   display: flex;
   width: 25%;
@@ -155,31 +56,31 @@ input{
   color: #616161;
 }
 
-
-.rest{
+.rest {
   margin-left: 220px;
   padding: 0;
   height: 50%;
-  width: 100%-180px;
   padding-top: 80px;
 }
 
-.page{
+.page {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
 
-.back-button{
+.back-button {
   color: #616161;
   text-decoration: underline;
   margin-top: 10px;
 }
 
-.submit-button{
+.submit-button {
   color: #616161;
   text-decoration: underline;
   float: right;
   margin-right: 10px;
 }
+
+/*# sourceMappingURL=survey.css.map */
