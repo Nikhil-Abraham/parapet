@@ -90,6 +90,21 @@
   object-fit: contain;
   display: block;
   background-size: cover;
+
+  .grid-title{
+    margin: 0 auto;
+    padding: 10px 10px;
+    margin-top: 140px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 65%;
+  }
+
+
+  .grid-title > a {
+    font-size: 22px;
+    font-family: roboto;
+  }
 }
 
 .item4 {
