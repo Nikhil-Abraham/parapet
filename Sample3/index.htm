@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/CSS" href="CSS/fonts.css">
+  <link rel="stylesheet" type="text/CSS" href="CSS/index.css">
+</head>
+<body>
+  <img src="Assets/index-5.jpg">
+  <div class="circle"></div>
+
+  <div class="container" id="glass">
+    <h2 class="seq">Parapet</h2>
+    <p class="seq">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, omnis.</p>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+<script>
+  const glass = document.getElementById('glass');
+  const tl = gsap.timeline({defaults: {ease: "power2.inOut", duration: 1.5}})
+
+  tl.from('img',{x: '-10%',opacity: 0})
+    .from('.container', {opacity: 0, delay: .5, duration: 1},"-=1.5")
+</script>
+
+</html>
