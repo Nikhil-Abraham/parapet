@@ -1,11 +1,9 @@
-
-.survey-area{
+.survey-area {
   width: 22%;
   /* background-color: coral; */
-  float: right;
-}
+  float: right; }
 
-.survey-box{
+.survey-box {
   color: #666666;
   /* position: fixed; */
   background: #ffffff;
@@ -17,35 +15,31 @@
   padding: 10px;
   height: 260px;
   width: 80%;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-.survey-box p{
+.survey-box p {
   color: #3f3f3f;
   text-align: center;
   font-family: sans-serif;
   font-size: 20px;
   margin: 0;
-  padding: 2px;
-}
+  padding: 2px; }
 
-.survey-box .survey-topic{
+.survey-box .survey-topic {
   color: #666666;
   font-size: 15px;
   text-align: left;
   margin-left: 15px;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
-.survey-box .survey-content{
+.survey-box .survey-content {
   color: #666666;
   font-size: 13px;
   text-align: left;
   margin-left: 15px;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
-.survey-box textarea{
+.survey-box textarea {
   margin: 10px;
   height: 80px;
   width: 210px;
@@ -54,10 +48,9 @@
   color: #666666;
   border-radius: 5px;
   border-color: #666666;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-.survey-box input{
+.survey-box input {
   color: #666666;
   font-family: sans-serif;
   text-decoration: none;
@@ -68,10 +61,9 @@
   margin-right: 10px;
   margin-top: 15px;
   margin-left: auto;
-  float: right;
-}
+  float: right; }
 
-.survey-box a{
+.survey-box a {
   color: #666666;
   font-size: 14px;
   font-family: sans-serif;
@@ -83,11 +75,9 @@
   margin-top: 10px;
   margin-left: auto;
   float: right;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-
-.feed-area{
+.feed-area {
   /* background-color: cyan; */
   padding-top: 50px;
   float: left;
@@ -95,54 +85,46 @@
   padding: 0;
   height: 50%;
   width: 62%;
-  margin-top: 80px;
-}
+  margin-top: 80px; }
 
-.feed-item{
+.feed-item {
   margin-top: 40px;
   width: 88%;
   margin: 0 auto;
   background-color: white;
   padding: 20px;
   border: solid 0.5px #616161;
-  margin-bottom: 30px;
-}
+  margin-bottom: 30px; }
 
-.feed-title{
+.feed-title {
   display: inline-block;
   width: 100%;
   height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; }
 
-}
+.feed-title > a {
+  color: black; }
 
-.feed-title > a{
-  color: black;
-}
-
-.logo{
+.logo {
   display: inline-block;
   height: 40px;
   width: 40px;
   overflow: hidden;
   border-radius: 50%;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-.logo > img{
+.logo > img {
   max-width: 100%;
-  max-height: 100%;
-}
+  max-height: 100%; }
 
-.org-title{
+.org-title {
   display: inline-block;
   font-size: larger;
   font-weight: bold;
   font-family: roboto;
   margin-left: 0px;
   color: #000000;
-  font-size: 20px;
-}
+  font-size: 20px; }
 
 .in-feed-title {
   font-family: roboto;
@@ -152,8 +134,7 @@
   font-size: 25px;
   margin-top: -20px;
   color: black;
-  font-family: roboto;
-}
+  font-family: roboto; }
 
 .in-feed-title2 {
   font-family: roboto;
@@ -163,76 +144,67 @@
   font-size: 25px;
   margin-top: -20px;
   color: black;
-  font-family: roboto;
-}
+  font-family: roboto; }
 
-.follow{
+.follow {
   color: #616161;
   float: right;
   text-decoration: underline;
   padding: 2px;
   font-family: sans-serif;
   font-size: small;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
-.feed-image{
+.feed-image {
   height: 350px;
-  padding: 10px;
-}
+  padding: 10px; }
 
 .feed-image > a > img {
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
-.feed-text{
+.feed-text {
   color: #666666;
   font-family: sans-serif;
   font-style: italic;
   margin-left: 10px;
   margin-bottom: 10px;
-  padding-top: 10px;
-}
+  padding-top: 10px; }
 
-.text-areaaaa{
+.text-areaaaa {
   width: 760px;
   height: 120px;
   margin-left: 30px;
   margin-bottom: 40px;
   margin-top: 0px;
-  padding-top: 20px;
-}
+  padding-top: 20px; }
 
-.post-area{
+.post-area {
   padding: 20px;
   width: 88%;
   margin: 0 auto;
   top: 5px;
   height: 120px;
   margin-bottom: 15px;
-  border: 1px solid rgb(110, 110, 110);
-  background: white;
-}
+  border: 1px solid #6e6e6e;
+  background: white; }
 
 h1 {
   font-family: roboto;
   font-size: 20px;
   float: left;
   margin-top: -10px;
-  text-transform: bold;
-}
+  text-transform: bold; }
 
-.post-text-area{
+.post-text-area {
   height: 65px;
   width: 98%;
   font-family: roboto;
   font-size: 17px;
   font-family: roboto;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
-.post-submit{
+.post-submit {
   float: right;
   margin-top: 0px;
   width: 80px;
@@ -242,5 +214,6 @@ h1 {
   border-color: #808080;
   color: #ffffff;
   font-size: 13px;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
+
+/*# sourceMappingURL=mbrstyle.css.map */

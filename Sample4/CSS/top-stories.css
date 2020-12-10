@@ -1,13 +1,17 @@
 .clip-area {
   padding-top: 50px;
-  background-color:;
   float: left;
-  margin-left: 250px;
+  margin: 0 auto;
   padding: 0;
   height: 50%;
   width: 62%;
   margin-top: 80px;
+  display: block;
+  margin-left: 50vw;
+  transform: translate(-50%)
+
 }
+
 
 .clip {
   margin: 0 auto;
@@ -15,6 +19,10 @@
   width: 90%;
   height: 90%;
   margin-top: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   
 }
 
 .clip-area h2 {
