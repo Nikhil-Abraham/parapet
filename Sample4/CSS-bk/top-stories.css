@@ -10,6 +10,7 @@
   height: 50%;
   width: 62%;
   margin-top: 80px;
+
   
 }
 
@@ -26,11 +27,17 @@
 
   font-size: larger;
   font-weight: bold;
-  font-family: roboto;
+  font-family: serif;
   margin-top: 30px;
   color: #000000;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   margin-left: 40px;
 }
+
+.boxed {
+  border: 1px solid rgb(7, 7, 7) ;
+}
+
+
 
