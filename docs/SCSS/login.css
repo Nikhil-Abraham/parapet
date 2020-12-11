@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: white;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  padding: 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+  text-align: center;
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+  color: #281c18;
+  font-family: brightons;
+  font-weight: 600;
+  margin-top: 130px;
+  font-size: 40px;
+}
+
+.box h2 {
+  color: black;
+  font-weight: 500;
+}
+
+.box input[type="text"], .box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #281c18;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: grey;
+  border-radius: 20px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus {
+  width: 280px;
+  border-color: gray;
+}
+
+.box input[type="submit"] {
+  font-size: 16px;
+  border: 0;
+  background: black;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid black;
+  border-color: black;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 30px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box > input {
+  padding-top: 50px;
+  margin-top: 20px;
+}
+
+#email, #password {
+  border: 1px solid grey;
+}
+/*# sourceMappingURL=login.css.map */
