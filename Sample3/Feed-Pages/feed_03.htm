@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="../CSS/fonts.css" type="text/css">
   <link rel="stylesheet" href="../CSS/menu-nav.css">
   <link rel="stylesheet" href="../CSS/Feed.css">
+  <link rel="stylesheet" href="../CSS/nav.css">
   <title>
     Main Page
   </title>
@@ -14,28 +15,20 @@
 
   <div class="page">
 
-    <div class="nav">
-      <a href="#home" class="title">Parapet</a>
-
-        <div class="search-box">
-          <form>
-            <input type="text" placeholder="Search">
-          </form>
-        </div>
-
-        <a href="login.htm" class="link-action">Logout</a>
-      
-    </div>
-
-
-    <div class="menu-bar">
-      <div><a href="../mbrpage.html">Home</a></div>
-      <div><a href="#">Newsletter</a></div>
-      <div><a href="#">Top Stories</a></div>
-      <div><a href="../About.htm">About Us</a></div>
-    </div>
-    <div class="main content">
-      <div class="header"></div>
+    <div class="nav__container">
+      <header>
+        <div class="title">Parapet</div>
+        <nav>
+          <ul class="nav__links">
+            <li><a href="top-stories.htm">Top Stories</a></li>
+            <li><a href="newsletter.htm" class="active">Newsletter</a></li>
+            <li><a href="index.htm">About</a></li>
+          </ul>
+        </nav>
+        <a class="cta" href="#">
+          <button>Log Out</button>
+        </a>
+      </header>
     </div>
     <div class="feedarea">
         <div class= "containerarea">
