@@ -1,4 +1,5 @@
 @import './variables';
+@import './fonts.scss';
 
 body{
   margin: 0;
@@ -63,7 +64,7 @@ body{
   height: 50px;
   top: 50%;
   text-align: right;
-  font-family: billy;
+  font-family: 'billy';
 }
 
 .vr {
@@ -203,4 +204,8 @@ ul li a::before{
   background-image: url("../Assets/bgimg3.jpg");
   height: 600px;
   opacity: 0.85;
+}
+
+.about {
+  font-family: billy;
 }
