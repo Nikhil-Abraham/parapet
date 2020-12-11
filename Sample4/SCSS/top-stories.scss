@@ -1,20 +1,22 @@
 @import './variables';
+@import './fonts.scss';
 
 
 
-
-
-.clip-area{
+.clip-area {
   padding-top: 50px;
-  background-color: white;
   float: left;
-  margin-left: 400px;
+  margin: 0 auto;
   padding: 0;
   height: 50%;
   width: 62%;
   margin-top: 80px;
-  
+  display: block;
+  margin-left: 50vw;
+  transform: translate(-50%)
+
 }
+
 
 
 .clip{

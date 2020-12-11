@@ -28,6 +28,7 @@
   width: 100%;
   object-fit: contain;
   display: block;
+<<<<<<< HEAD
   background-size: cover; }
   .item1 .grid-title {
     margin: 0 auto;
@@ -39,6 +40,22 @@
   .item1 .grid-title > a {
     font-size: 22px;
     font-family: roboto; }
+=======
+  background-size: cover;
+}
+.item1 .grid-title {
+  margin: 0 auto;
+  padding: 10px 10px;
+  margin-top: 100px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 65%;
+}
+.item1 a {
+  font-size: 22px;
+  font-family: roboto;
+}
+>>>>>>> a6c2f3382de9709ad3b9d8c50706d13e9184e50e
 
 .item2 {
   grid-column: 4/6;
@@ -48,6 +65,7 @@
   object-fit: contain;
   display: block;
   background-size: cover;
+<<<<<<< HEAD
   background-position: center; }
   .item2 .grid-title {
     margin: 0 auto;
@@ -59,6 +77,22 @@
   .item2 .grid-title > a {
     font-size: 22px;
     font-family: roboto; }
+=======
+  background-position: center;
+}
+.item2 .grid-title {
+  margin: 0 auto;
+  padding: 10px 10px;
+  margin-top: 100px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 65%;
+}
+.item2 a {
+  font-size: 22px;
+  font-family: roboto;
+}
+>>>>>>> a6c2f3382de9709ad3b9d8c50706d13e9184e50e
 
 .item3 {
   grid-row: 2/4;
@@ -68,6 +102,7 @@
   width: 100%;
   object-fit: contain;
   display: block;
+<<<<<<< HEAD
   background-size: cover; }
   .item3 .grid-title {
     margin: 0 auto;
@@ -79,6 +114,22 @@
   .item3 .grid-title > a {
     font-size: 22px;
     font-family: roboto; }
+=======
+  background-size: cover;
+}
+.item3 .grid-title {
+  margin: 0 auto;
+  padding: 10px 10px;
+  margin-top: 140px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 65%;
+}
+.item3 .grid-title > a {
+  font-size: 22px;
+  font-family: roboto;
+}
+>>>>>>> a6c2f3382de9709ad3b9d8c50706d13e9184e50e
 
 .item4 {
   grid-column: 3/6;

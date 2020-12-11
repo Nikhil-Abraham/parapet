@@ -36,12 +36,12 @@ header {
 }
 
 .title {
-  cursor: pointer;
+  margin-right: auto;
+}
+.title a {
   font-family: brightons;
   font-size: 27px;
-  padding: 5px;
   color: white;
-  margin-right: auto;
 }
 
 .nav__links {

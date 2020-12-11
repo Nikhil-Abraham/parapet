@@ -1,39 +1,17 @@
-.clip-area {
-  padding-top: 50px;
-  float: left;
-  margin: 0 auto;
-  padding: 0;
-  height: 50%;
-  width: 62%;
-  margin-top: 80px;
+/* Error: expected ";".
+ *   ,
+ * 2 | @import './fonts.scss'
+ *   |                       ^
+ *   '
+ *   scss/top-stories.scss 2:23  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  margin-left: 50vw;
-  transform: translate(-50%)
-
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: expected \";\".\a   \2577 \a 2 \2502  @import './fonts.scss'\a   \2502                        ^\a   \2575 \a   scss/top-stories.scss 2:23  root stylesheet";
 }
-
-
-.clip {
-  margin: 0 auto;
-  display: block;
-  width: 90%;
-  height: 90%;
-  margin-top: 80px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-   
-}
-
-.clip-area h2 {
-  font-size: larger;
-  font-weight: bold;
-  font-family: roboto;
-  margin-top: 30px;
-  color: #080808;
-  font-size: 35px;
-  font-weight: bold;
-  margin-left: 40px;
-}
-
-/*# sourceMappingURL=top-stories.css.map */
