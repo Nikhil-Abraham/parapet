@@ -1,11 +1,12 @@
 @import './variables';
+@import './fonts.scss';
 
 body{
   margin: 0;
   padding: 0;
   transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /*overflow-y: scroll;
+  overflow-x: hidden; */
 }
 
 .box-1, .box-2, .box-3{
@@ -18,7 +19,7 @@ body{
 }
 
 .box-1{
-  background-image: url(../Assets/bgimg1.jpg);
+  background-image: url(../Assets/bg-new1.jpg);
   opacity: 0.84;
   height: 100vh;
   transform-origin: center center 0;
@@ -127,7 +128,6 @@ body{
   margin-top: 220px;
   padding: 10px 30px 10px 30px;
   font-family: loui_george;
-  margin-left: 30px;
 }
 .links .login-link{
   order: 2;
@@ -204,3 +204,30 @@ ul li a::before{
   height: 600px;
   opacity: 0.85;
 }
+
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+
+  .flex-item{
+    width: 50px;
+    height: 100px;
+    background-color: #000;
+    margin-top: 80px;
+  }
+}
+
+.main-container{
+  background-color: gray;
+  height: 500px;
+  width: 100%;
+
+}
+
+.container{
+  background-color: aqua;
+}
+
