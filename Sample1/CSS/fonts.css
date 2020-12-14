@@ -37,19 +37,12 @@
   src: url("../Assets/Billy Signature.otf"); }
 @font-face {
   font-family: loui_george;
-<<<<<<< HEAD
-  src: url("../Assets/Louis George Cafe.ttf");
-}
+  src: url("../Assets/Louis George Cafe.ttf"); }
 @font-face {
   font-family: autograph;
-  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
-}
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf"); }
 @font-face {
   font-family: signature;
-  src: url("../Assets/Cristhyna Signature Free.ttf");
-}
-=======
-  src: url("../Assets/Louis George Cafe.ttf"); }
->>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
+  src: url("../Assets/Cristhyna Signature Free.ttf"); }
 
 /*# sourceMappingURL=fonts.css.map */

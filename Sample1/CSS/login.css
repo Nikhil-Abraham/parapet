@@ -11,7 +11,6 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: white;
   text-align: center;
@@ -41,13 +40,7 @@ h1 {
   outline: none;
   color: grey;
   border-radius: 20px;
-<<<<<<< HEAD
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
-=======
   transition: 0.25s; }
->>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 
 .box input[type="text"]:focus, .box input[type="password"]:focus {
   width: 280px;
@@ -66,7 +59,6 @@ h1 {
   outline: none;
   color: white;
   border-radius: 30px;
-  -webkit-transition: 0.25s;
   transition: 0.25s;
   cursor: pointer; }
 
@@ -76,7 +68,5 @@ h1 {
 
 #email, #password {
   border: 1px solid grey; }
-
-/*# sourceMappingURL=login.css.map */
 
 /*# sourceMappingURL=login.css.map */

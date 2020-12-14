@@ -1,17 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-=======
   box-sizing: border-box; }
->>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100vh;
@@ -23,20 +15,10 @@
   background-position: center; }
 
 #left-box {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 40%;
   flex: 0 0 40%;
   height: 100%;
   position: relative;
   background-color: rgba(255, 255, 255, 0.25);
-<<<<<<< HEAD
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
-=======
   backdrop-filter: blur(10px); }
->>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
-
-/*# sourceMappingURL=login-1.css.map */
 
 /*# sourceMappingURL=login-1.css.map */

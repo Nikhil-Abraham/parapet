@@ -4,7 +4,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: white;
   text-align: center;
@@ -35,13 +34,7 @@ h1 {
   outline: none;
   color: grey;
   border-radius: 20px;
-<<<<<<< HEAD
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
-=======
   transition: 0.25s; }
->>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 
 .box input[type="text"]:focus, .box input[type="password"]:focus, .box input[type="password"]:focus {
   width: 280px;
@@ -61,7 +54,5 @@ h1 {
   color: white;
   border-radius: 20px;
   cursor: pointer; }
-
-/*# sourceMappingURL=signup.css.map */
 
 /*# sourceMappingURL=signup.css.map */
