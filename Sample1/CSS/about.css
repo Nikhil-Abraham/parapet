@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @font-face {
   font-family: infinite_stroke;
-<<<<<<< HEAD
   src: url("../Assets/Infinite_Stroke.otf");
 }
 @font-face {
@@ -60,51 +59,19 @@
   font-family: signature;
   src: url("../Assets/Cristhyna Signature Free.ttf");
 }
-=======
-  src: url("../Assets/Infinite_Stroke.otf"); }
-@font-face {
-  font-family: california;
-  src: url("../Assets/California.otf"); }
-@font-face {
-  font-family: golden_hill;
-  src: url("../Assets/GoldenHillsDEMO.ttf"); }
-@font-face {
-  font-family: blacklist;
-  src: url("../Assets/The Blacklist.ttf"); }
-@font-face {
-  font-family: dolce_vita;
-  src: url("../Assets/Dolce Vita.ttf"); }
-@font-face {
-  font-family: roboto;
-  src: url("../Assets/Roboto-Light.ttf"); }
-@font-face {
-  font-family: legend;
-  src: url("../Assets/Legends.otf"); }
-@font-face {
-  font-family: heart_warming;
-  src: url("../Assets/Heart Warming Font by Situjuh (7NTypes).otf"); }
-@font-face {
-  font-family: brightons;
-  src: url("../Assets/Brightons.otf"); }
-@font-face {
-  font-family: vogue;
-  src: url("../Assets/Vogue.ttf"); }
-@font-face {
-  font-family: lemon_milk;
-  src: url("../Assets/LEMONMILK-Regular.otf"); }
-@font-face {
-  font-family: billy;
-  src: url("../Assets/Billy Signature.otf"); }
-@font-face {
-  font-family: loui_george;
-  src: url("../Assets/Louis George Cafe.ttf"); }
->>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 body {
   margin: 0;
   padding: 0;
   transform-style: preserve-3d;
   /*overflow-y: scroll;
-  overflow-x: hidden; */ }
+  overflow-x: hidden; */
+}
+
+.box-container {
+  width: 100%;
+  margin: 0;
+  padding: o;
+}
 
 .box-1, .box-2, .box-3 {
   position: relative;
@@ -112,7 +79,8 @@ body {
   width: 100%;
   /* opacity: 0.75; */
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+}
 
 .box-1 {
   background-image: url(../Assets/bg-new1.jpg);
@@ -121,7 +89,8 @@ body {
   transform-origin: center center 0;
   transform: translateZ(-1px) scale(1.1);
   z-index: -1;
-  width: 100%; }
+  width: 100%;
+}
 
 .box-1 .caption {
   position: absolute;
@@ -129,7 +98,8 @@ body {
   top: 50%;
   width: 100%;
   text-align: center;
-  color: #000; }
+  color: #000;
+}
 
 .caption span.border {
   font-family: brightons;
@@ -138,7 +108,8 @@ body {
   letter-spacing: 2px;
   color: aliceblue;
   background-color: #111;
-  text-align: center; }
+  text-align: center;
+}
 
 .content-block {
   display: flex;
@@ -146,7 +117,8 @@ body {
   flex-direction: row;
   align-items: center;
   height: 400px;
-  padding: 20px; }
+  padding: 20px;
+}
 
 .content-block .about {
   order: 1;
@@ -155,7 +127,8 @@ body {
   height: 50px;
   top: 50%;
   text-align: right;
-  font-family: billy; }
+  font-family: billy;
+}
 
 .vr {
   order: 2;
@@ -164,7 +137,8 @@ body {
   border-left: 1px solid gray;
   min-height: 200px;
   /*display: inline-block;*/
-  /*margin: 0 auto;*/ }
+  /*margin: 0 auto;*/
+}
 
 .content-block .discription {
   order: 3;
@@ -172,12 +146,14 @@ body {
   text-align: left;
   font-family: roboto;
   font-size: 30px;
-  width: 50%; }
+  width: 50%;
+}
 
 .box-2 {
   background-image: url("../Assets/bgimg2.jpg");
   height: 500px;
-  opacity: 0.85; }
+  opacity: 0.85;
+}
 
 .heading {
   position: absolute;
@@ -186,18 +162,21 @@ body {
   top: 50%;
   font-family: brightons;
   color: #ffffff;
-  font-size: 30px; }
+  font-size: 30px;
+}
 
 .heading span.heading-text {
   background-color: black;
-  padding: 20px; }
+  padding: 20px;
+}
 
 .links {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  filter: opacity(0.8); }
+  filter: opacity(0.8);
+}
 
 .links .signup-link {
   order: 1;
@@ -211,7 +190,8 @@ body {
   width: 5%;
   margin-top: 220px;
   padding: 10px 30px 10px 30px;
-  font-family: loui_george; }
+  font-family: loui_george;
+}
 
 .links .login-link {
   order: 2;
@@ -225,7 +205,8 @@ body {
   width: 5%;
   margin-top: 220px;
   padding: 10px 30px 10px 30px;
-  font-family: loui_george; }
+  font-family: loui_george;
+}
 
 .content-block2 {
   display: flex;
@@ -235,15 +216,18 @@ body {
   height: 100px;
   padding: 20px;
   background-color: #ffffff;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 ul {
   position: relative;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 ul li {
-  list-style: none; }
+  list-style: none;
+}
 
 ul li a {
   position: relative;
@@ -255,48 +239,57 @@ ul li a {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.5s;
-  z-index: 1; }
+  z-index: 1;
+}
 
 ul:hover li a {
-  opacity: 0; }
+  opacity: 0;
+}
 
 ul li a:hover {
   transform: scale(1.4);
   z-index: 10000;
   background: #bebebe;
-  opacity: 1; }
+  opacity: 1;
+}
 
 ul li a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 80px;
   height: 100px;
-  background: linear-gradient(); }
+  background: linear-gradient();
+}
 
 .box-3 {
   background-image: url("../Assets/bgimg3.jpg");
   height: 600px;
-  opacity: 0.85; }
+  opacity: 0.85;
+}
 
 .flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row; }
-  .flex-container .flex-item {
-    width: 50px;
-    height: 100px;
-    background-color: #000;
-    margin-top: 80px; }
+  flex-direction: row;
+}
+.flex-container .flex-item {
+  width: 50px;
+  height: 100px;
+  background-color: #000;
+  margin-top: 80px;
+}
 
 .main-container {
   background-color: gray;
   height: 500px;
-  width: 100%; }
+  width: 100%;
+}
 
 .container {
-  background-color: aqua; }
+  background-color: aqua;
+}
 
 /*# sourceMappingURL=about.css.map */
