@@ -51,15 +51,25 @@
   font-family: loui_george;
   src: url("../Assets/Louis George Cafe.ttf");
 }
+@font-face {
+  font-family: autograph;
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("../Assets/Cristhyna Signature Free.ttf");
+}
 .clip-area {
   padding-top: 50px;
-  background-color: white;
   float: left;
-  margin-left: 400px;
+  margin: 0 auto;
   padding: 0;
   height: 50%;
   width: 62%;
   margin-top: 80px;
+  display: block;
+  margin-left: 50vw;
+  transform: translate(-50%);
 }
 
 .clip {

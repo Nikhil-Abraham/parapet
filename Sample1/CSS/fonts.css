@@ -51,5 +51,13 @@
   font-family: loui_george;
   src: url("../Assets/Louis George Cafe.ttf");
 }
+@font-face {
+  font-family: autograph;
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("../Assets/Cristhyna Signature Free.ttf");
+}
 
 /*# sourceMappingURL=fonts.css.map */

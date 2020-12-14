@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: infinite_stroke;
+  src: url("/Infinite_Stroke.cf0d5ef0.otf");
+}
+@font-face {
+  font-family: california;
+  src: url("/California.af65b95d.otf");
+}
+@font-face {
+  font-family: golden_hill;
+  src: url("/GoldenHillsDEMO.05902208.ttf");
+}
+@font-face {
+  font-family: blacklist;
+  src: url("/The Blacklist.dd5abc3e.ttf");
+}
+@font-face {
+  font-family: dolce_vita;
+  src: url("/Dolce Vita.420b9fbd.ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("/Roboto-Light.d0cb2895.ttf");
+}
+@font-face {
+  font-family: legend;
+  src: url("/Legends.4281e772.otf");
+}
+@font-face {
+  font-family: heart_warming;
+  src: url("/Heart Warming Font by Situjuh (7NTypes).fe9a6d33.otf");
+}
+@font-face {
+  font-family: brightons;
+  src: url("/Brightons.e4ce29e0.otf");
+}
+@font-face {
+  font-family: vogue;
+  src: url("/Vogue.9e85f723.ttf");
+}
+@font-face {
+  font-family: lemon_milk;
+  src: url("/LEMONMILK-Regular.2ff05dfa.otf");
+}
+@font-face {
+  font-family: billy;
+  src: url("/Billy Signature.59159ed5.otf");
+}
+@font-face {
+  font-family: loui_george;
+  src: url("/Louis George Cafe.9aa5039c.ttf");
+}
+@font-face {
+  font-family: autograph;
+  src: url("/Autograf_PersonalUseOnly.311b2464.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("/Cristhyna Signature Free.b866af10.ttf");
+}
+body {
+  background: #c8dce7;
+  color: black;
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  background-image: url("/index-22.8f2824a1.jpg");
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 8px rgba(47, 31, 47, 0.03);
+  top: 20%;
+  padding-right: 160px;
+  border-radius: 10px;
+  padding-left: 80px;
+  font-family: brightons;
+  font-size: 23px;
+  left: 8%;
+  color: white;
+  height: auto;
+  width: 400px;
+  padding-bottom: 10px;
+}
+
+.container h3 {
+  font-family: "Poppins";
+  display: inline;
+}
+
+.typing {
+  position: relative;
+}
+
+.typing::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  border-right: 2px solid white;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.home, .about {
+  height: 90vh;
+  position: absolute;
+  height: 100%;
+}
+
+.home-content, .about-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.home-content .trs-image, .about-content .trs-image {
+  height: 70%;
+}
+.home-content h1, .about-content h1 {
+  font-size: 40px;
+  padding: 10px;
+}
+.home-content p, .about-content p {
+  font-size: 20px;
+}
+
+.home {
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.about {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+
+
+
+/*# sourceMappingURL=/CSS.56a9cc53.css.map */

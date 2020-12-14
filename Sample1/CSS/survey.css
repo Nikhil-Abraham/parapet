@@ -35,6 +35,8 @@
 
 .checkbox-item {
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 25%;
   margin-left: 90px;
@@ -48,6 +50,8 @@
 
 .radio-item {
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 25%;
   margin-left: 90px;
@@ -80,5 +84,7 @@
   float: right;
   margin-right: 10px;
 }
+
+/*# sourceMappingURL=survey.css.map */
 
 /*# sourceMappingURL=survey.css.map */
