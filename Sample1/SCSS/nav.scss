@@ -1,12 +1,13 @@
 @import './variables';
 
 *{
-  box-sizing: content-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+
+.bg{
   background-image: url("../Assets/bg-new1.jpg");
   background-repeat: no-repeat;
   width: 100%;
@@ -32,18 +33,18 @@ header{
   justify-content: flex-end;
   align-items: center;
   padding: 5px 10%;
-  background-color: $grey-accent;
-  position: fixed;
-  width: 80%;
+  background-color: white;
+  position: relative;
+  width: 100%;
 }
 
 
 .title{
-  margin-right: auto;
+  margin-left: auto;
   a{
     font-family: brightons;
     font-size: 27px;
-    color: white;
+    color: $grey-accent;
   }
 }
 
@@ -78,4 +79,8 @@ button {
 
 button:hover{
   background-color: rgba(0,136,169,0.8);
+}
+
+a{
+  color: $grey-accent;
 }

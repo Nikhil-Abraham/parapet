@@ -63,6 +63,7 @@ body {
   margin: 0;
   padding: 0;
   transform-style: preserve-3d;
+  box-sizing: border-box;
   /*overflow-y: scroll;
   overflow-x: hidden; */
 }

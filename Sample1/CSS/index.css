@@ -66,10 +66,43 @@
 }
 
 .block1 {
-  height: 100vh;
+  height: 79vh;
   width: 100%;
-  padding: 30px;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  padding: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: nowrap;
+}
+.block1 h2 {
+  font-family: brightons;
+  font-size: 40px;
+}
+.block1 h3 {
+  width: 450px;
+  font-weight: lighter;
+  font-family: "Poppins";
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.img1 {
+  height: 50vh;
+  max-width: 100%;
+}
+
+header {
+  padding: 20px;
+  height: 30px;
+}
+
+footer {
+  height: 15vh;
+  background-color: #24252A;
+  padding: 20px;
+  color: white;
+  margin-top: auto;
 }
 
 /*# sourceMappingURL=index.css.map */
