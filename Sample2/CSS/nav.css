@@ -32,12 +32,11 @@ header {
   width: 80%; }
 
 .title {
-  cursor: pointer;
-  font-family: brightons;
-  font-size: 27px;
-  padding: 5px;
-  color: white;
   margin-right: auto; }
+  .title a {
+    font-family: brightons;
+    font-size: 27px;
+    color: white; }
 
 .nav__links {
   list-style: none; }

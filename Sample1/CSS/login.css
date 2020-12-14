@@ -2,8 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: white;
-}
+  background: white; }
 
 .box {
   width: 300px;
@@ -16,8 +15,7 @@ body {
   transform: translate(-50%, -50%);
   background: white;
   text-align: center;
-  border: 2px solid black;
-}
+  border: 2px solid black; }
 
 h1 {
   text-align: center;
@@ -25,15 +23,13 @@ h1 {
   font-family: brightons;
   font-weight: 600;
   margin-top: 130px;
-  font-size: 40px;
-}
+  font-size: 40px; }
 
 .box h2 {
   color: black;
-  font-weight: 500;
-}
+  font-weight: 500; }
 
-.box input[type=text], .box input[type=password] {
+.box input[type="text"], .box input[type="password"] {
   border: 0;
   background: none;
   display: block;
@@ -45,16 +41,19 @@ h1 {
   outline: none;
   color: grey;
   border-radius: 20px;
+<<<<<<< HEAD
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
+=======
+  transition: 0.25s; }
+>>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 
-.box input[type=text]:focus, .box input[type=password]:focus {
+.box input[type="text"]:focus, .box input[type="password"]:focus {
   width: 280px;
-  border-color: gray;
-}
+  border-color: gray; }
 
-.box input[type=submit] {
+.box input[type="submit"] {
   font-size: 16px;
   border: 0;
   background: black;
@@ -69,17 +68,14 @@ h1 {
   border-radius: 30px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .box > input {
   padding-top: 50px;
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 #email, #password {
-  border: 1px solid grey;
-}
+  border: 1px solid grey; }
 
 /*# sourceMappingURL=login.css.map */
 

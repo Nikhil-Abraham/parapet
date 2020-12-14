@@ -1,54 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @font-face {
   font-family: infinite_stroke;
-  src: url("../Assets/Infinite_Stroke.otf");
-}
+  src: url("../Assets/Infinite_Stroke.otf"); }
 @font-face {
   font-family: california;
-  src: url("../Assets/California.otf");
-}
+  src: url("../Assets/California.otf"); }
 @font-face {
   font-family: golden_hill;
-  src: url("../Assets/GoldenHillsDEMO.ttf");
-}
+  src: url("../Assets/GoldenHillsDEMO.ttf"); }
 @font-face {
   font-family: blacklist;
-  src: url("../Assets/The Blacklist.ttf");
-}
+  src: url("../Assets/The Blacklist.ttf"); }
 @font-face {
   font-family: dolce_vita;
-  src: url("../Assets/Dolce Vita.ttf");
-}
+  src: url("../Assets/Dolce Vita.ttf"); }
 @font-face {
   font-family: roboto;
-  src: url("../Assets/Roboto-Light.ttf");
-}
+  src: url("../Assets/Roboto-Light.ttf"); }
 @font-face {
   font-family: legend;
-  src: url("../Assets/Legends.otf");
-}
+  src: url("../Assets/Legends.otf"); }
 @font-face {
   font-family: heart_warming;
-  src: url("../Assets/Heart Warming Font by Situjuh (7NTypes).otf");
-}
+  src: url("../Assets/Heart Warming Font by Situjuh (7NTypes).otf"); }
 @font-face {
   font-family: brightons;
-  src: url("../Assets/Brightons.otf");
-}
+  src: url("../Assets/Brightons.otf"); }
 @font-face {
   font-family: vogue;
-  src: url("../Assets/Vogue.ttf");
-}
+  src: url("../Assets/Vogue.ttf"); }
 @font-face {
   font-family: lemon_milk;
-  src: url("../Assets/LEMONMILK-Regular.otf");
-}
+  src: url("../Assets/LEMONMILK-Regular.otf"); }
 @font-face {
   font-family: billy;
-  src: url("../Assets/Billy Signature.otf");
-}
+  src: url("../Assets/Billy Signature.otf"); }
 @font-face {
   font-family: loui_george;
+<<<<<<< HEAD
   src: url("../Assets/Louis George Cafe.ttf");
 }
 @font-face {
@@ -59,5 +48,8 @@
   font-family: signature;
   src: url("../Assets/Cristhyna Signature Free.ttf");
 }
+=======
+  src: url("../Assets/Louis George Cafe.ttf"); }
+>>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 
 /*# sourceMappingURL=fonts.css.map */

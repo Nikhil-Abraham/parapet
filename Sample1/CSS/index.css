@@ -62,10 +62,14 @@
 body {
   background: #c8dce7;
   color: black;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   margin: 0;
+<<<<<<< HEAD
   padding: 0;
 }
+=======
+  padding: 14em 14em 14em 20em; }
+>>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 
 .img {
   background-image: url("../Assets/index-22.jpg");
@@ -73,10 +77,15 @@ body {
   background-attachment: fixed;
   width: 100%;
   height: 100vh;
+<<<<<<< HEAD
   z-index: -2;
   background-size: cover;
   background-position: center;
 }
+=======
+  top: 0;
+  left: 0; }
+>>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 
 .container {
   display: inline-block;
@@ -86,6 +95,7 @@ body {
   backdrop-filter: blur(10px);
   border: solid 2px transparent;
   background-clip: padding-box;
+<<<<<<< HEAD
   box-shadow: 10px 10px 8px rgba(47, 31, 47, 0.03);
   top: 20%;
   padding-right: 160px;
@@ -156,5 +166,8 @@ body {
 .about {
   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
+=======
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03); }
+>>>>>>> 0e8161f81bd4ac62f443ab64e06c2ed8065f334b
 
 /*# sourceMappingURL=index.css.map */

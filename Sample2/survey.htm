@@ -4,7 +4,7 @@
 <head>
   <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
   <link rel="stylesheet" href="CSS/menu-nav.css">
-  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="stylesheet" href="CSS/nav.css">
   <link rel="stylesheet" href="CSS/survey.css">
   <title>
     Main Page
@@ -15,31 +15,21 @@
 <body>
 
 
-  <div class="page">
-    
-    <div class="nav">
-      <div><a href="#home" class="title">Parapet</a></div>
-      <div class="search-box">
-        <form>
-          <input type="text" placeholder="Search">
-        </form>
-      </div>
-
-        <a href="login.htm" class="link-action">Login</a>
-
-        <a href="SignUp.htm" class="link-action">Sign Up</a>
-    </div>
-
-    <div class="menu-bar">
-      <div><a href="mbrpage.html">Home</a></div>
-      <div><a href="newsletter.htm">Newsletter</a></div>
-      <div><a href="top-stories.htm">Top Stories</a></div>
-      <div><a href="index.htm">About Us</a></div>
-    </div>
-    <div class="main content">
-      <div class="header"></div>
-    </div>
-
+  <div class="nav__container">
+    <header>
+      <div class="title"><a href="nav.html">Parapet</a></div>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="top-stories.htm">Top Stories</a></li>
+          <li><a href="newsletter.htm" class="active">Newsletter</a></li>
+          <li><a href="index.htm">About</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#">
+        <button>Log Out</button>
+      </a>
+    </header>
+  </div>
 
     <div class="rest">
 

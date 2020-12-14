@@ -3,11 +3,11 @@
 
 <head>
   <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
-  <link rel="stylesheet" href="CSS/menu-nav.css">
   <link rel="stylesheet" href="CSS/top-stories.css">
-
+  <link rel="stylesheet" href="CSS/nav.css">
+  <script src="JS/newsletter.js"></script>
   <title>
-    Main Page
+    Top-Stories
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -17,25 +17,20 @@
   <div class="page">
 
 
-    <div class="nav">
-      <div><a href="#home" class="title">Parapet</a></div>
-      <div class="search-box">
-        <form>
-          <input type="text" placeholder="Search">
-        </form>
-      </div>
-
-      <a href="login.htm" class="link-action">Logout</a>
-
-    </div>
-
-
-
-    <div class="menu-bar">
-      <div><a href="mbrpage.html">Home</a></div>
-      <div><a href="newsletter.htm">Newsletter</a></div>
-      <div><a href="top-stories.htm">Top Stories</a></div>
-      <div><a href="index.htm">About Us</a></div>
+    <div class="nav__container">
+      <header>
+        <div class="title"><a href="nav.html">Parapet</a></div>
+        <nav>
+          <ul class="nav__links">
+            <li><a href="top-stories.htm">Top Stories</a></li>
+            <li><a href="newsletter.htm" class="active">Newsletter</a></li>
+            <li><a href="index.htm">About</a></li>
+          </ul>
+        </nav>
+        <a class="cta" href="#">
+          <button>Log Out</button>
+        </a>
+      </header>
     </div>
 
 
@@ -44,7 +39,7 @@
 
 
     <div class="clip-area">
-      <h2>Top Stories...</h2>
+      <h2>Top Stories:</h2>
       <div class="clips">
         <video width="320" height="240" controls class="clip">
           <source src="Assets/news1.mp4" type="video/mp4">
