@@ -80,3 +80,15 @@ h1
 #email, #password{
   border: 1px solid grey;
 }
+
+a, p{
+  text-decoration: underline;
+  font-family: roboto;
+  font-size: 15px;
+  color: $grey-accent;
+}
+
+p{
+  text-decoration: none;
+  display: inline;
+}

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @font-face {
   font-family: infinite_stroke;
   src: url("../Assets/Infinite_Stroke.otf");
@@ -50,12 +51,28 @@
   font-family: loui_george;
   src: url("../Assets/Louis George Cafe.ttf");
 }
-body {
+@font-face {
+  font-family: autograph;
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("../Assets/Cristhyna Signature Free.ttf");
+}
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden;
+}
+
+.box-container {
+  width: 100%;
+  margin: 0;
+  padding: o;
 }
 
 .box-1, .box-2, .box-3 {
@@ -68,7 +85,7 @@ body {
 }
 
 .box-1 {
-  background-image: url(../Assets/bgimg1.jpg);
+  background-image: url(../Assets/bg-new1.jpg);
   opacity: 0.84;
   height: 100vh;
   transform-origin: center center 0;
@@ -112,7 +129,7 @@ body {
   height: 50px;
   top: 50%;
   text-align: right;
-  font-family: "billy";
+  font-family: billy;
 }
 
 .vr {
@@ -151,7 +168,7 @@ body {
 }
 
 .heading span.heading-text {
-  background-color: black;
+  background-color: #24252A;
   padding: 20px;
 }
 
@@ -176,7 +193,6 @@ body {
   margin-top: 220px;
   padding: 10px 30px 10px 30px;
   font-family: loui_george;
-  margin-left: 30px;
 }
 
 .links .login-link {
@@ -194,15 +210,21 @@ body {
   font-family: loui_george;
 }
 
+.nav {
+  width: 100%;
+}
+
 .content-block2 {
+  text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  height: 100px;
+  height: 20px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
+  margin-top: 5px;
 }
 
 ul {
@@ -226,6 +248,7 @@ ul li a {
   letter-spacing: 2px;
   transition: 0.5s;
   z-index: 1;
+  font-size: 13px;
 }
 
 ul:hover li a {
@@ -235,7 +258,7 @@ ul:hover li a {
 ul li a:hover {
   transform: scale(1.4);
   z-index: 10000;
-  background: #bebebe;
+  background: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 
@@ -255,8 +278,39 @@ ul li a::before {
   opacity: 0.85;
 }
 
-.about {
-  font-family: billy;
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.flex-container .flex-item {
+  width: 50px;
+  height: 100px;
+  background-color: #000;
+  margin-top: 80px;
+}
+
+.main-container {
+  background-color: gray;
+  height: 500px;
+  width: 100%;
+}
+
+.container {
+  background-color: aqua;
+}
+
+footer {
+  height: 12vh;
+  background-color: #24252A;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .sig {
+  font-family: autograph;
 }
 
 /*# sourceMappingURL=about.css.map */

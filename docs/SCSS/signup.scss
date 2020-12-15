@@ -1,4 +1,5 @@
 @import './variables';
+@import './fonts.scss';
 
 .box
 {
@@ -40,7 +41,7 @@ h1
   width: 200px;
   outline: none;
   color: grey;
-  border-radius: 20px;
+  border-radius: 50px;
   transition: 0.25s;
 
 }
@@ -62,6 +63,22 @@ h1
   padding: 14px 40px;
   outline: none;
   color: white;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
+}
+
+a, p{
+  text-decoration: underline;
+  font-family: roboto;
+  font-size: 15px;
+  color: $grey-accent;
+}
+
+p{
+  text-decoration: none;
+  display: inline;
+}
+h2{
+  font-family: roboto;
+  font-weight: bold;
 }

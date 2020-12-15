@@ -1,19 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: infinite_stroke;
+  src: url("../Assets/Infinite_Stroke.otf");
+}
+@font-face {
+  font-family: california;
+  src: url("../Assets/California.otf");
+}
+@font-face {
+  font-family: golden_hill;
+  src: url("../Assets/GoldenHillsDEMO.ttf");
+}
+@font-face {
+  font-family: blacklist;
+  src: url("../Assets/The Blacklist.ttf");
+}
+@font-face {
+  font-family: dolce_vita;
+  src: url("../Assets/Dolce Vita.ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("../Assets/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: legend;
+  src: url("../Assets/Legends.otf");
+}
+@font-face {
+  font-family: heart_warming;
+  src: url("../Assets/Heart Warming Font by Situjuh (7NTypes).otf");
+}
+@font-face {
+  font-family: brightons;
+  src: url("../Assets/Brightons.otf");
+}
+@font-face {
+  font-family: vogue;
+  src: url("../Assets/Vogue.ttf");
+}
+@font-face {
+  font-family: lemon_milk;
+  src: url("../Assets/LEMONMILK-Regular.otf");
+}
+@font-face {
+  font-family: billy;
+  src: url("../Assets/Billy Signature.otf");
+}
+@font-face {
+  font-family: loui_george;
+  src: url("../Assets/Louis George Cafe.ttf");
+}
+@font-face {
+  font-family: autograph;
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("../Assets/Cristhyna Signature Free.ttf");
+}
+.main-survey input[type=text] {
+  border: 0;
+  background: none;
+  display: block;
+  border: 2px solid black;
+  padding: 5px;
+  width: 400px;
+  outline: none;
+  color: grey;
+  border-radius: 5px;
+  transition: 0.25s;
+  margin-top: 10px;
+}
+
 .main-survey {
   background-color: #ffffff;
-  width: 50%;
-  height: 600px;
-  padding: 30px;
-  padding-left: 40px;
-  margin-top: 80px;
-  margin-left: 400px;
-  margin: 0 auto;
+  width: 60%;
+  padding: 50px;
+  margin-top: 30px;
+  margin-left: 150px;
   overflow: auto;
+  padding-left: 100px;
 }
 
 .main-survey .survey-title {
-  font-size: larger;
-  font-family: sans-serif;
+  font-size: 30px;
+  font-family: roboto;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .main-survey .survey-area1 {
@@ -25,24 +99,29 @@
 }
 
 .main-survey .survey-content {
-  font-style: italic;
   color: #616161;
   width: 95%;
+  margin-top: 10px;
 }
 
-.checkbox {
+.main-survey .question1 {
+  color: #616161;
+  width: 95%;
+  margin-top: 10px;
+}
+
+/*.checkbox{
   width: 100%;
   text-align: center;
 }
 
-.checkbox-item {
+.checkbox-item{
   padding: 5px;
   display: flex;
   width: 25%;
   margin-left: 90px;
   color: #616161;
-}
-
+}*/
 .radio-button {
   width: 100%;
   text-align: center;
@@ -52,7 +131,8 @@
   padding: 5px;
   display: flex;
   width: 25%;
-  margin-left: 90px;
+  margin-left: 10px;
+  margin-top: 5px;
   color: #616161;
 }
 
@@ -80,7 +160,8 @@
   color: #616161;
   text-decoration: underline;
   float: right;
-  margin-right: 10px;
+  margin-right: 30px;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=survey.css.map */
