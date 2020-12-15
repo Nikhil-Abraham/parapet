@@ -43,7 +43,7 @@ header{
   margin-right: auto;
   a{
     font-family: brightons;
-    font-size: 27px;
+    font-size: 30px;
     color: white;
   }
 }
@@ -79,4 +79,8 @@ button {
 
 button:hover{
   background-color: rgba(0,136,169,0.8);
+}
+
+.active{
+  color: rgba(0,136,169,0.8);
 }

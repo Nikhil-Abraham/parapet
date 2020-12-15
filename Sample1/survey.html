@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="CSS/menu-nav.css">
   <link rel="stylesheet" href="CSS/nav.css">
   <link rel="stylesheet" href="CSS/survey.css">
+  <script defer type="text/javascript" src="JS/survey.js"></script>
   <title>
     Main Page
   </title>
@@ -25,7 +26,7 @@
           <li><a href="index.html">About</a></li>
         </ul>
       </nav>
-      <a class="cta" href="#">
+      <a class="cta" href="login.html">
         <button>Log Out</button>
       </a>
     </header>
@@ -35,7 +36,7 @@
 
 
       <div class="main-survey">
-        <form>
+        <form action="./mbrpage.html" onsubmit="return SurValidate()">
           <p class="survey-title">Rate our website!</p>
           <input type="text" name="" placeholder="Enter your name" id="name">
           <input type="text" name="" placeholder="Enter your email id" id="email">
@@ -165,10 +166,9 @@
           <p class="survey-content">Any suggestions for us?</p>
           <textarea class="survey-area1"></textarea>
 
+          <input type="submit" value="Submit" class="submit-button">
+
         </form>
-        <div class="button">
-          <a href="mbrpage.html" class="submit-button">Submit</a>
-        </div>
       </div>
 
     </div>

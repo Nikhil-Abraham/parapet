@@ -78,4 +78,16 @@ h1 {
   border: 1px solid grey;
 }
 
+a, p {
+  text-decoration: underline;
+  font-family: roboto;
+  font-size: 15px;
+  color: #24252A;
+}
+
+p {
+  text-decoration: none;
+  display: inline;
+}
+
 /*# sourceMappingURL=login.css.map */
