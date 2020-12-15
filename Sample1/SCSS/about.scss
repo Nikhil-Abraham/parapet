@@ -1,14 +1,15 @@
 @import './variables';
 @import './fonts.scss';
 
-body{
+*{
   margin: 0;
   padding: 0;
-  transform-style: preserve-3d;
-  
   box-sizing: border-box;
-  /*overflow-y: scroll;
-  overflow-x: hidden; */
+}
+
+
+body{
+  transform-style: preserve-3d;
 }
 
 .box-container{
@@ -111,7 +112,7 @@ body{
 }
 
 .heading span.heading-text{
-  background-color: black;
+  background-color: $grey-accent;
   padding: 20px;
 }
 
@@ -152,15 +153,20 @@ body{
   font-family: loui_george;
 }
 
+.nav{
+  width: 100%;
+
+}
 
 .content-block2{
+  text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  height: 100px;   
+  height: 20px;   
   padding: 20px;
-  background-color: #ffffff;
+  background-color: transparent;
   overflow: hidden;
 }
 ul{
@@ -184,6 +190,7 @@ ul li a{
   letter-spacing: 2px;
   transition: 0.5s;
   z-index: 1;
+  font-size: 13px;
 }
 
 ul:hover li a{
@@ -193,7 +200,7 @@ ul:hover li a{
 ul li a:hover{
   transform: scale(1.4);
   z-index: 10000;
-  background: rgb(190, 190, 190);
+  background: rgba(255, 255, 255, 0.50);
   opacity: 1;
 }
 
@@ -239,3 +246,16 @@ ul li a::before{
   background-color: aqua;
 }
 
+footer{
+  height: 12vh;
+  background-color: $grey-accent;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+
+  .sig{
+    font-family: autograph;
+  }
+}

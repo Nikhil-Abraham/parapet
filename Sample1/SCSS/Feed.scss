@@ -1,4 +1,5 @@
 @import './variables';
+@import './fonts.scss';
 
 
 body {
@@ -30,10 +31,10 @@ body {
 
 
 .fakeimg {
-  
   width: 80%;
   padding: 20px;
   height: 100%;
+  background-size: cover;
 }
 
 
@@ -69,7 +70,7 @@ body {
   /* background-color: cyan; */
   padding-top: 50px;
   float: left;
-  margin-left: 220px;
+  margin-left: 100px;
   padding: 0;
   height: 50%;
   width: 62%;

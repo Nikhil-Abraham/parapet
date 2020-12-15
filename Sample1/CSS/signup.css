@@ -1,3 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: infinite_stroke;
+  src: url("../Assets/Infinite_Stroke.otf");
+}
+@font-face {
+  font-family: california;
+  src: url("../Assets/California.otf");
+}
+@font-face {
+  font-family: golden_hill;
+  src: url("../Assets/GoldenHillsDEMO.ttf");
+}
+@font-face {
+  font-family: blacklist;
+  src: url("../Assets/The Blacklist.ttf");
+}
+@font-face {
+  font-family: dolce_vita;
+  src: url("../Assets/Dolce Vita.ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("../Assets/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: legend;
+  src: url("../Assets/Legends.otf");
+}
+@font-face {
+  font-family: heart_warming;
+  src: url("../Assets/Heart Warming Font by Situjuh (7NTypes).otf");
+}
+@font-face {
+  font-family: brightons;
+  src: url("../Assets/Brightons.otf");
+}
+@font-face {
+  font-family: vogue;
+  src: url("../Assets/Vogue.ttf");
+}
+@font-face {
+  font-family: lemon_milk;
+  src: url("../Assets/LEMONMILK-Regular.otf");
+}
+@font-face {
+  font-family: billy;
+  src: url("../Assets/Billy Signature.otf");
+}
+@font-face {
+  font-family: loui_george;
+  src: url("../Assets/Louis George Cafe.ttf");
+}
+@font-face {
+  font-family: autograph;
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("../Assets/Cristhyna Signature Free.ttf");
+}
 .box {
   width: 300px;
   padding: 20px 40px 20px 40px;
@@ -7,7 +68,8 @@
   transform: translate(-50%, -50%);
   background: white;
   text-align: center;
-  border: 2px solid black; }
+  border: 2px solid black;
+}
 
 h1 {
   text-align: center;
@@ -15,14 +77,16 @@ h1 {
   font-family: brightons;
   font-weight: 600;
   margin-top: 80px;
-  font-size: 40px; }
+  font-size: 40px;
+}
 
 .box h2 {
   color: black;
   font-weight: 500;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
-.box input[type="text"], .box input[type="password"], .box input[type="password"] {
+.box input[type=text], .box input[type=password], .box input[type=password] {
   border: 0;
   background: none;
   display: block;
@@ -34,13 +98,15 @@ h1 {
   outline: none;
   color: grey;
   border-radius: 20px;
-  transition: 0.25s; }
+  transition: 0.25s;
+}
 
-.box input[type="text"]:focus, .box input[type="password"]:focus, .box input[type="password"]:focus {
+.box input[type=text]:focus, .box input[type=password]:focus, .box input[type=password]:focus {
   width: 280px;
-  border-color: gray; }
+  border-color: gray;
+}
 
-.box input[type="submit"] {
+.box input[type=submit] {
   font-size: 17px;
   border: 0;
   background: black;
@@ -53,6 +119,7 @@ h1 {
   outline: none;
   color: white;
   border-radius: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=signup.css.map */

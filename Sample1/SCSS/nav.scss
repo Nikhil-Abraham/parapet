@@ -1,7 +1,8 @@
 @import './variables';
+@import './fonts.scss';
 
 *{
-  box-sizing: content-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -34,7 +35,7 @@ header{
   padding: 5px 10%;
   background-color: $grey-accent;
   position: fixed;
-  width: 80%;
+  width: 100%;
 }
 
 

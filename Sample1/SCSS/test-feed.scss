@@ -1,4 +1,5 @@
 @import './variables';
+@import './fonts.scss';
 
 .feed-area{
   margin: 0 auto;
@@ -93,16 +94,16 @@
   .grid-title{
     margin: 0 auto;
     padding: 10px 10px;
-    margin-top: 140px;
+    margin-top: 190px;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     width: 65%;
-    font-size: 25px;
   }
 
 
   .grid-title > a {
     font-family: roboto;
+    font-size: 20px;
   }
 }
 
@@ -122,12 +123,12 @@
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     width: 65%;
-    font-size: 25px;
   }
 
 
   .grid-title > a {
     font-family: roboto;
+    font-size: 20px;
   }
 }
 
@@ -142,16 +143,16 @@
   .grid-title{
     margin: 0 auto;
     padding: 10px 10px;
-    margin-top: 60px;
+    margin-top: 80px;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     width: 65%;
-    font-size: 25px;
   }
 
 
   .grid-title > a {
     font-family: roboto;
+    font-size: 20px;
   }
 }
 
@@ -163,6 +164,21 @@
   object-fit: contain;
   display: block;
   background-size: cover;
+
+  .grid-title{
+    margin: 0 auto;
+    padding: 10px 10px;
+    margin-top: 80px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 65%;
+  }
+
+
+  .grid-title > a {
+    font-family: roboto;
+    font-size: 20px;
+  }
 }
 
 .item7 {
@@ -213,4 +229,31 @@
   object-fit: contain;
   display: block;
   background-size: cover;
+}
+
+footer{
+  height: 10vh;
+}
+
+
+.item0{
+  grid-column: 1/6;
+  
+  #post-area{
+    width: 95%;
+    height: 56%;
+  }
+  .post-title{
+    float: left;
+    display: block;
+    font-family: "Poppins";
+    padding: 15px;
+    margin-left: 5px;
+  }
+
+  button{
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
 }

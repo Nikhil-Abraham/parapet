@@ -63,10 +63,6 @@
   src: url("../Assets/Louis George Cafe.ttf");
 }
 
-@font-face {
-  font-family: serif;
-}
-
 .clip-area {
   padding-top: 50px;
   float: left;

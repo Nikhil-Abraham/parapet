@@ -1,58 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: infinite_stroke;
+  src: url("../Assets/Infinite_Stroke.otf");
+}
+@font-face {
+  font-family: california;
+  src: url("../Assets/California.otf");
+}
+@font-face {
+  font-family: golden_hill;
+  src: url("../Assets/GoldenHillsDEMO.ttf");
+}
+@font-face {
+  font-family: blacklist;
+  src: url("../Assets/The Blacklist.ttf");
+}
+@font-face {
+  font-family: dolce_vita;
+  src: url("../Assets/Dolce Vita.ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("../Assets/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: legend;
+  src: url("../Assets/Legends.otf");
+}
+@font-face {
+  font-family: heart_warming;
+  src: url("../Assets/Heart Warming Font by Situjuh (7NTypes).otf");
+}
+@font-face {
+  font-family: brightons;
+  src: url("../Assets/Brightons.otf");
+}
+@font-face {
+  font-family: vogue;
+  src: url("../Assets/Vogue.ttf");
+}
+@font-face {
+  font-family: lemon_milk;
+  src: url("../Assets/LEMONMILK-Regular.otf");
+}
+@font-face {
+  font-family: billy;
+  src: url("../Assets/Billy Signature.otf");
+}
+@font-face {
+  font-family: loui_george;
+  src: url("../Assets/Louis George Cafe.ttf");
+}
+@font-face {
+  font-family: autograph;
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("../Assets/Cristhyna Signature Free.ttf");
+}
 body {
   font-family: Arial;
   padding: 0px;
-  background: #f1f1f1; }
+  background: #f1f1f1;
+}
 
 .header {
   padding: 20px;
   font-size: 40px;
   text-align: center;
-  background: white; }
+  background: white;
+}
 
 .leftcolumn {
   float: left;
-  width: 100%; }
+  width: 100%;
+}
 
 .rightcolumn {
   float: left;
   width: 25%;
-  padding-left: 20px; }
+  padding-left: 20px;
+}
 
 .fakeimg {
   width: 80%;
   padding: 20px;
-  height: 100%; }
+  height: 100%;
+  background-size: cover;
+}
 
 .card {
   background-color: white;
   padding: 20px;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 .row:after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
 .footer {
   padding: 20px;
   text-align: center;
   background: #ddd;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {
     width: 100%;
-    padding: 0; } }
+    padding: 0;
+  }
+}
 .feedarea {
   /* background-color: cyan; */
   padding-top: 50px;
   float: left;
-  margin-left: 220px;
+  margin-left: 100px;
   padding: 0;
   height: 50%;
   width: 62%;
-  margin-top: 80px; }
+  margin-top: 80px;
+}
 
 .containerarea {
   margin-top: 40px;
@@ -61,6 +134,7 @@ body {
   background-color: white;
   padding: 20px;
   border: solid 0.5px #616161;
-  margin-left: 162px; }
+  margin-left: 162px;
+}
 
 /*# sourceMappingURL=Feed.css.map */
