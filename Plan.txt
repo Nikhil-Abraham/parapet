@@ -1,0 +1,11 @@
+Parapet:
+  1.Login/Signup
+  2.DB for Login/Signup
+  3.Session
+  4.Feed Page
+  5.DB for Feed
+
+2nd June: Home/Login/Signup
+3rd June: Create and Link Database
+4th June: Valid User and Login/SignUp + Session.
+          
