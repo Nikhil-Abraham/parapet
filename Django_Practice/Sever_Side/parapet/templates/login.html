@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>login page</title>
-  <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
-  <link rel="stylesheet" href="CSS/login.css" type="text/css">
-  <script defer type="text/javascript" src="JS/login.js"></script>
-</head>
-<body>
+{% extends "login-layout.html" %}
+
+{% block body %}
+
   <h1>Parapet</h1>
   <form class ="box" id="form" action="mbrpage.html" onsubmit="return validate()">
   <h2>Login </h2>
@@ -16,6 +10,5 @@
   <input type="submit"  value="Login" id="login-submit">
   <p>Not a memeber? </p><a href="./SignUp.html">Sign Up</a>
   </form>
-  
-</body>
-</html>
+
+  {% endblock %}
