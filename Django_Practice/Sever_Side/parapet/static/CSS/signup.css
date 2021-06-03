@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: infinite_stroke;
+  src: url("../Assets/Infinite_Stroke.otf");
+}
+@font-face {
+  font-family: california;
+  src: url("../Assets/California.otf");
+}
+@font-face {
+  font-family: golden_hill;
+  src: url("../Assets/GoldenHillsDEMO.ttf");
+}
+@font-face {
+  font-family: blacklist;
+  src: url("../Assets/The Blacklist.ttf");
+}
+@font-face {
+  font-family: dolce_vita;
+  src: url("../Assets/Dolce Vita.ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("../Assets/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: legend;
+  src: url("../Assets/Legends.otf");
+}
+@font-face {
+  font-family: heart_warming;
+  src: url("../Assets/Heart Warming Font by Situjuh (7NTypes).otf");
+}
+@font-face {
+  font-family: brightons;
+  src: url("../Assets/Brightons.otf");
+}
+@font-face {
+  font-family: vogue;
+  src: url("../Assets/Vogue.ttf");
+}
+@font-face {
+  font-family: lemon_milk;
+  src: url("../Assets/LEMONMILK-Regular.otf");
+}
+@font-face {
+  font-family: billy;
+  src: url("../Assets/Billy Signature.otf");
+}
+@font-face {
+  font-family: loui_george;
+  src: url("../Assets/Louis George Cafe.ttf");
+}
+@font-face {
+  font-family: autograph;
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("../Assets/Cristhyna Signature Free.ttf");
+}
+.box {
+  width: 300px;
+  padding: 20px 40px 20px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  text-align: center;
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+  color: #281c18;
+  font-family: brightons;
+  font-weight: 600;
+  margin-top: 80px;
+  font-size: 40px;
+}
+
+.box h2 {
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.box input[type=text], .box input[type=password], .box input[type=password] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid gray;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: grey;
+  border-radius: 50px;
+  transition: 0.25s;
+}
+
+.box input[type=text]:focus, .box input[type=password]:focus, .box input[type=password]:focus {
+  width: 280px;
+  border-color: gray;
+}
+
+.box input[type=submit] {
+  font-size: 17px;
+  border: 0;
+  background: black;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid black;
+  border-color: black;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+a, p {
+  text-decoration: underline;
+  font-family: roboto;
+  font-size: 15px;
+  color: #24252A;
+}
+
+p {
+  text-decoration: none;
+  display: inline;
+}
+
+h2 {
+  font-family: roboto;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=signup.css.map */
