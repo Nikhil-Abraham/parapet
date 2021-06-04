@@ -15,8 +15,12 @@
     <ul>
       <li data-text="Home"><a href="main.html">Home</a></li>
       <li data-text="Top Stories"><a href="top-stories.html">Top Stories</a></li>
-      <li data-text="Login"><a href="{% url 'login' %}">Login</a></li>
-      <li data-text="Sign_Up"><a href="{% url 'signup' %}">Sign Up</a></li>
+      {% if user.is_authenticated %}
+      <li data-text="Logout"><a href="logout">Logout</a></li>
+      {% else %}
+      <li data-text="Login"><a href="login">Login</a></li>
+      <li data-text="Sign_Up"><a href="register">Sign Up</a></li>
+      {% endif %}
     </ul>
   </div>
 

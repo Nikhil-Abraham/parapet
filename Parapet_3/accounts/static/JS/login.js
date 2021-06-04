@@ -21,7 +21,7 @@ function validate(){
     document.getElementById("email").placeholder="";
     flag1 = 1;
   }
-  if(password.length <6){
+  if(password.length <4){
     document.getElementById("password").style.border="1px solid red";
     document.getElementById("password").placeholder="invalid password";
     console.log("Pass-Error!")
