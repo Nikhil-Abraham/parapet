@@ -27,7 +27,7 @@ def register(request):
     else:
       messages.info(request, "Passwords Dont Match")
       return redirect('register')
-    return redirect('index')
+    return redirect('social:index')
 
   else:
     return render(request, "SignUp.html")
@@ -42,7 +42,7 @@ def login(request):
 
     if user is not None:
       auth.login(request, user)
-      return redirect('index')
+      return redirect('social:index')
     else:
       messages.info(request, "Invalid Credentials")
       return redirect('login')

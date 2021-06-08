@@ -9,7 +9,7 @@ function validate(){
   var flag1=0;
   var flag2=0;
 
-  if(email.length<9){
+  if(email.length<5){
     document.getElementById("email").style.border="1px solid red";
     document.getElementById("email").placeholder="invalid username";
     console.log("Email-Error!");
