@@ -8,4 +8,8 @@ Parapet:
 2nd June: Home/Login/Signup
 3rd June: Create and Link Database
 4th June: Valid User and Login/SignUp + Session.
+
+DONE
+
+TODO: feed !!!!
           
