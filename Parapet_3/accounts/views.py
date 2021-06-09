@@ -18,7 +18,7 @@ def register(request):
     if password1 == password2:
       if User.objects.filter(username=username).exists():
         messages.info(request, "User Exists")
-        return redirect('register')
+        return redirect('accounts:register')
       else: 
         user = User.objects.create_user(username=username,email=email, first_name=first_name, last_name=last_name, password=password1)
         user.save()
@@ -27,7 +27,7 @@ def register(request):
         
     else:
       messages.info(request, "Passwords Dont Match")
-      return redirect('register')
+      return redirect('accounts:register')
     return redirect('social:index')
 
   else:
@@ -46,7 +46,7 @@ def login(request):
       return redirect('social:index')
     else:
       messages.info(request, "Invalid Credentials")
-      return redirect('login')
+      return redirect('accounts:login')
 
 
   else:
