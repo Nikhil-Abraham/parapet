@@ -27,7 +27,7 @@
         </div>
    
     
-          <form method="POST">
+          <form method="POST" class="post_form">
             {% csrf_token %}
             {{ form }}
               <button class="btn_submit">Submit</button>
@@ -38,7 +38,7 @@
         <div class="  feed_section">
           <div class=" feed_article">
             <p class="post_author">@{{ post.author }}  {{ post.created_on }}</p>
-            <p>{{ post.body }}</p>
+            <p class="post_body">{{ post.body }}</p>
           </div>
         </div>
       {% endfor %}
