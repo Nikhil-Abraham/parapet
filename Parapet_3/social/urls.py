@@ -6,5 +6,5 @@ app_name = 'social'
 urlpatterns = [
   path('',views.index,name='index'),
   path('logout_f',views.logout_f,name='logout_f'),
-  path('profiles/<str:pk>', views.profile,name="profile")
+  # path('profiles/<str:pk>', views.profile,name="profile")
 ]
