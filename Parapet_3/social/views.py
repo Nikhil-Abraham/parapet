@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Post
 from .forms import PostForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 def index(request):
@@ -22,9 +23,22 @@ def index(request):
     posts = Post.objects.all().order_by('-created_on')
     form = PostForm()
 
-  context = {
-    "post_list": posts,
-    'form' : form,
-  }
-  return render(request, 'social/index.html', context)
+    context = {
+      "post_list": posts,
+      'form' : form,
+    }
+    return render(request, 'social/index.html', context)
   
+def profile(request, pk):
+  user = User.objects.get(id=pk)
+  posts = user.post_set.all().order_by('-created_on')
+
+  context = {
+    'post_list' : posts, 
+    'user' : user
+  }
+
+  return render(request, 'social/profile.html', context)
+
+def feed_logout(request):
+  return redirect('accounts:logout')
