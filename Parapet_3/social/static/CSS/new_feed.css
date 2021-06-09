@@ -1,34 +1,54 @@
 .feed_area{
   background-color: rgba(255, 255, 255, 0.8);
   width: 50%;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .feed_section{
   width: 100%;
   text-align: center;
+  margin-top: 10px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border: solid 0.5px #616161;
+  margin-bottom: 30px;
 }
 
 .feed_article{
   width: 100%;
+  text-align: left;
 }
 
 .post_title{
   font-size: larger;
   color: rgb(29, 29, 29);
   font-family: Poppins, sans-serif;
-  padding: 10px;
   text-align: left;
+
+  display: inline-block;
+  width: 100%;
+  
+}
+
+.post_author{
+  text-align: left;
+  color: rgb(29, 29, 29);
+  font-family: Poppins, sans-serif;
+  font-size: small;
+
 }
 
 .title_field{
   display: block;
   width: 100%;
   margin: 10px;
+  border: solid 0.5px #616161;
 }
 
 .text_area_field{
   display: block;
   width: 100%;
   margin: 10px;
+  border: solid 0.5px #616161;
 }
