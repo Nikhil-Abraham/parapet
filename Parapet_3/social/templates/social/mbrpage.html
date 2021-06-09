@@ -1,0 +1,60 @@
+{% extends 'social/base.html' %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+{% block content %}
+
+
+<div class="nav__container">
+  <header>
+    <div class="title"><a href="mbrpage.html">Parapet</a></div>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="./top-stories.html">Top Stories</a></li>
+        <li><a href="./newsletter.html">Newsletter</a></li>
+        <li><a href="./index.html">About</a></li>
+      </ul>
+    </nav>
+    <a href="logout_f">
+      Log Out
+    </a>
+  </header>
+</div>
+
+
+<div class="feed-area">
+    <div class="container feed_area">
+      <div class="row  mt-3 feed_section">
+        <div class="col-md-5  col-sm-12 feed_article">
+          Add A Post !
+        </div>
+      </div>
+      <div class="row  mt-3 feed_section">
+        <div class="col-md-5  col-sm-12 border-bottom feed_article">
+          <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+              <button class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+      {% for post in post_list %}
+        <div class="row  mt-3 feed_section">
+          <div class="col-md-5  col-sm-12 border-bottom feed_article">
+            <p class="feed_title"><strong>
+                <a class="post_link post_title" href="#">{{ post.title }}</a>
+              </strong></p>
+            <p class="post_author">@{{ post.author }}  {{ post.created_on }}</p>
+            <p>{{ post.body }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+</div>
+
+
+
+{% endblock content %}

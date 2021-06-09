@@ -17,7 +17,7 @@ def index(request):
     "post_list": posts,
     'form' : form,
     }
-    return render(request, 'social/index.html', context)
+    return render(request, 'social/mbrpage.html', context)
 
   else:
     posts = Post.objects.all().order_by('-created_on')
@@ -27,7 +27,7 @@ def index(request):
       "post_list": posts,
       'form' : form,
     }
-    return render(request, 'social/index.html', context)
+    return render(request, 'social/mbrpage.html', context)
   
 def profile(request, pk):
   user = User.objects.get(id=pk)
@@ -40,5 +40,5 @@ def profile(request, pk):
 
   return render(request, 'social/profile.html', context)
 
-def feed_logout(request):
+def logout_f(request):
   return redirect('accounts:logout')

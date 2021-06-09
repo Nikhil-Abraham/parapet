@@ -1,0 +1,34 @@
+.feed_area{
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 50%;
+  padding-top: 20px;
+}
+
+.feed_section{
+  width: 100%;
+  text-align: center;
+}
+
+.feed_article{
+  width: 100%;
+}
+
+.post_title{
+  font-size: larger;
+  color: rgb(29, 29, 29);
+  font-family: Poppins, sans-serif;
+  padding: 10px;
+  text-align: left;
+}
+
+.title_field{
+  display: block;
+  width: 100%;
+  margin: 10px;
+}
+
+.text_area_field{
+  display: block;
+  width: 100%;
+  margin: 10px;
+}
