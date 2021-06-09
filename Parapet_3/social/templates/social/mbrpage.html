@@ -9,9 +9,11 @@
 <div class="sidenav">
   <div class="title"><a href="mbrpage.html">Parapet</a></div>
   <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="#">Explore</a>
+  <a href="#">Newsletter</a>
+  <a href="#">Top-Stories</a>
+  <a href="#">Logout</a>
+  
 
   
 </div>
@@ -19,23 +21,22 @@
 
 
     <div class="container feed_area">
-      <div class="row  mt-3 feed_section">
-        <div class="col-md-5  col-sm-12 feed_article">
+      <div class="post_area">
+        <div class=" post_area_title">
           {{ first_name }} {{ last_name }}
         </div>
-      </div>
-      <div class="row  mt-3 feed_section">
-        <div class="col-md-5  col-sm-12 border-bottom feed_article">
+   
+    
           <form method="POST">
             {% csrf_token %}
             {{ form }}
-              <button class="btn btn-success">Submit</button>
+              <button class="btn_submit">Submit</button>
           </form>
-        </div>
+        
       </div>
       {% for post in post_list %}
-        <div class="row  mt-3 feed_section">
-          <div class="col-md-5  col-sm-12 border-bottom feed_article">
+        <div class="  feed_section">
+          <div class=" feed_article">
             <p class="post_author">@{{ post.author }}  {{ post.created_on }}</p>
             <p>{{ post.body }}</p>
           </div>
