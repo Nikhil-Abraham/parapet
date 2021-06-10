@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
 from .models import Post,PostArticle
+from accounts.models import Parapet_User
 from .forms import PostArticleForm,PostFeedForm
 from django.contrib.auth.models import User
 
@@ -16,7 +17,7 @@ def index(request):
     form = PostFeedForm(request.POST)
     if form.is_valid():
       new_post = form.save(commit=False)
-      new_post.author = request.user
+      new_post.author = Parapet_User.objects.get(user = request.user)
       new_post.save()
 
     return HttpResponseRedirect(request.path)
@@ -26,13 +27,12 @@ def index(request):
     form = PostFeedForm()
 
     user = request.user
-    current_user = User.objects.get(username = user)
+    current_user = Parapet_User.objects.get(user = user)
 
     context = {
       "post_list": posts,
       'form' : form,
-      'first_name' : current_user.first_name,
-      'last_name' : current_user.last_name,
+      'user': current_user
     }
     return render(request, 'social/mbrpage.html', context)
 
@@ -46,3 +46,16 @@ def explore(request):
   }
 
   return render(request, 'social/explore.html', context)
+
+@login_required(login_url='accounts:login')
+def user_profile(request):
+  user = request.user
+  current_user = Parapet_User.objects.get(user = user)
+
+  posts = Post.objects.all().filter(author=current_user)
+
+  context = {
+    'user': current_user,
+    'post_list':posts,
+  }
+  return render(request, 'social/user_profile.html', context)

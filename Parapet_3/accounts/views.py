@@ -1,3 +1,4 @@
+from accounts.models import Parapet_User
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -26,13 +27,16 @@ def register(request):
       else: 
         user = User.objects.create_user(username=username,email=email, first_name=first_name, last_name=last_name, password=password1)
         user.save()
-        user = auth.authenticate(username=username,password=password1)
-        auth.login(request, user)
-        
+        Parapet_User.objects.create(
+          user=user,
+          name=user.first_name+" "+user.last_name,
+          email=user.email,
+          username=user.email
+        )
+        return redirect('accounts:login')  
     else:
       messages.info(request, "Passwords Dont Match")
       return redirect('accounts:register')
-    return redirect('social:index')
 
   else:
     return render(request, "SignUp.html")
