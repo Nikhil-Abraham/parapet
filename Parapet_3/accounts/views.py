@@ -2,10 +2,14 @@ from django.contrib.auth.models import User,auth
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
+from .decorators import unauthenticated_user
+
+
 # Create your views here.
 def index(request):
   return render(request, "index.html")
 
+@unauthenticated_user
 def register(request):
   if request.method == "POST":
     first_name = request.POST["first_name"]
@@ -33,7 +37,7 @@ def register(request):
   else:
     return render(request, "SignUp.html")
 
-
+@unauthenticated_user
 def login(request):
   if request.method == "POST":
     username = request.POST["username"]

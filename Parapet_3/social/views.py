@@ -1,11 +1,15 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+
+from django.contrib.auth.decorators import login_required
+
 from .models import Post,PostArticle
 from .forms import PostArticleForm,PostFeedForm
 from django.contrib.auth.models import User
 
 # Create your views here.
+@login_required(login_url='accounts:login')
 def index(request):
   if request.method == "POST":
     posts = Post.objects.all().order_by('-created_on')
@@ -15,15 +19,6 @@ def index(request):
       new_post.author = request.user
       new_post.save()
 
-    # user = request.user
-    # current_user = User.objects.get(username = user)
-
-    # context = {
-    #   "post_list": posts,
-    #   'form' : form,
-    #   'first_name' : current_user.first_name,
-    #   'last_name' : current_user.last_name,
-    # }
     return HttpResponseRedirect(request.path)
 
   else:
@@ -41,5 +36,13 @@ def index(request):
     }
     return render(request, 'social/mbrpage.html', context)
 
-def logout_f(request):
-  return redirect('accounts:logout')
+@login_required(login_url='accounts:login')
+def explore(request):
+
+  articles = PostArticle.objects.all().order_by('-created_on')
+
+  context = {
+    'article_list': articles
+  }
+
+  return render(request, 'social/explore.html', context)

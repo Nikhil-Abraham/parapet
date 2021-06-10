@@ -1,23 +1,14 @@
 {% extends 'social/base.html' %}
 
+{% load static %}
+
 {% block title %}
   Parapet.org
 {% endblock title %}
 
 {% block content %}
 
-<div class="sidenav">
-  <div class="title"><a href="mbrpage.html">Parapet</a></div>
-  <a href="#">About</a>
-  <a href="#">Explore</a>
-  <a href="#">Newsletter</a>
-  <a href="#">Top-Stories</a>
-  <a href="#">Logout</a>
-  
-
-  
-</div>
-
+{% include 'social/nav.html' %}
 
 
     <div class="container feed_area">

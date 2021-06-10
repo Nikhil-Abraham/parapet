@@ -1,20 +1,13 @@
 
-{% block navbar %}
 
-<div class="nav__container">
-  <header>
-    <div class="title"><a href="mbrpage.html">Parapet</a></div>
-    <nav>
-      <ul class="nav__links">
-        <li><a href="./top-stories.html">Top Stories</a></li>
-        <li><a href="./newsletter.html">Newsletter</a></li>
-        <li><a href="./index.html">About</a></li>
-      </ul>
-    </nav>
-    <a class="cta" href="{% social: url 'feed_logout' %}">
-      <button>Log Out</button>
-    </a>
-  </header>
+<div class="sidenav">
+  <div class="title"><a href="{% url 'social:index' %}">Parapet</a></div>
+  <a href="{% url 'accounts:index' %}">About</a>
+  <a href="{% url 'social:explore' %}">Explore</a>
+  <a href="#">Newsletter</a>
+  <a href="#">Top-Stories</a>
+  <a href="{% url 'accounts:logout' %}">Logout</a>
+  
+
+  
 </div>
-
-{% endblock navbar %}

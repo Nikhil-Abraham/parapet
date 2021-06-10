@@ -28,6 +28,10 @@
   width: 100%;
   text-align: left;
   margin: 0px;
+  overflow: scroll;
+}
+.article_body{
+  height: 100px;
 }
 
 .post_title{
