@@ -1,0 +1,58 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+{% block content %}
+
+{% include 'social/nav.html' %}
+
+
+    <div class="container feed_area">
+      <div class="profile_parent">
+      <div class="profile_settings_area ">
+        <div class="settings_image">
+          <img class="profile-pic setting_pic" src="{{request.user.parapet_user.profile_pic.url}}">
+        </div>
+        <div class=" post_area_title settings_name">
+          {{ user.name }}
+        </div>
+        <div class=" username">
+          @{{ user.username }}
+        </div>
+      
+      <div class="setting_update">
+        <form method="post" action="" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+
+          <input type="submit" value="Update" class="btn btn-info">
+        </form>
+      </div>
+    </div>
+    </div>
+      {% for post in post_list %}
+        <div class="  feed_section">
+          <div class=" feed_article">
+              <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
+            <span class="post_author">{{ post.author.name }}</span><span class="post_author username">@{{ post.author.username }}</span>   <span class="datetime">{{ post.created_on }}</span>
+            <p class="post_body">{{ post.body }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+
+
+    <!-- GLOBAL CHAT SECTION -->
+
+    <div class="chat_area">
+      <h3>Global Chat</h3>
+    </div>
+
+
+
+{% endblock content %}

@@ -1,6 +1,7 @@
 from django import forms
 from django.forms.widgets import Widget
 from .models import Post, PostArticle
+from accounts.models import Parapet_User
 
 class PostFeedForm(forms.ModelForm):
   
@@ -36,8 +37,12 @@ class PostArticleForm(forms.ModelForm):
       'class' : 'text_area_field',
     })
   )
-
-
   class Meta:
     model = PostArticle
     fields = ['title','body']
+
+class UserForm(forms.ModelForm):
+  class Meta:
+    model = Parapet_User
+    fields = '__all__'
+    exclude = ['user']

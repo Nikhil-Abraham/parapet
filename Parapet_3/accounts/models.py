@@ -13,8 +13,8 @@ class Parapet_User(models.Model):
   phone = CharField(max_length=60, null=True)
   email = CharField(max_length=60, null=True)
   username = CharField(max_length=60, null=True)
-  profile_pic = models.ImageField(default='static/media/default-profile.jpg')
+  profile_pic = models.ImageField(upload_to = 'Profiles', default = 'Profiles/default-profile.jpg')
   date_created = models.DateTimeField(auto_now_add=True, null=True)
 
   def __str__(self):
-    return self.name
+    return self.name 

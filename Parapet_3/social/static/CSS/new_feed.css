@@ -200,3 +200,32 @@
   display: flex;
   margin-top: 20px;
 }
+
+.profile_settings_area{
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.profile_parent{
+  margin-top: 10px;
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-bottom: 10px;
+}
+
+.setting_pic{
+  width: 120px;
+  height: 120px;
+}
+
+.settings_name{
+  font-size: xx-large;
+}
+.setting_update{
+  padding: 20px;
+  margin-top: 20px;
+}

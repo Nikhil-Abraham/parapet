@@ -8,17 +8,6 @@ from django.contrib.auth.models import User
 from accounts.models import Parapet_User
 
 
-# class Parapet_User(models.Model):
-#   user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-#   name = CharField(max_length=60, null=True)
-#   phone = CharField(max_length=60, null=True)
-#   email = CharField(max_length=60, null=True)
-#   date_created = models.DateTimeField(auto_now_add=True, null=True)
-
-#   def __str__(self):
-#     return self.name
-  
-
 class Post(models.Model):
   body = models.TextField()
   created_on = models.DateTimeField(default=timezone.now)
@@ -30,3 +19,6 @@ class PostArticle(models.Model):
   body = models.TextField()
   created_on = models.DateTimeField(default=timezone.now)
   author = models.ForeignKey(Parapet_User, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return self.title

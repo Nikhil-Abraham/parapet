@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 from .models import Post,PostArticle
 from accounts.models import Parapet_User
-from .forms import PostArticleForm,PostFeedForm
+from .forms import PostArticleForm, PostFeedForm, UserForm
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -59,3 +59,25 @@ def user_profile(request):
     'post_list':posts,
   }
   return render(request, 'social/user_profile.html', context)
+
+@login_required(login_url='accounts:login')
+def settings(request):
+  user = request.user
+  p_user = user.parapet_user
+  current_user = Parapet_User.objects.get(user = user)
+
+  posts = Post.objects.all().filter(author=current_user)
+
+  form = UserForm(instance=p_user)
+
+  if request.method == 'POST':
+    form = UserForm(request.POST, request.FILES,instance=p_user)
+    if form.is_valid():
+      form.save()
+
+  context = {
+    'user':current_user,
+    'post_list':posts,
+    'form':form,
+  }
+  return render(request, 'social/settings.html', context)
