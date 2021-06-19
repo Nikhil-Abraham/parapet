@@ -21,8 +21,11 @@
       </div>
       {% for article in article_list %}
         <div class="feed_section">
+         
           <div class="feed_article">
+            <a href="{% url 'social:article' %}">
             <p class="article_title">{{ article.title }}</p>
+          </a>
             <p class="post_author">@{{ article.author }}  {{ article.created_on }}</p>
             <p class="article_body">{{ article.body }}</p>
           </div>

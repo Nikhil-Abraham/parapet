@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, request
 from django.urls import reverse
 
 from django.contrib.auth.decorators import login_required
@@ -81,3 +81,15 @@ def settings(request):
     'form':form,
   }
   return render(request, 'social/settings.html', context)
+
+
+@login_required(login_url='accounts:login')
+def article(request):
+    articles = PostArticle.objects.filter(title='ROCK MARTIN')
+
+    context = {
+      'article_item':articles,
+    }
+    return render(request, 'social/article_item.html', context)
+
+  
