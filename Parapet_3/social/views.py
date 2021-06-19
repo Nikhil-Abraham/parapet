@@ -84,8 +84,8 @@ def settings(request):
 
 
 @login_required(login_url='accounts:login')
-def article(request):
-    articles = PostArticle.objects.filter(title='ROCK MARTIN')
+def article(request,art):
+    articles = PostArticle.objects.filter(title=art.title)
 
     context = {
       'article_item':articles,
