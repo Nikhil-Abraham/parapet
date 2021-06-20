@@ -10,5 +10,23 @@
 
 {% include 'social/nav.html' %}
 
+<div class="container feed_area">
+  <h1>    </h1>
+  {% for article in post_item %}
+    <div class="feed_section">
+         
+    <div class="feed_article">
+      <p class="article_title">{{ article.title }}</p>
+
+      <p class="post_author">@{{ article.author }}  {{ article.created_on }}</p>
+      <p class="article_body">{{ article.body }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+
+
+
+</div>
 
 {% endblock content %}
