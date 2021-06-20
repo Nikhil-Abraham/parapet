@@ -11,22 +11,25 @@
 {% include 'social/nav.html' %}
 
 <div class="container feed_area">
-  <h1>    </h1>
-  {% for article in post_item %}
+
+  {% if article_item %}
     <div class="feed_section">
          
     <div class="feed_article">
-      <p class="article_title">{{ article.title }}</p>
 
-      <p class="post_author">@{{ article.author }}  {{ article.created_on }}</p>
-      <p class="article_body">{{ article.body }}</p>
+      <!-- {{ article_item }} -->
+
+      <p class="article_title">{{ article_item.title }}</p>
+
+      <p class="post_author">@{{ article_item.author }}  {{ article_item.created_on }}</p>
+      <p class="article_body">{{ article_item.body }}</p>
     </div>
+    {% else %}
+    <p>Error article not found</p>
+    {% endif %}
   </div>
-{% endfor %}
-
-
-
-
 </div>
+
+<!-- {{ article_item }} -->
 
 {% endblock content %}

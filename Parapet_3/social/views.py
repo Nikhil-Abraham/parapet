@@ -84,13 +84,12 @@ def settings(request):
 
 @login_required(login_url='accounts:login')
 def article(request,pk):
-    articles = PostArticle.objects.filter(title=pk.title)
-    post = PostArticle.objects.all()
+    article = PostArticle.objects.all().get(id=pk)
+    # post = PostArticle.objects.all()
 
     context = {
-      'article_item':articles,
-      'post_item':post,
-          }
+      'article_item':article,
+    }
     return render(request, 'social/article_item.html', context)
 
   

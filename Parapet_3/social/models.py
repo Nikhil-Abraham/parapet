@@ -21,4 +21,4 @@ class PostArticle(models.Model):
   author = models.ForeignKey(Parapet_User, on_delete=models.CASCADE)
 
   def __str__(self):
-    return self.title
+    return f"{self.title} : {self.body}"
