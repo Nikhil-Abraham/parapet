@@ -23,7 +23,7 @@
         <div class="feed_section">
          
           <div class="feed_article">
-            <a href="{% url 'social:article' %}">
+            <a href="{% url 'social:article' pk=article.title %}">
             <p class="article_title">{{ article.title }}</p>
           </a>
             <p class="post_author">@{{ article.author }}  {{ article.created_on }}</p>

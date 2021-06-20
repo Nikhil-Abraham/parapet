@@ -38,7 +38,6 @@ def index(request):
 
 @login_required(login_url='accounts:login')
 def explore(request):
-
   articles = PostArticle.objects.all().order_by('-created_on')
 
   context = {
@@ -84,8 +83,8 @@ def settings(request):
 
 
 @login_required(login_url='accounts:login')
-def article(request,art):
-    articles = PostArticle.objects.filter(title=art.title)
+def article(request,pk):
+    articles = PostArticle.objects.filter(title=pk.title)
 
     context = {
       'article_item':articles,

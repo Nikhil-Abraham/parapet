@@ -10,5 +10,5 @@ urlpatterns = [
   path('user_profile/',views.user_profile,name='user_profile'),
   # path('profiles/<str:pk>', views.profile,name="profile")
 
-  path('explore/article/<art>',views.article,name='article'),
+  path('explore/article/<pk>',views.article,name='article'),
 ]
