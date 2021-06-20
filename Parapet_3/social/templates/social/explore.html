@@ -23,8 +23,8 @@
         <div class="feed_section">
          
           <div class="feed_article">
-            <a href="{% url 'social:article' pk=article.id %}" class="stretched-link">          </a>
-            <p class="article_title">{{ article.title }}</p>
+                    
+            <div  class="article_title"> <a href="{% url 'social:article' pk=article.id %}">{{ article.title }}</a></div> 
             <p class="post_author">@{{ article.author }}  {{ article.created_on }}</p>
             <p class="article_body" id="box">{{ article.body }}</p>
           </div>
