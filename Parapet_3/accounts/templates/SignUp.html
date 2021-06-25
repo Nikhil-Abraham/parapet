@@ -1,8 +1,11 @@
 {% extends "login-layout.html" %}
 
 {% block body %}
-  <h1>Parapet</h1>
-  <form class ="box" action="register" onsubmit="return validate()" method="post">
+
+ <h1>Parapet</h1>
+  <div class="bg-image"></div>
+  
+  <form class ="s_box" action="register" onsubmit="return validate()" method="post">
     {% csrf_token %}
 
   <h2>Sign Up </h2>
