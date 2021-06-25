@@ -13,9 +13,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: rgb(221, 122, 122);
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid rgb(155, 9, 9);
 }
 
 h1 {
