@@ -24,9 +24,9 @@
          
           <div class="feed_article">
                     
-            <div  class="article_title"> <a href="{% url 'social:article' pk=article.id %}">{{ article.title }}</a></div> 
+            <p class="article_title"><a href="{% url 'social:article' pk=article.id %}">{{ article.title }}</a></p> 
             <p class="post_author">@{{ article.author }}  {{ article.created_on }}</p>
-            <p class="article_body" id="box">{{ article.body }}</p>
+            <p class="article_body">{{ article.body }}</p>
           </div>
         </div>
       {% endfor %}
@@ -40,7 +40,7 @@
       <h3>Trending</h3>
     </div>
 
-    <script src="jquery-3.5.1.min.js">jQuery('#box').html(jQuery('#box').html().substr(0,30) + '...');</script>
+    
 
 
 {% endblock content %}

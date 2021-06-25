@@ -22,6 +22,7 @@
   background-color: white;
   padding: 20px;
   margin-bottom: 5px;
+  height: 250px;
 
 }
 
@@ -30,9 +31,6 @@
   height: 100px;
   text-align: left;
   margin: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  position: relative;
 
 }
 
@@ -42,9 +40,9 @@
 
 }
 .article_body{
-  
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden;
+  height: 100px;
+  white-space: normal;
 }
 
 .post_title{
@@ -247,4 +245,24 @@
   width: 100%;
   text-align: left;
   margin: 0px;
+}
+
+.Article_Area{
+  height: 100%;
+}
+
+.Article_Section_Area{
+  background-color: white;
+  padding: 10px;
+  height: auto;
+}
+
+.post_section{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 5px;
+  height: auto;
 }

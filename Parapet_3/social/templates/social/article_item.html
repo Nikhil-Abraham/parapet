@@ -10,12 +10,11 @@
 
 {% include 'social/nav.html' %}
 
-<div class="container feed_area">
+<div class="container feed_area Article_Area">
 
   {% if article_item %}
-    <div class="feed_section " >
-         
-    <div class="feed_article article_section">
+    <div class="Article_Section_Area" >
+        
 
       <!-- {{ article_item }} -->
 
@@ -23,7 +22,6 @@
 
       <p class="post_author">@{{ article_item.author }}  {{ article_item.created_on }}</p>
       <p >{{ article_item.body }}</p>
-    </div>
     {% else %}
     <p>Error article not found</p>
     {% endif %}
