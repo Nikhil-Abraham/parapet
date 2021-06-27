@@ -1,0 +1,24 @@
+{% extends "login-layout.html" %}
+
+{% block body %}
+
+ <h1>Parapet</h1>
+  <div class="bg-image"></div>
+  
+  <form class ="s_box" action="register" onsubmit="return validate()" method="post">
+    {% csrf_token %}
+
+  <h2>Sign Up </h2>
+  <input type="text" name="first_name" placeholder="First Name" id="name" required>
+  <input type="text" name="last_name" placeholder="Last Name" required>
+  <input type="text" name="email" placeholder="Email" id="email">
+  <input type="password" name="password1" placeholder="Password" id="pass">
+  <input type="password" name="password2" placeholder="Verify Password" id="pass2">
+  <input type="submit"  value="Sign Up">
+  <p>Already a memeber? </p><a href="login">Login</a>
+  </form>
+  {% for message in messages %}
+    <div>{{ message }}</div>
+  {% endfor %}
+
+{% endblock %}

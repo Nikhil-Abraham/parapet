@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: infinite_stroke;
+  src: url("../Assets/Infinite_Stroke.otf");
+}
+@font-face {
+  font-family: california;
+  src: url("../Assets/California.otf");
+}
+@font-face {
+  font-family: golden_hill;
+  src: url("../Assets/GoldenHillsDEMO.ttf");
+}
+@font-face {
+  font-family: blacklist;
+  src: url("../Assets/The Blacklist.ttf");
+}
+@font-face {
+  font-family: dolce_vita;
+  src: url("../Assets/Dolce Vita.ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("../Assets/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: legend;
+  src: url("../Assets/Legends.otf");
+}
+@font-face {
+  font-family: heart_warming;
+  src: url("../Assets/Heart Warming Font by Situjuh (7NTypes).otf");
+}
+@font-face {
+  font-family: brightons;
+  src: url("../Assets/Brightons.otf");
+}
+@font-face {
+  font-family: vogue;
+  src: url("../Assets/Vogue.ttf");
+}
+@font-face {
+  font-family: lemon_milk;
+  src: url("../Assets/LEMONMILK-Regular.otf");
+}
+@font-face {
+  font-family: billy;
+  src: url("../Assets/Billy Signature.otf");
+}
+@font-face {
+  font-family: loui_george;
+  src: url("../Assets/Louis George Cafe.ttf");
+}
+@font-face {
+  font-family: autograph;
+  src: url("../Assets/Autograf_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: signature;
+  src: url("../Assets/Cristhyna Signature Free.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../Assets/bg-new1.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+li, a, button {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #edf0f1;
+}
+
+header {
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 10%;
+  background-color: #24252A;
+  position: fixed;
+  width: 100%;
+}
+
+.title {
+  margin-right: auto;
+}
+.title a {
+  font-family: brightons;
+  font-size: 30px;
+  color: white;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 5px 20px;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-left: 20px;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.active {
+  color: rgba(0, 136, 169, 0.8);
+}
+
+/*# sourceMappingURL=nav.css.map */

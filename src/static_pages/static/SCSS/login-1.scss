@@ -1,0 +1,33 @@
+@import './variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+}
+
+.container{
+  display: flex;
+  width: 100%;
+height: 100vh;
+background-image: url("../Assets/bg-new6.jpg");
+background-size: cover;
+height: 100vh;
+width: 100%;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#left-box {
+  flex: 0 0 40%;
+  height: 100%;
+  position: relative;
+  background-color: rgba($color: #ffffff, $alpha: 0.25);
+  backdrop-filter: blur(10px);
+}
+
+#left-box h2 {
+}

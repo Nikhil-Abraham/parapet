@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parapet.org</title>
+  <link rel="sylesheet" href="{% static '/CSS/fonts.css' %}">
+  <link rel="stylesheet" href="{% static '/CSS/about.css' %}" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="content-block2">
+    <ul>
+      <li data-text="Home"><a href="{% url 'social:index' %}">Home</a></li>
+      <li data-text="Top Stories"><a href="top-stories.html">Top Stories</a></li>
+      {% if user.is_authenticated %}
+      <li data-text="Logout"><a href="logout">Logout</a></li>
+      {% else %}
+      <li data-text="Login"><a href="login">Login</a></li>
+      <li data-text="Sign_Up"><a href="register">Sign Up</a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <div class="box-container">
+    <div class="box-1">
+      <div class="caption">
+        <span class="border">Parapet.org</span>
+      </div>
+    </div>
+    <div class="content-block">
+      <!-- About Us Text -->
+      <div class="about">
+        About Us
+      </div>
+      <!-- Verticle Line -->
+      <div class="vr" style="height: 45px;">
+      </div>
+      <!-- About Us Discription -->
+      <div class="discription">
+        Empowering the youth to address socioeconomic issues and help bring change to build a
+        sustainable, equitable and just future and to set the tone for the years ahead.
+      </div>
+    </div>
+    <div class="box-2">
+      <div class="heading">
+        <span class="heading-text">
+          One act of kindness a day can make a difference
+        </span>
+      </div>
+    </div>
+    
+  <footer>
+    <p class="sig">Neha</p>
+    <p class="sig">Nikhil</p>
+    <p class="sig">Nishchal</p>
+    <p class="sig">Abhinav</p>
+  </footer> 
+</body>
+
+</html>
