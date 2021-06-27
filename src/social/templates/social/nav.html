@@ -4,8 +4,8 @@
   <div class="title"><a href="{% url 'social:index' %}">Parapet</a></div>
   <a href="{% url 'accounts:index' %}">About</a>
   <a href="{% url 'social:explore' %}">Explore</a>
-  <a href="#">Newsletter</a>
-  <a href="#">Top-Stories</a>
+  <a href="{% url 'static_pages:newsletter' %}">Newsletter</a>
+  <a href="{% url 'static_pages:topStories' %}">Top-Stories</a>
   <a href="{% url 'social:settings' %}">Settings</a>
   <a href="{% url 'accounts:logout' %}">Logout</a>
 </div>

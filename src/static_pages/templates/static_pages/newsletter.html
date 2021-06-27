@@ -1,41 +1,17 @@
-<!DOCTYPE html>
-<html>
+{% extends 'social/base.html' %}
 
-<head>
-  <link rel="stylesheet" href="CSS/fonts.css" type="text/css">
-  <link rel="stylesheet" href="CSS/menu-nav.css">
-  <link rel="stylesheet" href="CSS/newsletter.css">
-  <link rel="stylesheet" href="CSS/nav.css">
-  <script src="JS/newsletter.js"></script>
-  <title>
-    Newsletters
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+{% load static %}
 
-<body>
+{% block title %}
+  Newsletter
+{% endblock title %}
 
-  <div class="page">
+{% block content %}
+
+{% include 'social/nav.html' %}
 
 
-  <div class="nav__container">
-    <header>
-      <div class="title"><a href="./main.html">Parapet</a></div>
-      <nav>
-        <ul class="nav__links">
-          <li><a href="top-stories.html">Top Stories</a></li>
-          <li><a href="newsletter.html" class="active">Newsletter</a></li>
-          <li><a href="index.html">About</a></li>
-        </ul>
-      </nav>
-      <a class="cta" href="login.html">
-        <button>Log Out</button>
-      </a>
-    </header>
-  </div>
-
-
-    <div class="feedarea">
+    <div class="container feed_area nwsltr_area">
       <div class="containerarea">
         <div class="header">
           <div class="newsltr-title">Newsletter #1</div>
@@ -93,15 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="post-area">
-        <div class="email-text">Sign up for our weekly Newsletter...</div>
-        <form onsubmit="return newsletter()">
-          <input type="text" class="post-text-area" id="email"></input>
-          <input type="submit" class="post-submit" type="button"></input>
-        </form>
-      </div>
     </div>
-  </div>
-</body>
 
-</html>
+
+ {% endblock content %}
