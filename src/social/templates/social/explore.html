@@ -17,7 +17,7 @@
           <form method="post">
             Search
           </form>
-          <button class="btn btn-success">Post Article</button>
+          <a href="{% url 'social:post_article' %}"><button class="btn btn-success">Post Article</button></a>
       </div>
       {% for article in article_list %}
         <div class="feed_section">

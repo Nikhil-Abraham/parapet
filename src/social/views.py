@@ -92,4 +92,24 @@ def article(request,pk):
     }
     return render(request, 'social/article_item.html', context)
 
-  
+
+@login_required(login_url='accounts:login')
+def post_article(request):
+    if request.method=='POST':
+      posts = PostArticle.objects.all().order_by('-created_on')
+      form = PostArticleForm(request.POST)
+      new_post = form.save(commit=False)
+      new_post.author = Parapet_User.objects.get(user = request.user)
+      new_post.save()
+      return HttpResponseRedirect(request.path)
+
+    else:
+      form = PostArticleForm()
+      user = request.user
+      current_user = Parapet_User.objects.get(user = user)
+
+    context = {
+      'form' : form,
+      'user': current_user
+    }
+    return render(request,'social/post_article.html',context)
