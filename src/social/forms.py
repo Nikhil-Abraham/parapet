@@ -39,7 +39,7 @@ class PostArticleForm(forms.ModelForm):
   )
   class Meta:
     model = PostArticle
-    fields = ['title','body']
+    fields = ['title','body','article_pic']
 
 class UserForm(forms.ModelForm):
   class Meta:
