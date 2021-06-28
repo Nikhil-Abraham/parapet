@@ -19,6 +19,7 @@ class PostArticle(models.Model):
   body = models.TextField()
   created_on = models.DateTimeField(default=timezone.now)
   author = models.ForeignKey(Parapet_User, on_delete=models.CASCADE)
+  article_pic = models.ImageField(upload_to = 'ArticlePictures',null=True,blank=True)
 
   def __str__(self):
     return f"{self.title} : {self.body}"

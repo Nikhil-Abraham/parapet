@@ -21,6 +21,11 @@
       <p class="article_title">{{ article_item.title }}</p>
 
       <p class="post_author">@{{ article_item.author }}  {{ article_item.created_on }}</p>
+      {% if article_item.article_pic %}
+            <div class="article_picture">
+              <img class="" src="{{article_item.article_pic.url}}">
+            </div>
+            {% endif %}
       <p >{{ article_item.body }}</p>
     {% else %}
     <p>Error article not found</p>
