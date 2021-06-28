@@ -96,12 +96,17 @@ def article(request,pk):
 @login_required(login_url='accounts:login')
 def post_article(request):
     if request.method=='POST':
-      posts = PostArticle.objects.all().order_by('-created_on')
-      form = PostArticleForm(request.POST)
-      new_post = form.save(commit=False)
-      new_post.author = Parapet_User.objects.get(user = request.user)
-      new_post.save()
-      return HttpResponseRedirect(request.path)
+      a_user=Parapet_User.objects.get(user = request.user)
+      a_form = PostArticleForm(request.POST, request.FILES)
+      if a_form.is_valid():
+        new_post = a_form.save(commit=False)
+        new_post.author = a_user
+        new_post.save()
+        
+        #a_form.save()
+        print("Article is Valid")
+        return redirect('../explore/')
+      print("Invalid Article")
 
     else:
       form = PostArticleForm()
