@@ -11,6 +11,7 @@ urlpatterns = [
     path('social/', include('social.urls'), name='social'),
     path('static_pages/', include('static_pages.urls'), name='static_pages'),
     path('chat/', include('chat.urls'), name='chat'),
+    path('chat2/', include('chat2.urls'), name='chat2'),
   
 ]
 
