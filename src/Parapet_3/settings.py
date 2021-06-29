@@ -22,7 +22,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'accounts',
     'social',
-    'static_pages',
     'chat',
     'chat2',
     'django.contrib.admin',

@@ -118,3 +118,9 @@ def post_article(request):
       'user': current_user
     }
     return render(request,'social/post_article.html',context)
+
+def newsletter(request):
+  return render(request, 'social/newsletter.html')
+
+def topStories(request):
+  return render(request, 'social/top-stories.html')

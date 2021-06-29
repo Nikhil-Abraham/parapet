@@ -1,13 +1,14 @@
 .feed_area{
-  background-color: rgba(250, 254, 255, 0.705);
+  background-color: #222433;
   width: 52%;
   margin-left: 22%;
   margin-top: 0;
   padding-top: 0;
   float: left;
 }
+
 .chat_area{
-  background-color: rgba(250, 254, 255, 0.705);
+  background-color: #222433;
   width: 26%;
   height: 100%;
   position: relative;
@@ -91,28 +92,10 @@
 }
 
 
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 22%; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #24252A; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-  float: left;
-}
+
 
 /* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  margin-left: 16%;
-}
+
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
@@ -285,4 +268,19 @@
   padding-left: 20%;
   text-align: center;
   width: 80%;
+}
+.dark{
+  background-color: #222433;
+}
+
+.right_sidebar{
+  background-color: #222433;
+  width: 26%;
+  height: 100%;
+  position: relative;
+  float: right;
+}
+.title{
+  font-family: brightons;
+  color: blue;
 }

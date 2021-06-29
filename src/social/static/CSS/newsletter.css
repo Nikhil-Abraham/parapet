@@ -1,9 +1,3 @@
-body {
-  font-family: Arial;
-  padding: 0px;
-  background: #FAFAFA;
-}
-
 .header {
   padding: 20px;
   font-size: 40px;
@@ -138,5 +132,3 @@ h1 {
   font-size: 15px;
   padding: 5px;
 }
-
-/*# sourceMappingURL=newsletter.css.map */

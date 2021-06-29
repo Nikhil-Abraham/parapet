@@ -8,7 +8,9 @@ urlpatterns = [
   path('explore/',views.explore,name='explore'),
   path('settings/',views.settings,name='settings'),
   path('user_profile/',views.user_profile,name='user_profile'),
-  # path('profiles/<str:pk>', views.profile,name="profile")
+  # path('profiles/<str:pk>', views.profile,name="profile"),
+  path('newsletter/',views.newsletter,name='newsletter'),
+  path('topStories/',views.topStories,name='topStories'), 
 
   path('explore/article/<str:pk>/',views.article,name='article'),
 

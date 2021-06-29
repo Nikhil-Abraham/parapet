@@ -7,8 +7,7 @@ class PostFeedForm(forms.ModelForm):
   
   body = forms.CharField(
     label='',
-    widget=forms.Textarea(attrs={
-      'rows' : '3',
+    widget=forms.TextInput(attrs={
       'placeholder' : 'Say Something...',
       'class' : 'text_area_field',
     })
