@@ -13,23 +13,38 @@
 
     <div class="container feed_area">
       <div class="post_area">
-        <div class=" post_area_title">
-          <a href="{% url 'social:user_profile' %}" class="user_profile">{{ user.name }}</a>
+        <div>
+          <a href="{% url 'social:index'  %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+        </div>   
+        
+        <div>
+          <img src="{{ profile.picture.url }}" class="rounded-circle" width="100" height="100" />
+          {% if profile.name %}
+          <h3 class="py-4">{{ profile.name }}</h3>
+          {% endif %}
+
+          {% if profile.username %}
+          <h5 class="py-4">{{ profile.username }}</h5>
+          {% endif %}
+
+          {% if profile.phone %}
+          <h4 class="py-4">{{ profile.phone }}</h4>
+          {% endif %}
+
+          {% if profile.email %}
+          <h3 class="py-4">{{ profile.email }}</h3>
+          {% endif %}
         </div>
-   
-    
-          <form method="POST" class="post_form">
-            {% csrf_token %}
-            {{ form }}
-              <button class="btn_submit">Submit</button>
-          </form>
         
       </div>
+
       {% for post in post_list %}
-        <div class="  feed_section">
-          <div class=" feed_article">
-            <p class="post_author">@{{ post.author }}  {{ post.created_on }}</p>
+        <div class="  post_section">
+          <div class=" feed_article position-relative">
+            <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
+            <span class="post_author"><a href="{% url 'social:user_profile' post.author.pk %}"></a>{{ post.author.name }}</span><div class="datetime">{{ post.created_on }}</div>
             <p class="post_body">{{ post.body }}</p>
+            <a href="{% url 'social:postDetail' post.pk %} " class="profile_link"><i class="fas fa-comment post_btn"></i></a>
           </div>
         </div>
       {% endfor %}

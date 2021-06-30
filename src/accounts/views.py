@@ -7,7 +7,7 @@ from .decorators import unauthenticated_user
 
 
 # Create your views here.
-def index(request):
+def home(request):
   return render(request, "index.html")
 
 @unauthenticated_user
@@ -62,4 +62,4 @@ def login(request):
 
 def logout(request):
   auth.logout(request)
-  return redirect('accounts:index')
+  return redirect('accounts:home')

@@ -1,0 +1,90 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+
+{% block content %}
+
+{% include 'social/nav.html' %}
+
+
+    <div class="container feed_area">
+      <div class="post_area">
+
+
+        <div>
+          <a href="{% url 'social:index' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+      </div>   
+      </div>
+
+
+        <div class="  post_section">
+          <div class=" feed_article">
+              <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
+            <span class="post_author">{{ post.author.name }}<div class="datetime">{{ post.created_on }} </div>
+  
+              {% if request.user.parapet_user == post.author %}
+              <a href="{% url 'social:postEdit' post.pk %}" style="color: rgb(207, 207, 207);"> <i class="far fa-edit"></i> </a>
+              <a href="{% url 'social:postDelete' post.pk %}" style="color: rgb(207, 207, 207);"> <i class="fas fa-trash"></i> </a>
+              {% endif %}
+        
+           
+
+            <p class="post_body">{{ post.body }}</p>
+          </div>
+        </div>
+        <div class="post_area">
+
+        <img class="profile-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+        <div class="profile_post_area">
+        <form method="POST" class="post_form">
+          {% csrf_token %}
+          {{ form }}
+          <button class="btn" type="submit"><i class="fas fa-comment post_btn"></i></button>
+        </form>
+      </div>   
+      </div>
+      {% if comments in None %}
+      <div class="  comment_section">
+        No comments.
+      </div>
+      {% else %}
+      <div class="  comment_section">
+        Comments :
+      </div>
+      {% endif %}
+      {% for comment in comments %}
+        <div class="  post_section">
+          <div class=" feed_article position-relative">
+            <img class="profile-pic-post" src="{{comment.author.profile_pic.url}}">
+            <span class="post_author">{{ comment.author.name }}</span><div class="datetime">{{ comment.created_on }}</div>
+            <p class="post_body">{{ comment.comment }}</p>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+
+
+
+    <!-- GLOBAL CHAT SECTION -->
+
+    <div class="right_sidebar">
+      <div class="friends_title">Friends</div>
+      <div class="friends">
+        <div>Loca</div>
+        <div>Neha</div>
+        <div>Nishchal</div>
+        <div>Abhinav</div>
+        <div>Bob</div>
+      </div>
+    </div>
+
+
+
+{% endblock content %}
