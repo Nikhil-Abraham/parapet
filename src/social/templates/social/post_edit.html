@@ -14,8 +14,12 @@
 
     <div class="container feed_area">
       <div class="post_area">
-
-        <img class="profile-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+        <div>
+          <a href="{% url 'social:postDetail' object.pk %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+        </div>   
+        <div class="update_post">
+        Update Your Post !
+      </div>
         <div class="profile_post_area">
         <form method="POST" class="post_form">
           {% csrf_token %}
@@ -24,23 +28,7 @@
         </form>
       </div>   
       </div>
-      {% for post in post_list %}
-        <div class="  post_section">
-          <div class=" feed_article position-relative">
-            <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
-            <span class="post_author">
-              <div class="profile_link">
-              <a href="{% url 'social:user_profile' post.author.pk %}">
-                {{ post.author.name }}
-              </a>
-            </div>
-            </span>
-            <div class="datetime">{{ post.created_on }}</div>
-            <div class="post_body">{{ post.body }}</div>
-            <a href="{% url 'social:postDetail' post.pk %} " class="profile_link"><i class="fas fa-comment post_btn"></i></a>
-          </div>
-        </div>
-      {% endfor %}
+      
     </div>
 
 

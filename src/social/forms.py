@@ -1,6 +1,6 @@
 from django import forms
 from django.forms.widgets import Widget
-from .models import Post, PostArticle
+from .models import Post, PostArticle, Comment
 from accounts.models import Parapet_User
 
 class PostFeedForm(forms.ModelForm):
@@ -45,3 +45,18 @@ class UserForm(forms.ModelForm):
     model = Parapet_User
     fields = '__all__'
     exclude = ['user']
+
+
+class CommentForm(forms.ModelForm):
+  comment = forms.CharField(
+    label='',
+    widget=forms.TextInput(attrs={
+     'placeholder' :'Add Comment ...',
+     'class' : 'text_area_field',
+    })
+  )
+
+
+  class Meta:
+    model = Comment
+    fields = ['comment']
