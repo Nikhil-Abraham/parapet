@@ -3,9 +3,13 @@ body{
   color: #FFFFFF;
 }
 
+/*         Dark Version Color */
 .sidenav, .profile_post_area, .feed_area{
-  background-color: #222433; 
+  background-color: #222433;  
 }
+
+
+/*       Light color  */
 .profile_post_area, .post_area, .post_section{
   background-color: #2F3142; 
 }
