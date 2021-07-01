@@ -9,8 +9,23 @@
 
 {% block content %}
 
+<div class="blurred-wrapper">
+<div class="color-layer">
+
 {% include 'social/nav.html' %}
 
+<div class="header-wrapper">
+  <div class="topnav-right">
+  <form class="topnav-search">
+    <input type="text" class="topnav-searchbar" placeholder="Search">
+    <button class="topnav-searchbutton">
+      <a href=""><i class="fa fa-search"></i></a>
+    </button>
+  </form>  
+  <div class="nav_user_profile topnav_profile">{{request.user.parapet_user.name}}</div>
+  <img class="profile-pic-post topnav-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+</div>
+</div>
 
     <div class="container feed_area">
       <div class="post_area">
@@ -59,5 +74,6 @@
     </div>
 
 
-
+  </div>
+</div>
 {% endblock content %}

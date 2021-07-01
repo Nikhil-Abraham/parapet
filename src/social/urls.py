@@ -18,4 +18,5 @@ urlpatterns = [
   path('post/<str:pk>',views.postDetail,name='postDetail'),
   path('post/edit/<str:pk>',views.PostEditView.as_view(),name='postEdit'),
   path('post/delete/<str:pk>',views.PostDeleteView.as_view(),name='postDelete'),
+  path('hv7/',views.hv7),
 ]

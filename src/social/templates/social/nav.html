@@ -1,10 +1,8 @@
 
 
 <div class="sidenav">
-  <div class="nav_profile_details">
-    <img class="nav-profile-pic" src="{{request.user.parapet_user.profile_pic.url}}">
-    <div class="nav_user_profile">{{request.user.parapet_user.name}}</div>
-    <div class="nav_username">@{{ request.user.parapet_user.username }}</div> 
+  <div class="sidenav-title">
+    Parapet.org
   </div>
   <div class="nav_links">
   <a href="{% url 'social:index' %}"><i class="fas fa-home"></i>Home</a>
@@ -20,3 +18,5 @@
 <a href="{% url 'social:newsletter' %}">Newsletter</a>
   <a href="{% url 'accounts:home' %}">About</a>
   <a href="{% url 'social:topStories' %}">Top-Stories</a> -->
+
+ 

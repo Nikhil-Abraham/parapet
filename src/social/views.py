@@ -109,7 +109,7 @@ def user_profile(request, pk):
 
   context = {
     'user': user,
-    'profilr':profile,
+    'profile':profile,
     'post_list':posts,
   }
   return render(request, 'social/user_profile.html', context)
@@ -180,3 +180,7 @@ def newsletter(request):
 
 def topStories(request):
   return render(request, 'social/top-stories.html')
+
+
+def hv7(request):
+  return render(request, 'social/hv7.html')

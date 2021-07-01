@@ -1,0 +1,32 @@
+docker run -p 6379:6379 -d redis:5
+
+pip :
+  channels
+  channels_redis
+  websckets
+  django-cors-headers
+
+Docker app
+
+
+
+Styling -> Nishchal
+  1. Home page ( topnav, post article, seperation lines )
+  2. Article page
+  3. Newsletter
+  4. Top Stories
+  5. Settings
+
+Neha -> Model Update / Styling
+  1. Update Parapet_User Model
+  2. Style Profile page
+  3. Link Settingd
+  4. Add follow Button
+
+Abhinav -> People You May Know Column
+  1. Show all users along with profile pic
+
+Nikhil -> Modifictaions
+  1. Like and Dislikes
+  2. Followers
+  3. DMs
