@@ -1,0 +1,253 @@
+body{
+  background-color: #222433;
+  color: #FFFFFF;
+}
+
+/*         Dark Version Color */
+.sidenav, .profile_post_area, .feed_area{
+  background-color: #222433;  
+}
+
+
+/*       Light color  */
+.profile_post_area, .post_area, .post_section{
+  background-color: #2F3142; 
+}
+
+.right_sidebar{
+  padding: 10px;
+  width: 26%;
+  height: 100%;
+  position: relative;
+  float: right;
+}
+
+.profile-pic{
+  width: 45px;
+  height: 45px;
+}
+
+.text_area_field, .profile_post_area{
+  background-color: #222433;
+}
+.post_area{
+  margin-top: 25px;
+  padding-left: 7px;
+  margin-bottom: 15px;
+}
+
+.profile_post_area{
+  margin-top: 2px;
+  margin-left: 20px;
+  display: inline-block;
+  width: 85%;
+}
+.post_form{
+  display: flex;
+  width: 100%;
+}
+
+.text_area_field{
+  vertical-align: bottom;
+  color: #FFFFFF;
+}
+
+.btn_submit{
+  width: 30px;
+  line-height: normal;
+}
+.nav_profile-pic-post{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.post_btn{
+  color: #e0e0e0;
+  width: 30px;
+}
+
+.sidenav{
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 20%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  float: left;
+}
+
+.sidenav img{
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  text-decoration: none;
+  font-size: 25px;
+
+  display: block;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.sidenav div{
+  text-decoration: none;
+  display: block;
+}
+.sidenav a{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #FFFF;
+  display: block;
+  padding-left: 20px;
+  transition: 0.3s;
+}
+
+.nav_user_profile{
+  color: #FFFFFF;
+  font-size: 23px;
+  width: 70%;
+}
+
+.nav_username{
+  font-size: small;
+  color: #adadad;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.sidenav i{
+  padding-right: 9px;
+}
+
+.post_author{
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 17px;
+}
+
+.datetime{
+  color: #adadad; 
+}
+
+.post_body{
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+.post_section{
+  margin-bottom: 15px;
+}
+
+.right_sidebar{
+  padding: 20px;
+}
+
+.friends_title{
+  color: #adadad;
+  font-size: 17px;
+  padding: 20px;
+}
+.friends > div{
+  color: #FFFFFF;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.nav_links{
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.feed_section{
+  background-color: #2F3142;
+  color:#FFFFFF;
+}
+article_title >a{
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.comment_back_btn{
+  background-color: #222433;
+  text-decoration: none;
+}
+.post_form > textarea{
+  border: none;
+  color: #FFFFFF;
+  padding-left: 20px;
+  background-color: #222433;
+}
+
+.update_post{
+  padding: 20px;
+}
+
+.comment_section{
+  margin-top: 10px;
+  font-size: larger;
+  padding: 20px;
+  background-color: #222433;
+  
+}
+
+.back_btn_post{
+  background-color: #2F3142;
+  border: none;
+  color: #e0e0e0;
+  padding: 10px;
+  text-decoration: none;
+}
+.back_btn_post:hover{
+  color: #e0e0e0;
+}
+
+.back_btn_post > i{
+  padding-right: 10px;
+
+}
+
+.delete_post{
+  padding: 15px;
+}
+
+.post_author > a{
+  text-decoration: none;
+}
+
+.profile_link{
+  display: inline-block;
+}
+
+.profile_link > a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+.Article_Section_Area{
+  background-color: #2F3142;
+}
+
+.profile_link > i{
+  padding: 10px;
+  margin-bottom: 10px;
+  size: 20px;
+}
+
+.post_btn{
+  height: 10px;
+  width: 10px;
+  margin-bottom: 10px;
+}

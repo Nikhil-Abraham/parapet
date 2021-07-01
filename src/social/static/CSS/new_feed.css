@@ -1,0 +1,286 @@
+.feed_area{
+  background-color: #222433;
+  width: 52%;
+  margin-left: 22%;
+  margin-top: 0;
+  padding-top: 0;
+  float: left;
+}
+
+.chat_area{
+  background-color: #222433;
+  width: 26%;
+  height: 100%;
+  position: relative;
+  float: right;
+}
+
+
+.feed_section{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 5px;
+  height: 250px;
+
+}
+
+.feed_article{
+  width: 100%;
+  height: 100px;
+  text-align: left;
+  margin: 0px;
+
+}
+
+.article_title >a{
+  color: black;
+  text-decoration: none;
+
+}
+.article_body{
+  overflow: hidden;
+  height: 100px;
+  white-space: normal;
+}
+
+.post_title{
+  font-size: larger;
+  color: rgb(29, 29, 29);
+  font-family: Poppins, sans-serif;
+  text-align: left;
+
+  display: inline-block;
+  width: 100%;
+  
+}
+
+.post_author{
+  text-align: left;
+  color: rgb(22, 22, 22);
+  font-family: Poppins, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  margin-left: 10px;
+
+}
+.datetime{
+  float: right;
+  font-size: small;
+  color: #464646;
+}
+
+.title_field{
+  display: block;
+  width: 100%;
+  margin: 10px;
+  border: solid 0.5px #616161;
+}
+
+.text_area_field{
+  display: block;
+  width: 100%;
+  margin: 10px;
+  border: none;
+
+}
+.text_area_field:focus{
+  border: none;
+  outline: none;
+}
+
+
+
+
+/* The navigation menu links */
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+.title > a{
+  color: rgb(255, 255, 255);
+  font-size: 220%;
+}
+
+.post_area{
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+.post_area_title > a{
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  
+}
+.btn_submit{
+  float: right;
+  background-color: darkgreen;
+
+
+}
+
+.btn_submit:hover
+{
+  background-color: darkgreen;
+}
+
+.post_form{
+  display: inline-block;
+  padding-left: 20px;
+  width: 80%;
+}
+
+.post_body{
+  color: #464646;
+  margin-left: 60px;
+}
+
+
+.user_profile{
+  font-size: larger;
+  text-decoration: none;
+  color: #1a1a1a;
+  display: block;
+
+  padding-left: 20px;
+}
+
+.user_profile:hover{
+  color: #1a1a1a;
+}
+
+.profile-pic{
+  display: inline;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.profile-pic-post{
+  margin-top: 10px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.username{
+  color: #585858;
+  font-size: small;
+}
+.profile_post_area{
+  display: flex;
+  margin-top: 20px;
+}
+
+.profile_settings_area{
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.profile_parent{
+  margin-top: 10px;
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-bottom: 10px;
+}
+
+.setting_pic{
+  width: 120px;
+  height: 120px;
+}
+
+.settings_name{
+  font-size: xx-large;
+}
+.setting_update{
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.article_section{
+ 
+  width: 100%;
+  text-align: left;
+  margin: 0px;
+}
+
+.Article_Area{
+  height: 100%;
+}
+
+.Article_Section_Area{
+  background-color: white;
+  padding: 10px;
+  height: auto;
+}
+
+.post_section{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 5px;
+  height: auto;
+}
+
+.nwsltr_area{
+  width: 100%;
+  margin-left: 22%;
+}
+
+.containerarea{
+  width: 70%;
+  margin-top: 30px;
+}
+
+.tpstr_area{
+  width: 78%;
+}
+
+.clips{
+  padding-left: 20%;
+  text-align: center;
+  width: 80%;
+}
+.dark{
+  background-color: #222433;
+}
+
+.right_sidebar{
+  background-color: #222433;
+  width: 26%;
+  height: 100%;
+  position: relative;
+  float: right;
+}
+.title{
+  font-family: brightons;
+  color: blue;
+}

@@ -1,0 +1,25 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Explore
+{% endblock title %}
+
+{% block content %}
+
+{% include 'social/nav.html' %}
+
+<div class="container feed_area">
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+{{form}}
+<input type="submit">
+</form>
+
+
+
+
+</div>
+
+{% endblock content %}

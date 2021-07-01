@@ -1,0 +1,63 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+{% block content %}
+
+{% include 'social/nav.html' %}
+
+
+    <div class="container feed_area">
+      <div class="post_area">
+        <div>
+          <a href="{% url 'social:index'  %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+        </div>   
+        
+        <div>
+          <img src="{{ user.profile_pic.url }}" class="rounded-circle" width="100" height="100" />
+          {% if user.name %}
+          <h3 class="py-4">{{ user.name }}</h3>
+          {% endif %}
+
+          {% if user.username %}
+          <h5 class="py-4">{{ user.username }}</h5>
+          {% endif %}
+
+          {% if user.phone %}
+          <h4 class="py-4">{{ user.phone }}</h4>
+          {% endif %}
+
+          {% if user.email %}
+          <h3 class="py-4">{{ user.email }}</h3>
+          {% endif %}
+        </div>
+        
+      </div>
+
+      {% for post in post_list %}
+        <div class="  post_section">
+          <div class=" feed_article position-relative">
+            <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
+            <span class="post_author"><a href="{% url 'social:user_profile' post.author.pk %}"></a>{{ post.author.name }}</span><div class="datetime">{{ post.created_on }}</div>
+            <p class="post_body">{{ post.body }}</p>
+            <a href="{% url 'social:postDetail' post.pk %} " class="profile_link"><i class="fas fa-comment post_btn"></i></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+
+
+    <!-- GLOBAL CHAT SECTION -->
+
+    <div class="chat_area">
+      <h3>Global Chat</h3>
+    </div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,79 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="blurred-wrapper">
+<div class="color-layer">
+
+{% include 'social/nav.html' %}
+
+<div class="header-wrapper">
+  <div class="topnav-right">
+  <form class="topnav-search">
+    <input type="text" class="topnav-searchbar" placeholder="Search">
+    <button class="topnav-searchbutton">
+      <a href=""><i class="fa fa-search"></i></a>
+    </button>
+  </form>  
+  <div class="nav_user_profile topnav_profile">{{request.user.parapet_user.name}}</div>
+  <img class="profile-pic-post topnav-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+</div>
+</div>
+
+    <div class="container feed_area">
+      <div class="post_area">
+
+        <img class="profile-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+        <div class="profile_post_area">
+        <form method="POST" class="post_form">
+          {% csrf_token %}
+          {{ form }}
+          <button class="btn" type="submit"><i class="fa fa-paper-plane fa-lg post_btn"></i></button>
+        </form>
+      </div>   
+      </div>
+      {% for post in post_list %}
+        <div class="  post_section">
+          <div class=" feed_article position-relative">
+            <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
+            <span class="post_author">
+              <div class="profile_link">
+              <a href="{% url 'social:user_profile' post.author.pk %}">
+                {{ post.author.name }}
+              </a>
+            </div>
+            </span>
+            <div class="datetime">{{ post.created_on }}</div>
+            <div class="post_body">{{ post.body }}</div>
+            <a href="{% url 'social:postDetail' post.pk %} " class="profile_link"><i class="fas fa-comment post_btn"></i></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+
+
+    <!-- GLOBAL CHAT SECTION -->
+
+    <div class="right_sidebar">
+      <div class="friends_title">Friends</div>
+      <div class="friends">
+        <div>Loca</div>
+        <div>Neha</div>
+        <div>Nishchal</div>
+        <div>Abhinav</div>
+        <div>Bob</div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+{% endblock content %}

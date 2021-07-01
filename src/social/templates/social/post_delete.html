@@ -1,0 +1,52 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+
+{% block content %}
+
+{% include 'social/nav.html' %}
+
+
+    <div class="container feed_area">
+      <div class="post_area">
+        <div>
+          <a href="{% url 'social:postDetail' object.pk %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+        </div>   
+        <div class="update_post">
+        Are You Sure ?
+      </div>
+      <div class="delete_post">
+      <p>You are about to delete this post. This cannot be undone</p>
+    
+        <form method="POST">
+          {% csrf_token %}
+          <button class="btn btn-danger" type="submit">Delete <i class="fas fa-trash"></i></button>
+        </form>  
+      </div>
+    </div>
+      
+    </div>
+
+
+
+    <!-- GLOBAL CHAT SECTION -->
+
+    <div class="right_sidebar">
+      <div class="friends_title">Friends</div>
+      <div class="friends">
+        <div>Loca</div>
+        <div>Neha</div>
+        <div>Nishchal</div>
+        <div>Abhinav</div>
+        <div>Bob</div>
+      </div>
+    </div>
+
+
+
+{% endblock content %}
