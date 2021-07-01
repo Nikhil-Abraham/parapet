@@ -1,0 +1,60 @@
+.back_btn_post {
+  font-size: small;
+  padding: 5px;
+}
+
+.follow-button{
+  color: #1664b3;
+  font-family: "Helvetica";
+  font-size: 10pt;
+  width: 80px;
+  border:none ;
+  height: 30px;
+  cursor: hand;
+  margin-right: 20px;
+  margin-left: 380px;
+  background-color:rgb(233, 230, 230) ;
+}
+
+img{
+  display: block;
+}
+
+.user_details_field{
+  display: block;
+  margin-top: 10px;
+}
+
+.udf_profile {
+  float: left;
+  margin-left: 5px;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.udf_profile img {
+  border-radius: 50%;
+}
+
+.user_setting_button >a{
+  float: right;
+  margin-right: 8px;
+  margin-bottom: 20px;
+  color: white;
+  margin-top: 4px;
+}
+.udf_username {
+  display: inline-block;
+  font-size:25px;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(194, 194, 194);
+
+}
+
+.udf_bio{
+  display: inline-block;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(194, 194, 194);
+  font-size: 15px;
+}

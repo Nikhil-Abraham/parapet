@@ -15,6 +15,7 @@ class Parapet_User(models.Model):
   username = CharField(max_length=60, null=True)
   profile_pic = models.ImageField(upload_to = 'Profiles', default = 'Profiles/default-profile.jpg')
   date_created = models.DateTimeField(auto_now_add=True, null=True)
+  bio=CharField(max_length=100, null=True )
 
   def __str__(self):
     return self.name 

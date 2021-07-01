@@ -9,34 +9,40 @@
 {% block content %}
 
 {% include 'social/nav.html' %}
-
-
+<!-- 
+<div class="blurred-wrapper">
+  <div class="color-layer"> -->
+    
     <div class="container feed_area">
       <div class="post_area">
         <div>
           <a href="{% url 'social:index'  %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
         </div>   
         
-        <div>
-          <img src="{{ user.profile_pic.url }}" class="rounded-circle" width="100" height="100" />
-          {% if user.name %}
-          <h3 class="py-4">{{ user.name }}</h3>
-          {% endif %}
-
-          {% if user.username %}
-          <h5 class="py-4">{{ user.username }}</h5>
-          {% endif %}
-
-          {% if user.phone %}
-          <h4 class="py-4">{{ user.phone }}</h4>
-          {% endif %}
-
-          {% if user.email %}
-          <h3 class="py-4">{{ user.email }}</h3>
-          {% endif %}
-        </div>
         
-      </div>
+          <div class="user_details_field">
+             <div class="udf_profile">
+             <img src="{{ user.profile_pic.url }}" alt="" width="100" height="100" />
+             </div>
+
+             
+
+             <div class="user_setting_button">
+
+              {% if user.username %}
+              <h3 class="udf_username">{{ user.name }}</h3>
+              {% endif %}
+               <button class="follow-button">Follow</button> 
+             <a class="setting_icon" href="{% url 'social:settings' %}"><i class="fa fa-cog fa-sm"></i></a>
+             </div>
+
+             <div class="udf_bio">
+               <p><span class="udf_fullname">{{user.username}}</span><br>
+              {{user.bio}}
+              </p>
+             </div>
+          </div>
+
 
       {% for post in post_list %}
         <div class="  post_section">
@@ -49,15 +55,15 @@
         </div>
       {% endfor %}
     </div>
-
+  </div>
 
 
     <!-- GLOBAL CHAT SECTION -->
 
-    <div class="chat_area">
+    <!-- <div class="chat_area">
       <h3>Global Chat</h3>
-    </div>
+    </div> -->
 
-
+  
 
 {% endblock content %}
