@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.base import Model
 from django.db.models.fields import CharField
-from django.db.models.fields.related import OneToOneField
+from django.db.models.fields.related import ManyToManyField, OneToOneField
 from django.utils import timezone
 from django.contrib.auth.models import User
 
@@ -15,7 +15,8 @@ class Parapet_User(models.Model):
   username = CharField(max_length=60, null=True)
   profile_pic = models.ImageField(upload_to = 'Profiles', default = 'Profiles/default-profile.jpg')
   date_created = models.DateTimeField(auto_now_add=True, null=True)
-  bio=CharField(max_length=100, null=True )
+  bio = CharField(max_length=100, null=True )
+  followers = ManyToManyField(User, blank = True, related_name = 'followers')
 
   def __str__(self):
     return self.name 

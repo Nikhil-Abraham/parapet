@@ -52,7 +52,31 @@
             </span>
             <div class="datetime">{{ post.created_on }}</div>
             <div class="post_body">{{ post.body }}</div>
-            <a href="{% url 'social:postDetail' post.pk %} " class="profile_link"><i class="fas fa-comment post_btn"></i></a>
+            <div class="d-flex flex-row">
+              <form action="{% url 'social:like' post.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}">
+                <button type="submit">
+                  <i class="far fa-thumbs-up "> <span>{{ post.likes.all.count }}</span></i>
+                </button>
+              </form>
+
+              <form action="{% url 'social:dislike' post.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}"> 
+                <button type="submit">
+                  <i class="far fa-thumbs-down "><span>{{ post.dislikes.all.count }}</span></i>
+                </button>
+              </form>
+
+              <form action="{% url 'social:postDetail' post.pk %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">
+                  <i class="far fa-comment"></i>
+                </button>
+              </form>
+            </div>
+            
           </div>
         </div>
       {% endfor %}

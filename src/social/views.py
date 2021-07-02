@@ -98,19 +98,35 @@ def explore(request):
 
   return render(request, 'social/explore.html', context)
 
+
+
 @login_required(login_url='accounts:login')
 def user_profile(request, pk):
 
-  user = Parapet_User.objects.get(pk=pk)
-  
-  profile = Parapet_User.user
+  profile = Parapet_User.objects.get(pk=pk)
+  user = profile.user
+  posts = Post.objects.filter(author=profile).order_by('-created_on')
 
-  posts = Post.objects.all().filter(author=user).order_by('-created_on')
+  followers = profile.followers.all()
+
+  if len(followers) == 0:
+      is_following = False
+
+  for follower in followers:
+      if follower == request.user:
+          is_following = True
+          break
+      else:
+          is_following = False
+
+  number_of_followers = len(followers)
 
   context = {
-    'user': user,
-    'profile':profile,
-    'post_list':posts,
+      'user': user,
+      'profile': profile,
+      'post_list': posts,
+      'number_of_followers': number_of_followers,
+      'is_following': is_following,
   }
   return render(request, 'social/user_profile.html', context)
 
@@ -184,3 +200,76 @@ def topStories(request):
 
 def hv7(request):
   return render(request, 'social/hv7.html')
+
+
+def addFollower(request,pk):
+  profile = Parapet_User.objects.get(pk = pk)
+  profile.followers.add(request.user)
+  
+  return redirect('social:user_profile', pk=profile.pk)
+
+def removeFollower(request,pk):
+  profile = Parapet_User.objects.get(pk = pk)
+  profile.followers.remove(request.user)
+
+  return redirect('social:user_profile', pk=profile.pk)
+
+def addLike(request, pk):
+  post = Post.objects.get(pk=pk)
+
+  is_dislike = False
+
+  for dislike in post.dislikes.all():
+    if dislike == request.user:
+      is_dislike = True
+      break
+  
+  if is_dislike:
+    post.dislikes.remove(request.user)
+  
+  is_like = False
+
+  for like in post.likes.all():
+    if like == request.user:
+      is_like = True
+      break
+
+  if not is_like:
+    post.likes.add(request.user)
+  if is_like:
+    post.likes.remove(request.user)
+
+  next = request.POST.get('next','/')
+  return HttpResponseRedirect(next)
+
+
+
+  
+def dislike(request, pk):
+  post = Post.objects.get(pk=pk)
+
+  is_like = False
+
+  for like in post.likes.all():
+    if like == request.user:
+      is_like = True
+      break
+
+  if is_like:
+    post.likes.remove(request.user)
+
+  is_dislike = False
+
+  for dislike in post.dislikes.all():
+    if dislike == request.user:
+      is_dislike = True
+      break
+  
+  if not is_dislike:
+    post.dislikes.add(request.user)
+  if is_dislike:
+    post.dislikes.remove(request.user)
+
+
+  next = request.POST.get('next','/')
+  return HttpResponseRedirect(next)

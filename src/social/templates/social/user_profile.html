@@ -22,23 +22,42 @@
         
           <div class="user_details_field">
              <div class="udf_profile">
-             <img src="{{ user.profile_pic.url }}" alt="" width="100" height="100" />
+             <img src="{{ profile.profile_pic.url }}" alt="" width="100" height="100" />
              </div>
 
              
 
              <div class="user_setting_button">
 
-              {% if user.username %}
-              <h3 class="udf_username">{{ user.name }}</h3>
+              {% if profile.username %}
+              <h3 class="udf_username">{{ profile.name }}</h3>
               {% endif %}
-               <button class="follow-button">Follow</button> 
-             <a class="setting_icon" href="{% url 'social:settings' %}"><i class="fa fa-cog fa-sm"></i></a>
+              
+              {% if profile.pk == request.user.pk %}
+              <a class="setting_icon" href="{% url 'social:settings' %}"><i class="fa fa-cog fa-sm"></i></a>
+              {% else %}
+                {% if is_following %}
+                  <form action="{% url 'social:removeFollower' profile.pk %}" method="post">
+                    {% csrf_token %}
+                    <button class="follow-button" type="submit">Unfollow</button>
+                  </form>
+                {% else %}
+                  <form action="{% url 'social:addFollower' profile.pk %}" method="post">
+                    {% csrf_token %}
+                    <button class="follow-button" type="submit">Follow</button>
+                  </form>           
+                {% endif %}
+               {% endif %}
+             
+             </div>
+
+             <div class="followers">
+               <p>Followers: {{ number_of_followers }}</p>
              </div>
 
              <div class="udf_bio">
-               <p><span class="udf_fullname">{{user.username}}</span><br>
-              {{user.bio}}
+               <p><span class="udf_fullname">{{profile.username}}</span><br>
+              {{profile.bio}}
               </p>
              </div>
           </div>
@@ -50,7 +69,30 @@
             <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
             <span class="post_author"><a href="{% url 'social:user_profile' post.author.pk %}"></a>{{ post.author.name }}</span><div class="datetime">{{ post.created_on }}</div>
             <p class="post_body">{{ post.body }}</p>
-            <a href="{% url 'social:postDetail' post.pk %} " class="profile_link"><i class="fas fa-comment post_btn"></i></a>
+            <div class="d-flex flex-row">
+              <form action="{% url 'social:like' post.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}">
+                <button type="submit">
+                  <i class="far fa-thumbs-up "> <span>{{ post.likes.all.count }}</span></i>
+                </button>
+              </form>
+
+              <form action="{% url 'social:dislike' post.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}"> 
+                <button type="submit">
+                  <i class="far fa-thumbs-down "><span>{{ post.dislikes.all.count }}</span></i>
+                </button>
+              </form>
+
+              <form action="{% url 'social:postDetail' post.pk %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">
+                  <i class="far fa-comment"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       {% endfor %}
