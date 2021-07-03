@@ -42,7 +42,7 @@
         <div class="  post_section">
           <div class=" feed_article position-relative">
             <h4>{{ thread.user }}-{{ thread.receiver }}</h4>
-            <a class="stretched-link" href="{% url 'social:thread-link' %}"></a>
+            <a class="stretched-link" href="{% url 'social:thread' thread.pk %}"></a>
           </div>
         </div>
       {% endfor %}

@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 from django.db.models import Q
+from django.views import View
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect, request
 from django.urls import reverse
@@ -306,7 +307,9 @@ def createThread(request):
             user=request.user,
             receiver=receiver
         )
+        print('thread created')
         thread.save()
+        print('thread saved')
         return redirect('thread', pk=thread.pk)
       print('inside try statement')
     except:
@@ -335,20 +338,29 @@ def threadView(request, pk):
 
   return render(request, 'social/thread.html', context)
 
-def createMessage(request, pk):
-  form = MessageForm(request.POST, request.FILES)
-  thread = ThreadModel.objects.get(pk=pk)
-  if thread.receiver == request.user:
-      receiver = thread.user
-  else:
-      receiver = thread.receiver
+class CreateMessage(View):
+  def post(self, request, pk, *args, **kwargs):
+    form = MessageForm(request.POST, request.FILES)
+    thread = ThreadModel.objects.get(pk=pk)
+    if thread.receiver == request.user:
+        receiver = thread.user
+    else:
+        receiver = thread.receiver
 
-  if form.is_valid():
-    print('form not valid')
-    message = form.save(commit=False)
-    message.thread = thread
-    message.sender_user = request.user
-    message.receiver_user = receiver
-    message.save()
-  print('message :' + message.body)
-  return redirect('social:thread', pk=pk)
+    # message = MessageModel(
+    #   thread=thread,
+    #   sender_user=request.user,
+    #   receiver_user=receiver,
+    #   body=request.POST.get('body')
+    # )
+    if form.is_valid():
+      print('form is valid')
+      message = form.save(commit=False)
+      message.thread = thread
+      message.sender_user = request.user
+      message.receiver_user = receiver
+      message.save()
+      print('validation completed')
+    print('message :' + message.body)
+    
+    return redirect('social:thread', pk=pk)

@@ -28,6 +28,6 @@ urlpatterns = [
   path('inbox/', views.listThreads, name='inbox'),
   path('inbox/createThread/', views.createThread, name='create-thread'),
   path('inbox/<int:pk>/', views.threadView, name='thread'),
-  path('inbox/<int:pk>/create-message/',views.createMessage, name='create-message')
+  path('inbox/<int:pk>/create-message/',views.CreateMessage.as_view(), name='create-message')
 
 ]
