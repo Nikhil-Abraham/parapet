@@ -26,6 +26,6 @@ urlpatterns = [
   path('user_profile/<str:pk>',views.user_profile,name='user_profile'),
   path('user_profile/<str:pk>/follower/add',views.addFollower,name='addFollower'),
   path('user_profile/<str:pk>/follower/remove',views.removeFollower,name='removeFollower'),
-  path('search/',views.UserSearch.as_view(),name='search'),
+  path('search/',views.UserSearch.as_view(),name='profile-search'),
 
 ]

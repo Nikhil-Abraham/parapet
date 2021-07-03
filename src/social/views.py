@@ -278,18 +278,6 @@ def dislike(request, pk):
   return HttpResponseRedirect(next)
 
 
-# def UserSearch(View):
-#   def get(self,request,*args,**kwargs):
-#     query=self.request.GET.get('query')
-#     profile_list=Parapet_User.objects.filter(
-#        Q(user__name__icontains=query)
-#     )
-#     if request.method=="GET":
-#       context={
-#             'profile_list':profile_list,
-#          }
-#     return render(request,'social/search.html',context)
-
 
 class UserSearch(View):
     def get(self, request, *args, **kwargs):
