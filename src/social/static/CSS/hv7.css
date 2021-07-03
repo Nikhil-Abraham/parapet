@@ -139,17 +139,22 @@ body{
 
 .sent-message{
   background-color: #f3f3f3;
-  border-radius: 30px;
+  display: block;
+  
   color: black;
-  padding: 10px 25px;
   width: 25%;
+  font-size: 15px;
 }
 
 .receive-message{
-  background-color: rgb(1,196,255);
-  color: #fff;
-  border-radius: 30px;
-  padding: 10px 25px;
+  color: black;
+  display: block;
+  background-color: #f3f3f3;
   width: 25%;
-  float: right;
+  font-size: 15px;
+}
+
+.chat-message{
+  width: 100%;
+  display: block;
 }

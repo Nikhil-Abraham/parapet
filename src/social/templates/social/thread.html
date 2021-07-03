@@ -45,20 +45,21 @@
       </div>
 
       {% endif %}
-      <div class="  post_section">
+      <div class="chat-area">
       {% for message in message_list %}
-        
+        <div class="chat-message">
             {% if message.sender_user == request.user %}
-            <div class="sent-message my-3 ">
+            <div class="sent-message">
+              <h5>@{{message.sender_user}}</h5>
               <p>{{ message.body }}</p>
             </div>
             {% elif message.receiver_user == request.user %}
-            <div class="receive-message my-3">
-              <p>{{ message.body }}</p>
+            <div class="receive-message">
+              <h5>@{{message.sender_user}}</h5>
+              <p>{{ message.body }}</h5>
             </div>
             {% endif %}
-    
-    
+        </div>
       {% endfor %}
     </div>
 
