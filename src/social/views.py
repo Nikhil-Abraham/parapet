@@ -153,6 +153,7 @@ def settings(request):
     'post_list':posts,
     'form':form,
   }
+  
   return render(request, 'social/settings.html', context)
 
 
