@@ -1,0 +1,36 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="container feed_area">
+
+  <div class="post_area">
+   <div>
+      <a href="{% url 'social:index' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+  </div>  
+
+  
+  {% for profile in profile_list %}
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-5 col-sm-12 border-bottom position-relative">
+        <p>
+          <a style="text-decoration: none;" class="text-primary" href="{% url 'profile' profile.pk %}">
+          {{profile.name}}</a>
+        </p>
+        <p>{{profile.username</p>
+      </div>
+    </div>
+ 
+
+
+    {% endfor %}
+ 
+</div>
+{% endblock content %}

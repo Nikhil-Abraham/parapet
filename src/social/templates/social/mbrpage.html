@@ -16,12 +16,22 @@
 
 <div class="header-wrapper">
   <div class="topnav-right">
-  <form class="topnav-search">
-    <input type="text" class="topnav-searchbar" placeholder="Search">
-    <button class="topnav-searchbutton">
-      <a href=""><i class="fa fa-search"></i></a>
+  <!-- <form class="topnav-search" method="GET" >
+    <input type="text" class="topnav-searchbar" placeholder="Search" aria-label="Search"
+     aria-describedby="basic.addon1" name="query" value="{{request.GET.query}}">
+    <button class="topnav-searchbutton" type="submit">
+      <a href="{% url 'social:search' %}"><i class="fa fa-search"></i></a>
     </button>
-  </form>  
+  </form>   -->
+  <form class="d-flex" method="GET" action="{% url 'profile-search' %}">
+    <div class="input-group">
+      <span class="input-group-text" id="basic-addon1">@</span>
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="query" value="{{ request.GET.query }}">
+      <button style="border: none; background-color: transparent; box-shadow: none" type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </form>
+
+
   <div class="nav_user_profile topnav_profile">{{request.user.parapet_user.name}}</div>
   <img class="profile-pic-post topnav-pic" src="{{request.user.parapet_user.profile_pic.url}}">
 </div>
