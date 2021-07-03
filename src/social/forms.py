@@ -1,6 +1,6 @@
 from django import forms
 from django.forms.widgets import Widget
-from .models import Post, PostArticle, Comment
+from .models import Post, PostArticle, Comment, ThreadModel, MessageModel
 from accounts.models import Parapet_User
 
 class PostFeedForm(forms.ModelForm):
@@ -60,3 +60,15 @@ class CommentForm(forms.ModelForm):
   class Meta:
     model = Comment
     fields = ['comment']
+
+
+class ThreadForm(forms.Form):
+    username = forms.CharField(label='', max_length=100)
+
+class MessageForm(forms.ModelForm):
+    body = forms.CharField(label='', max_length=1000)
+
+
+    class Meta:
+        model = MessageModel
+        fields = ['body']

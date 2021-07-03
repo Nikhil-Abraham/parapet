@@ -25,5 +25,9 @@ urlpatterns = [
   path('user_profile/<str:pk>/follower/add',views.addFollower,name='addFollower'),
   path('user_profile/<str:pk>/follower/remove',views.removeFollower,name='removeFollower'),
 
+  path('inbox/', views.listThreads, name='inbox'),
+  path('inbox/createThread/', views.createThread, name='create-thread'),
+  path('inbox/<int:pk>/', views.threadView, name='thread'),
+  path('inbox/<int:pk>/create-message/',views.createMessage, name='create-message')
 
 ]

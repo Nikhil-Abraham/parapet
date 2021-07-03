@@ -1,14 +1,15 @@
 from django.shortcuts import redirect, render
+from django.db.models import Q
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect, request
 from django.urls import reverse
 from django.views.generic.edit import UpdateView, DeleteView
-
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Comment, Post,PostArticle
+from .models import Comment, Post, PostArticle, ThreadModel, MessageModel
 from accounts.models import Parapet_User
-from .forms import PostArticleForm, PostFeedForm, UserForm, CommentForm
+from .forms import PostArticleForm, PostFeedForm, UserForm, CommentForm, ThreadForm, MessageForm
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -198,9 +199,6 @@ def topStories(request):
   return render(request, 'social/top-stories.html')
 
 
-def hv7(request):
-  return render(request, 'social/hv7.html')
-
 
 def addFollower(request,pk):
   profile = Parapet_User.objects.get(pk = pk)
@@ -273,3 +271,84 @@ def dislike(request, pk):
 
   next = request.POST.get('next','/')
   return HttpResponseRedirect(next)
+
+def listThreads(request):
+  threads = ThreadModel.objects.filter(Q(user=request.user) | Q(receiver=request.user))
+
+  context = {
+    'threads':threads,
+  }
+
+  return render(request,'social/inbox.html', context)
+
+def createThread(request):
+  if request.method=="POST":
+    form = ThreadForm(request.POST)
+
+    username = request.POST.get('username')
+    print(username)
+
+    try:
+      receiver = User.objects.get(username=username)
+      print('receiver exists')
+      if ThreadModel.objects.filter(user=request.user, receiver=receiver).exists():
+        thread = ThreadModel.objects.filter(user=request.user, receiver=receiver)[0]
+        return redirect('social:thread', pk=thread.pk)
+      elif ThreadModel.objects.filter(user=receiver, receiver=request.user).exists():
+        thread = ThreadModel.objects.filter(user=receiver, receiver=request.user)[0]
+        return redirect('social:thread', pk=thread.pk)
+
+      print('no previous thread')
+
+      if form.is_valid():
+        print('form is valid')
+        thread = ThreadModel(
+            user=request.user,
+            receiver=receiver
+        )
+        thread.save()
+        return redirect('thread', pk=thread.pk)
+      print('inside try statement')
+    except:
+      print('inside except statement')
+      messages.error(request, 'Invalid username')
+      return redirect('social:create-thread')
+
+  else:
+    form = ThreadForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'social/create_thread.html', context)
+
+
+def threadView(request, pk):
+  form = MessageForm()
+  thread = ThreadModel.objects.get(pk=pk)
+  message_list = MessageModel.objects.filter(thread__pk__contains=pk)
+  context = {
+    'thread': thread,
+    'form': form,
+    'message_list':message_list,
+  }
+
+  return render(request, 'social/thread.html', context)
+
+def createMessage(request, pk):
+  form = MessageForm(request.POST, request.FILES)
+  thread = ThreadModel.objects.get(pk=pk)
+  if thread.receiver == request.user:
+      receiver = thread.user
+  else:
+      receiver = thread.receiver
+
+  if form.is_valid():
+    print('form not valid')
+    message = form.save(commit=False)
+    message.thread = thread
+    message.sender_user = request.user
+    message.receiver_user = receiver
+    message.save()
+  print('message :' + message.body)
+  return redirect('social:thread', pk=pk)
