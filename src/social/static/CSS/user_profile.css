@@ -59,9 +59,20 @@ img{
   font-size: 15px;
 }
 
+.user_search {
+  text-decoration-color: white;
+  background-color: #53648ab4;
+  margin-left: 10px;
+  margin-top: 5px;
+}
 .user_search >a{
+  color: white;
+  margin-left: 5px;
   text-decoration: none;
-  float: right;
-  color:rgb(194, 194, 194) ;
-  background-color: #30436bb4;
+
+}
+.user_search >p{
+  color: rgb(194, 194, 194);
+  font-size: small;
+  margin-left: 40px;
 }

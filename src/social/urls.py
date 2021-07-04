@@ -27,5 +27,5 @@ urlpatterns = [
   path('user_profile/<str:pk>/follower/add',views.addFollower,name='addFollower'),
   path('user_profile/<str:pk>/follower/remove',views.removeFollower,name='removeFollower'),
   path('search/',views.UserSearch.as_view(),name='profile-search'),
-
+  path('explore/article_search/',views.ArticleSearch.as_view(),name='article-search'),
 ]

@@ -292,6 +292,20 @@ class UserSearch(View):
 
         return render(request, 'social/search.html', context)
 
+
+class ArticleSearch(View):
+    def get(self, request, *args, **kwargs):
+        query = self.request.GET.get('query')
+        article_list = PostArticle.objects.filter(
+            Q(title__icontains=query)
+        )
+
+        context = {
+            'article_list': article_list,
+        }
+
+        return render(request, 'social/article_search.html', context)
+
    
 
     

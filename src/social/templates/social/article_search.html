@@ -16,16 +16,16 @@
 
   <div class="post_area">
    <div>
-      <a href="{% url 'social:index' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+      <a href="{% url 'social:explore' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
   </div>  
 
   
-  {% for profile in profile_list %}
+  {% for article in article_list %}
       <div class="user_search">
-          <a  href="{% url 'social:user_profile' profile.pk %}">@
-          {{profile.name}}</a>
+          <a  href="{% url 'social:article' article.pk %}">- 
+          {{article.title}}</a>
           
-        <p>{{profile.username}}</p>
+        <p>{{article.author}}</p>
       </div>
   
  
