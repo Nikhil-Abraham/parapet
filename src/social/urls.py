@@ -1,6 +1,8 @@
 from django.urls import path,include
 from . import views
 
+
+
 app_name = 'social'
 
 urlpatterns = [
@@ -28,6 +30,8 @@ urlpatterns = [
   path('inbox/', views.listThreads, name='inbox'),
   path('inbox/createThread/', views.createThread, name='create-thread'),
   path('inbox/<int:pk>/', views.threadView, name='thread'),
-  path('inbox/<int:pk>/create-message/',views.CreateMessage.as_view(), name='create-message')
+  path('inbox/<int:pk>/create-message/',views.CreateMessage.as_view(), name='create-message'),
 
+  path('search/',views.UserSearch.as_view(),name='profile-search'),
+  path('explore/article_search/',views.ArticleSearch.as_view(),name='article-search'),
 ]

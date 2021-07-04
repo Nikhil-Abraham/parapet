@@ -1,9 +1,12 @@
+from django.db.models import query
+from django.db.models import Q
 from django.shortcuts import redirect, render
 from django.db.models import Q
 from django.views import View
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect, request
 from django.urls import reverse
+from django.views.generic.base import View
 from django.views.generic.edit import UpdateView, DeleteView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -365,3 +368,35 @@ class CreateMessage(View):
     print('message :' + message.body)
     
     return redirect('social:thread', pk=pk)
+
+
+class UserSearch(View):
+  def get(self, request, *args, **kwargs):
+    query = self.request.GET.get('query')
+    profile_list = Parapet_User.objects.filter(
+      Q(user__username__icontains=query)
+    )
+
+    context = {
+      'profile_list': profile_list,
+    }
+
+    return render(request, 'social/search.html', context)
+
+
+class ArticleSearch(View):
+  def get(self, request, *args, **kwargs):
+    query = self.request.GET.get('query')
+    article_list = PostArticle.objects.filter(
+      Q(title__icontains=query)
+    )
+
+    context = {
+      'article_list': article_list,
+    }
+
+    return render(request, 'social/article_search.html', context)
+
+   
+
+    
