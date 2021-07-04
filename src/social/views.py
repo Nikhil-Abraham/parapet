@@ -28,7 +28,7 @@ def socialHome(request):
     posts = Post.objects.all().order_by('-created_on')
     form = PostFeedForm()
     users = Parapet_User.objects.all()
-
+    userpp = request.FILES['image']
 
     user = request.user
     current_user = Parapet_User.objects.get(user = user)
@@ -37,7 +37,8 @@ def socialHome(request):
       "post_list": posts,
       'form' : form,
       'user': current_user,
-      'list': users
+      'list': users,
+      'pp' : userpp
     }
     return render(request, 'social/mbrpage.html', context)
 

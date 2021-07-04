@@ -28,7 +28,7 @@ body{
 }
 
 .text_area_field, .profile_post_area{
-  background-color: #522144;
+  background-color: #1D2E4E;
 }
 .post_area{
   margin-top: 25px;
@@ -107,6 +107,13 @@ body{
   display: block;
   padding-left: 20px;
   transition: 0.3s;
+}
+
+.sidenav-title{
+  font-family: brightons;
+}
+.sidenav-title h1{
+  font-size: 35px;
 }
 
 .nav_user_profile{

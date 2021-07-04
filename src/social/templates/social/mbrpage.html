@@ -64,14 +64,26 @@
 
     <div class="right_sidebar">
       <div class="friends_title"><h3>Friends List</h3></div>
-      <div class="friends">
-      {% for user in list %}
-        <a href="{% url 'social:user_profile' pk=user.pk %}">
-         <h3>{{ user.username }}</h3>
-         <!-- <img src="{%if user.userprofile.profile_pic%}{{user.userprofile.profile_pic.url}}{%endif%}"> -->
+        <div class="friend_list_area">
+          <div class="friends">
+            {% for user in list %}
+            <a href="{% url 'social:user_profile' pk=user.pk %}">
+              <img scr="{{userpp.profile_pic}}">
+             <h4>{{ user.username }}</h4>
+            <!-- <img src="{%if user.parapet_user.profile_pic%}{{user.parapet_user.profile_pic.url}}{%endif%}"> -->
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="top_stories_link">
+        <a href="">
+          <h4>Top Stories</h4>
         </a>
-      {% endfor %}
-      
+      </div>
+      <div class="newsletters_link">
+        <a href="">
+          <h4>Newsletters</h4>
+        </a>
       </div>
     </div>
 
