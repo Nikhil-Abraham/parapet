@@ -76,3 +76,76 @@ img{
   font-size: small;
   margin-left: 40px;
 }
+
+.feed_section,.Article_Section_Area{
+  background-color: #30436bd2;
+  margin-top: 10px;
+}
+ .article_title >a,.article_title{
+   color: white;
+   text-decoration: none;
+
+ }
+.post_author{
+  color:rgb(153, 151, 151) ;
+
+}
+p.article_body{
+  font-size: medium;
+}
+.btn-success{
+  margin-top: 10px;
+  margin-left: 3px;
+}
+.search_box{
+  background-color:rgb(209, 208, 208) ;
+  border: none;
+  width: 250px;
+  height: 30px;
+  margin-left: 4px;
+  box-shadow: none;
+}
+.search_box::placeholder{
+  color: #30436ba8;
+  font-size: medium;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.news_area{
+  margin-right: 70px;
+  float: right;
+  background-color: transparent;
+  border: none;
+}
+.newsltr-title{
+  color: white;
+}
+.header ,.card{
+  background-color: #30436bd2 ;
+}
+.card >p{
+  color: rgb(165, 164, 164);
+  font-size: large;
+}
+
+
+.Article_area{
+  margin-top: 10px;
+  margin-right: 70px;
+  float: right;
+  background-color: transparent;
+  border: none;
+}
+.article_picture{
+ width: 80%;
+ height: 80%;
+ margin-left: 10px;
+
+}
+
+img{
+  height: auto;
+  width: 100%;
+
+}

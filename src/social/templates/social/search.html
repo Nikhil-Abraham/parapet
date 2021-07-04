@@ -15,11 +15,12 @@
 <div class="container feed_area">
 
   <div class="post_area">
+    
    <div>
       <a href="{% url 'social:index' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
   </div>  
 
-  
+
   {% for profile in profile_list %}
       <div class="user_search">
           <a  href="{% url 'social:user_profile' profile.pk %}">@
@@ -34,6 +35,10 @@
     {% endfor %}
  
 </div>
+<div class="end-article">
+
+</div>
+
 </div>
   </div>
 {% endblock content %}

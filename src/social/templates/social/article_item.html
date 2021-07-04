@@ -7,6 +7,8 @@
 {% endblock title %}
 
 {% block content %}
+<div class="blurred-wrapper">
+  <div class="color-layer">
 
 {% include 'social/nav.html' %}
 
@@ -14,6 +16,9 @@
 
   {% if article_item %}
     <div class="Article_Section_Area" >
+      <div>
+        <a href="{% url 'social:explore' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+    </div>   
         
 
       <!-- {{ article_item }} -->
@@ -26,7 +31,7 @@
               <img class="" src="{{article_item.article_pic.url}}">
             </div>
             {% endif %}
-      <p >{{ article_item.body }}</p>
+      <p class="=article_body">{{ article_item.body }}</p>
     {% else %}
     <p>Error article not found</p>
     {% endif %}
@@ -34,5 +39,6 @@
 </div>
 
 <!-- {{ article_item }} -->
-
+  </div>
+</div>
 {% endblock content %}

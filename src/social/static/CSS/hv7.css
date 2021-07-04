@@ -28,6 +28,9 @@ body{
 .end-post{
   height: 50vh;
 }
+.end-article{
+  height: 100vh;
+}
 
 
 .sidenav{

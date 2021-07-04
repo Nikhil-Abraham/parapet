@@ -18,9 +18,8 @@
       <div class="post_area">
           
         <form class="d-flex" method="GET" action="{% url 'social:article-search' %}">
-          <div class="input-group">
-            <span class="input-group-text" id="basic-addon1"></span>
-            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" name="query" value="{{ request.GET.query }}">
+          <div class="search_col">
+            <input type="text" class="search_box" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" name="query" value="{{ request.GET.query }}">
             <button style="border: none; background-color: transparent; box-shadow: none" type="submit"><i class="fas fa-search"></i></button>
           </div>
         </form>
@@ -38,6 +37,9 @@
           </div>
         </div>
       {% endfor %}
+      <div class="end-post">
+
+      </div>
     </div>
 
 

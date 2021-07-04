@@ -7,18 +7,25 @@
 {% endblock title %}
 
 {% block content %}
+<div class="blurred-wrapper">
+  <div class="color-layer">
 
 {% include 'social/nav.html' %}
 
 <div class="container feed_area">
+  <div>
+    <a href="{% url 'social:explore' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+</div>   
 <form action="" method="post" enctype="multipart/form-data">
   {% csrf_token %}
 {{form}}
 <input type="submit">
 </form>
+</div>
+<div class="end-article">
 
-
-
+</div>
+  </div>
 
 </div>
 

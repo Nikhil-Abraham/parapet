@@ -7,17 +7,17 @@
 {% endblock title %}
 
 {% block content %}
+<div class="blurred-wrapper">
+  <div class="color-layer">
 
 {% include 'social/nav.html' %}
 
-
-    <div class="container feed_area nwsltr_area">
-      <div class="containerarea">
+      <div class="containerarea news_area">
         <div class="header">
           <div class="newsltr-title">Newsletter #1</div>
         </div>
-        <div class="row">
-          <div class="leftcolumn">
+        
+  
             <div class="card">
               <h1 class="nwsltr-title">CLIMATE CHANGE IS AFFECTING HUMAN LIFE AND HEALTH IN A VARIETY OF WAYS</h1>
               <p>The numbers are in: The past decade has been the warmest in recorded history. Deadly wildfires
@@ -66,10 +66,11 @@
                 world’s chronically food insecure people live in countries affected by conflict.
               </p>
             </div>
-          </div>
-        </div>
+          
+        
       </div>
     </div>
+  </div>
 
 
  {% endblock content %}
