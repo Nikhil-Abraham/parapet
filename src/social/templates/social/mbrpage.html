@@ -43,6 +43,13 @@
         </form>
       </div>   
       </div>
+      {% if post_list.all.count == 0 %}
+
+      <div class="no-post">
+        No Recent Posts
+      </div>
+
+      {% endif %}
       {% for post in post_list %}
         <div class="  post_section">
           <div class=" feed_article position-relative">
@@ -82,6 +89,9 @@
             </div>
             
           </div>
+        </div>
+        <div class="end-post">
+
         </div>
       {% endfor %}
     </div>
