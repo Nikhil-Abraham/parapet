@@ -11,7 +11,7 @@ body{
 
 /*       Light color  */
 .profile_post_area, .post_area, .post_section{
-  background-color: #2F3142; 
+  background-color: #3e422f; 
 }
 
 .right_sidebar{
@@ -28,7 +28,7 @@ body{
 }
 
 .text_area_field, .profile_post_area{
-  background-color: #222433;
+  background-color: #522144;
 }
 .post_area{
   margin-top: 25px;

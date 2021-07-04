@@ -63,13 +63,15 @@
     <!-- GLOBAL CHAT SECTION -->
 
     <div class="right_sidebar">
-      <div class="friends_title">Friends</div>
+      <div class="friends_title"><h3>Friends List</h3></div>
       <div class="friends">
-        <div>Loca</div>
-        <div>Neha</div>
-        <div>Nishchal</div>
-        <div>Abhinav</div>
-        <div>Bob</div>
+      {% for user in list %}
+        <a href="{% url 'social:user_profile' pk=user.pk %}">
+         <h3>{{ user.username }}</h3>
+         <!-- <img src="{%if user.userprofile.profile_pic%}{{user.userprofile.profile_pic.url}}{%endif%}"> -->
+        </a>
+      {% endfor %}
+      
       </div>
     </div>
 

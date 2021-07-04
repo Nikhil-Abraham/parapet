@@ -1,3 +1,4 @@
+from django.conf.urls import url
 from django.urls import path,include
 from . import views
 
@@ -8,6 +9,7 @@ urlpatterns = [
   path('explore/',views.explore,name='explore'),
   path('settings/',views.settings,name='settings'),
   path('user_profile/<str:pk>',views.user_profile,name='user_profile'),
+
 
   path('newsletter/',views.newsletter,name='newsletter'),
   path('topStories/',views.topStories,name='topStories'), 
