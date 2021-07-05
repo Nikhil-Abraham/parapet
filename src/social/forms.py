@@ -31,7 +31,7 @@ class PostArticleForm(forms.ModelForm):
   body = forms.CharField(
     label='',
     widget=forms.Textarea(attrs={
-      'rows' : '3',
+      'rows' : '10',
       'placeholder' : 'Say Something...',
       'class' : 'text_area_field',
     })

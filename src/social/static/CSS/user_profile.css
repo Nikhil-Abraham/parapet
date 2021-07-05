@@ -115,7 +115,7 @@ p.article_body{
 .news_area{
   margin-right: 70px;
   float: right;
-  background-color: transparent;
+  background-color:#30436bd2;
   border: none;
 }
 .newsltr-title{
@@ -129,23 +129,12 @@ p.article_body{
   font-size: large;
 }
 
-
-.Article_area{
-  margin-top: 10px;
-  margin-right: 70px;
-  float: right;
-  background-color: transparent;
-  border: none;
-}
 .article_picture{
- width: 80%;
- height: 80%;
- margin-left: 10px;
+  width: 30%;
+  height: 30%;
 
 }
 
-img{
-  height: auto;
-  width: 100%;
-
+.article_post_area{
+  background-color: aqua;
 }

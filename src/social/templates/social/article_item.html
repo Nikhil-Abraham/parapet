@@ -12,10 +12,10 @@
 
 {% include 'social/nav.html' %}
 
-<div class="container feed_area Article_Area">
+<div class="containerarea news_area">
 
   {% if article_item %}
-    <div class="Article_Section_Area" >
+    
       <div>
         <a href="{% url 'social:explore' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
     </div>   
@@ -31,11 +31,14 @@
               <img class="" src="{{article_item.article_pic.url}}">
             </div>
             {% endif %}
-      <p class="=article_body">{{ article_item.body }}</p>
+      <p class="article_body">{{ article_item.body }}</p>
     {% else %}
     <p>Error article not found</p>
     {% endif %}
-  </div>
+  
+</div>
+<div class="end-article">
+
 </div>
 
 <!-- {{ article_item }} -->

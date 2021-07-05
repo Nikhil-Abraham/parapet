@@ -9,13 +9,13 @@
 {% block content %}
 <div class="blurred-wrapper">
   <div class="color-layer">
-
 {% include 'social/nav.html' %}
+<div class="containerarea news_area">
+<div>
+  <a href="{% url 'social:explore' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
+</div>  
 
-<div class="container feed_area">
-  <div>
-    <a href="{% url 'social:explore' %}" class="back_btn_post"><i class="fas fa-arrow-left"></i>Back </a>
-</div>   
+  
 <form action="" method="post" enctype="multipart/form-data">
   {% csrf_token %}
 {{form}}
@@ -25,8 +25,9 @@
 <div class="end-article">
 
 </div>
-  </div>
+
 
 </div>
+  </div>
 
 {% endblock content %}
