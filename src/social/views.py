@@ -1,14 +1,19 @@
+from django.db.models import query
+from django.db.models import Q
 from django.shortcuts import redirect, render
+from django.db.models import Q
+from django.views import View
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect, request
 from django.urls import reverse
+from django.views.generic.base import View
 from django.views.generic.edit import UpdateView, DeleteView
-
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Comment, Post,PostArticle
+from .models import Comment, Post, PostArticle, ThreadModel, MessageModel
 from accounts.models import Parapet_User
-from .forms import PostArticleForm, PostFeedForm, UserForm, CommentForm
+from .forms import PostArticleForm, PostFeedForm, UserForm, CommentForm, ThreadForm, MessageForm
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -28,7 +33,6 @@ def socialHome(request):
     posts = Post.objects.all().order_by('-created_on')
     form = PostFeedForm()
     users = Parapet_User.objects.all()
-    userpp = request.FILES['image']
 
     user = request.user
     current_user = Parapet_User.objects.get(user = user)
@@ -38,8 +42,8 @@ def socialHome(request):
       'form' : form,
       'user': current_user,
       'list': users,
-      'pp' : userpp
     }
+
     return render(request, 'social/mbrpage.html', context)
 
 @login_required(login_url='accounts:login')
@@ -102,19 +106,35 @@ def explore(request):
 
   return render(request, 'social/explore.html', context)
 
+
+
 @login_required(login_url='accounts:login')
 def user_profile(request, pk):
 
-  user = Parapet_User.objects.get(pk=pk)
-  
-  profile = Parapet_User.user
+  profile = Parapet_User.objects.get(pk=pk)
+  user = profile.user
+  posts = Post.objects.filter(author=profile).order_by('-created_on')
 
-  posts = Post.objects.all().filter(author=user).order_by('-created_on')
+  followers = profile.followers.all()
+
+  if len(followers) == 0:
+      is_following = False
+
+  for follower in followers:
+      if follower == request.user:
+          is_following = True
+          break
+      else:
+          is_following = False
+
+  number_of_followers = len(followers)
 
   context = {
-    'user': user,
-    'profile':profile,
-    'post_list':posts,
+      'user': user,
+      'profile': profile,
+      'post_list': posts,
+      'number_of_followers': number_of_followers,
+      'is_following': is_following,
   }
   return render(request, 'social/user_profile.html', context)
 
@@ -139,6 +159,7 @@ def settings(request):
     'post_list':posts,
     'form':form,
   }
+  
   return render(request, 'social/settings.html', context)
 
 
@@ -186,5 +207,199 @@ def topStories(request):
   return render(request, 'social/top-stories.html')
 
 
-def hv7(request):
-  return render(request, 'social/hv7.html')
+
+def addFollower(request,pk):
+  profile = Parapet_User.objects.get(pk = pk)
+  profile.followers.add(request.user)
+  
+  return redirect('social:user_profile', pk=profile.pk)
+
+def removeFollower(request,pk):
+  profile = Parapet_User.objects.get(pk = pk)
+  profile.followers.remove(request.user)
+
+  return redirect('social:user_profile', pk=profile.pk)
+
+def addLike(request, pk):
+  post = Post.objects.get(pk=pk)
+
+  is_dislike = False
+
+  for dislike in post.dislikes.all():
+    if dislike == request.user:
+      is_dislike = True
+      break
+  
+  if is_dislike:
+    post.dislikes.remove(request.user)
+  
+  is_like = False
+
+  for like in post.likes.all():
+    if like == request.user:
+      is_like = True
+      break
+
+  if not is_like:
+    post.likes.add(request.user)
+  if is_like:
+    post.likes.remove(request.user)
+
+  next = request.POST.get('next','/')
+  return HttpResponseRedirect(next)
+
+
+
+  
+def dislike(request, pk):
+  post = Post.objects.get(pk=pk)
+
+  is_like = False
+
+  for like in post.likes.all():
+    if like == request.user:
+      is_like = True
+      break
+
+  if is_like:
+    post.likes.remove(request.user)
+
+  is_dislike = False
+
+  for dislike in post.dislikes.all():
+    if dislike == request.user:
+      is_dislike = True
+      break
+  
+  if not is_dislike:
+    post.dislikes.add(request.user)
+  if is_dislike:
+    post.dislikes.remove(request.user)
+
+
+  next = request.POST.get('next','/')
+  return HttpResponseRedirect(next)
+
+def listThreads(request):
+  threads = ThreadModel.objects.filter(Q(user=request.user) | Q(receiver=request.user))
+
+  context = {
+    'threads':threads,
+  }
+
+  return render(request,'social/inbox.html', context)
+
+def createThread(request):
+  if request.method=="POST":
+    form = ThreadForm(request.POST)
+
+    username = request.POST.get('username')
+    print(username)
+
+    try:
+      receiver = User.objects.get(username=username)
+      print('receiver exists')
+      if ThreadModel.objects.filter(user=request.user, receiver=receiver).exists():
+        thread = ThreadModel.objects.filter(user=request.user, receiver=receiver)[0]
+        return redirect('social:thread', pk=thread.pk)
+      elif ThreadModel.objects.filter(user=receiver, receiver=request.user).exists():
+        thread = ThreadModel.objects.filter(user=receiver, receiver=request.user)[0]
+        return redirect('social:thread', pk=thread.pk)
+
+      print('no previous thread')
+
+      if form.is_valid():
+        print('form is valid')
+        thread = ThreadModel(
+            user=request.user,
+            receiver=receiver
+        )
+        print('thread created')
+        thread.save()
+        print('thread saved')
+        return redirect('thread', pk=thread.pk)
+      print('inside try statement')
+    except:
+      print('inside except statement')
+      messages.error(request, 'Invalid username')
+      return redirect('social:create-thread')
+
+  else:
+    form = ThreadForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'social/create_thread.html', context)
+
+
+def threadView(request, pk):
+  form = MessageForm()
+  thread = ThreadModel.objects.get(pk=pk)
+  message_list = MessageModel.objects.filter(thread__pk__contains=pk)
+  context = {
+    'thread': thread,
+    'form': form,
+    'message_list':message_list,
+  }
+
+  return render(request, 'social/thread.html', context)
+
+class CreateMessage(View):
+  def post(self, request, pk, *args, **kwargs):
+    form = MessageForm(request.POST, request.FILES)
+    thread = ThreadModel.objects.get(pk=pk)
+    if thread.receiver == request.user:
+        receiver = thread.user
+    else:
+        receiver = thread.receiver
+
+    # message = MessageModel(
+    #   thread=thread,
+    #   sender_user=request.user,
+    #   receiver_user=receiver,
+    #   body=request.POST.get('body')
+    # )
+    if form.is_valid():
+      print('form is valid')
+      message = form.save(commit=False)
+      message.thread = thread
+      message.sender_user = request.user
+      message.receiver_user = receiver
+      message.save()
+      print('validation completed')
+    print('message :' + message.body)
+    
+    return redirect('social:thread', pk=pk)
+
+
+class UserSearch(View):
+  def get(self, request, *args, **kwargs):
+    query = self.request.GET.get('query')
+    profile_list = Parapet_User.objects.filter(
+      Q(user__username__icontains=query)
+    )
+
+    context = {
+      'profile_list': profile_list,
+    }
+
+    return render(request, 'social/search.html', context)
+
+
+class ArticleSearch(View):
+  def get(self, request, *args, **kwargs):
+    query = self.request.GET.get('query')
+    article_list = PostArticle.objects.filter(
+      Q(title__icontains=query)
+    )
+
+    context = {
+      'article_list': article_list,
+    }
+
+    return render(request, 'social/article_search.html', context)
+
+   
+
+    

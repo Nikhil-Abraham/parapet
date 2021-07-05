@@ -83,6 +83,7 @@ body{
 .post_section{
   background-color: #1c446490;
   border-radius: 10px;
+  padding-bottom: 30px;
 
 }
 .header-wrapper{
@@ -100,7 +101,7 @@ body{
   height: 35px;
   margin-right: 4.8cm;
   display: inline-flex;
-  border-bottom: 1px solid #888888;
+  border-bottom: 1px solid #000000;
 }
 .topnav-search > input{
   background-color: #1D2E4E;
@@ -114,7 +115,7 @@ body{
 }
 .topnav-search > button{
   /* margin-top: 20px; */
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(245, 6, 6, 0);
   border: none;
 }
 .topnav-search > button > a> i{
@@ -125,6 +126,7 @@ body{
 
 .topnav-searchbutton{
   display: inline-block;
+  color: rgb(255, 37, 37);
 }
 
 .nav_user_profile{
@@ -211,4 +213,69 @@ body{
 .friends a img{
   width: 45px;
   height: 45px;
+}
+
+.topnav-right.form-control{
+  color: red;
+}
+
+.username_top_right{
+  margin-left: 4.5cm;
+}
+
+.tu_bt{
+  display:inline-block;
+  margin-bottom: -2cm;
+  background-color: transparent;
+  height: 30px;
+  width: 40px;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: rgb(207, 207, 207);
+}
+
+.t_bt{
+  display:inline-block;
+  margin-bottom: -2cm;
+  background-color: transparent;
+  height: 30px;
+  width: 42px;
+  border: none;
+  color: rgb(207, 207, 207);
+  margin-left: 47px;
+  margin-top: 5px;
+}
+
+.tbt{
+  font-size: 15px;
+  display:inline-block;
+}
+
+.post_body{
+  margin-top: 10px;
+  color: rgb(207, 207, 207);
+  padding-bottom: 10px;
+}
+.profile-pic-post{
+  margin-top: -8px;
+}
+
+.profile_link{
+  display: inline-block;
+  margin-top: -10px;
+  margin-left:5px;
+  font-size: large;
+}
+
+.profile_link > a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+.interaction{
+  width: 30%;
+  margin-left: 70%;
 }

@@ -16,16 +16,20 @@
 
 <div class="header-wrapper">
   <div class="topnav-right">
-  <form class="topnav-search">
-    <input type="text" class="topnav-searchbar" placeholder="Search">
-    <button class="topnav-searchbutton">
-      <a href=""><i class="fa fa-search"></i></a>
-    </button>
-  </form>  
-  <div class="nav_user_profile topnav_profile">{{request.user.parapet_user.name}}</div>
-  <img class="profile-pic-post topnav-pic" src="{{request.user.parapet_user.profile_pic.url}}">
-</div>
-</div>
+
+    <form class="d-flex" method="GET" action="{% url 'social:profile-search' %}">
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="query" value="{{ request.GET.query }}">
+        <button style="border: none; background-color: transparent; box-shadow: none" type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </form>
+
+
+    <div class="username_top_right">{{request.user.parapet_user.name}}</div>
+    <img class="profile-pic-post topnav-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+  </div>
+ </div>
 
     <div class="container feed_area">
       <div class="post_area">
@@ -39,24 +43,57 @@
         </form>
       </div>   
       </div>
+      {% if post_list.all.count == 0 %}
+
+      <div class="no-post">
+        No Recent Posts
+      </div>
+
+      {% endif %}
       {% for post in post_list %}
-        <div class="  post_section">
+        <div class="post_section">
           <div class=" feed_article position-relative">
             <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
-            <span class="post_author">
-              <div class="profile_link">
+            <div class="profile_link">
               <a href="{% url 'social:user_profile' post.author.pk %}">
                 {{ post.author.name }}
               </a>
             </div>
-            </span>
             <div class="datetime">{{ post.created_on }}</div>
             <div class="post_body">{{ post.body }}</div>
-            <a href="{% url 'social:postDetail' post.pk %} " class="profile_link"><i class="fas fa-comment post_btn"></i></a>
+            <div class="d-flex flex-row interaction">
+              <form action="{% url 'social:like' post.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}">
+                <button class="t_bt" type="submit">
+                  <i class="far fa-thumbs-up fa-sm"><span class="tbt">{{ post.likes.all.count }}</span></i>
+                </button>
+              </form>
+
+              <form class="thumbs_up" action="{% url 'social:dislike' post.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}"> 
+                <button class="tu_bt" type="submit">
+                  <i class="far fa-thumbs-down fa-sm"><div class="tbt">{{ post.dislikes.all.count }}</div></i>
+                </button>
+              </form>
+
+              <form action="{% url 'social:postDetail' post.pk %}" method="POST">
+                {% csrf_token %}
+                <button class="tu_bt" type="submit">
+                  <i class="far fa-comment fa-sm"></i>
+                </button>
+              </form>
+            </div>
+            
           </div>
+        </div>
+        <div class="end-post">
+
         </div>
       {% endfor %}
     </div>
+
 
 
 
@@ -68,7 +105,7 @@
           <div class="friends">
             {% for user in list %}
             <a href="{% url 'social:user_profile' pk=user.pk %}">
-              <img scr="{{userpp.profile_pic}}">
+              <img scr="{{user.parapet_user.profile_pic.url}}">
              <h4>{{ user.username }}</h4>
             <!-- <img src="{%if user.parapet_user.profile_pic%}{{user.parapet_user.profile_pic.url}}{%endif%}"> -->
             </a>
