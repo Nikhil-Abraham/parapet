@@ -41,14 +41,29 @@
       {% for thread in threads.all %}
         <div class="  post_section">
           <div class=" feed_article position-relative message-card ">
+            {% if thread.receiver == request.user %}
+            <img class="profile-pic-post" src="{{thread.user.parapet_user.profile_pic.url}}">
+            <span class="post_author">
+              <div class="profile_link">
+                <a href="{% url 'social:thread' thread.pk %}">
+                
+                  {{ thread.user }}
+                
+              </a>
+              </div>
+            </span>
+            {% else %}
             <img class="profile-pic-post" src="{{thread.receiver.parapet_user.profile_pic.url}}">
             <span class="post_author">
               <div class="profile_link">
                 <a href="{% url 'social:thread' thread.pk %}">
-                {{ thread.receiver }}
+                
+                  {{ thread.receiver }}
+                
               </a>
               </div>
             </span>
+            {% endif %}
           </div>
         </div>
       {% endfor %}
