@@ -1,5 +1,5 @@
 .feed_area{
-  background-color: #222433;
+  background-color: #28264d;
   width: 52%;
   margin-left: 22%;
   margin-top: 0;
@@ -130,7 +130,7 @@
 }
 .btn_submit{
   float: right;
-  background-color: darkgreen;
+  background-color: rgb(100, 0, 87);
 
 
 }

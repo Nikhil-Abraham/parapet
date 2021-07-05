@@ -32,6 +32,7 @@ def socialHome(request):
   else:
     posts = Post.objects.all().order_by('-created_on')
     form = PostFeedForm()
+    users = Parapet_User.objects.all()
 
     user = request.user
     current_user = Parapet_User.objects.get(user = user)
@@ -39,8 +40,10 @@ def socialHome(request):
     context = {
       "post_list": posts,
       'form' : form,
-      'user': current_user
+      'user': current_user,
+      'list': users,
     }
+
     return render(request, 'social/mbrpage.html', context)
 
 @login_required(login_url='accounts:login')
@@ -400,7 +403,3 @@ class ArticleSearch(View):
     }
 
     return render(request, 'social/article_search.html', context)
-
-   
-
-    

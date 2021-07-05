@@ -62,12 +62,13 @@ body{
   font-size: 15px;
 }
 .post_area{
-  background-color: #30436bb4;
+  background-color: #1c446490;
   border-radius: 10px;
 }
 .post_section{
-  background-color: #30436bd2;
+  background-color: #1c446490;
   border-radius: 10px;
+  padding-bottom: 30px;
 
 }
 .header-wrapper{
@@ -79,32 +80,44 @@ body{
 
 .topnav-search{
   display: inline;
-  width: 300px;
-  display: flex;
-  border-bottom: 1px solid #30436bb4;
+  margin-top: 12px;
+  margin-left: 10px;
+  /* width: 400px; */
+  height: 35px;
+  margin-right: 4.8cm;
+  display: inline-flex;
+  border-bottom: 1px solid #000000;
 }
 .topnav-search > input{
-  background-color: rgba(0, 0, 0, 0);
-  width: 100px;
-  height: 50%;
-  font-size: 25px;
+  background-color: #1D2E4E;
+  color: rgb(205, 200, 200);
+  border-radius: 10px;
+  width: 6cm;
+  height: 30px;
+  font-size: 20px;
   border: none;
   
 }
 .topnav-search > button{
-  height: 50%;
-  background-color: rgba(0, 0, 0, 0);
+  /* margin-top: 20px; */
+  background-color: rgba(245, 6, 6, 0);
   border: none;
 }
 .topnav-search > button > a> i{
-  color: #30436b;
+  padding-bottom: 1cm;
+  color: #b9babb;
+  margin-left: 10px;
 }
 
 .topnav-searchbutton{
   display: inline-block;
+  color: rgb(255, 37, 37);
 }
 
 .nav_user_profile{
+  padding: 20px;
+  font-size: 20px;
+  margin-left: 10px;
   display: inline;
 }
 .topnav-pic{
@@ -148,3 +161,179 @@ body{
   display: flex;
 }
 
+.friend_list_area{
+  background-color: #1c446490;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: -0.7cm;
+}
+
+.friends a{
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.friends a h4{
+  font-size: 18px;
+  padding-left: 1.4cm;
+}
+
+.top_stories_link{
+  background-color: #1c446490;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 48%;
+}
+
+.newsletters_link{
+  background-color: #1c446490;
+  border-radius: 10px;
+  padding: 10px;
+  width: 48%;
+  margin-left: 50%;
+  margin-top: -1.5cm;
+}
+
+.top_stories_link a{
+  text-decoration: none;
+}
+
+.top_stories_link a h4{
+  font-size: 20px;
+  padding: 2px;
+  color: white;
+  text-align: center;
+}
+.newsletters_link a{
+  text-decoration: none;
+}
+.newsletters_link a h4{
+  font-size: 20px;
+  padding: 2px;
+  color: white;
+  text-align: center;
+}
+.friends_title h3{
+  margin-left: -0.5cm;
+  color: rgb(191, 185, 185);
+  font-size: 25px;
+}
+
+.profile_post_area{
+  border-radius: 10px;
+}
+
+.friends a img{
+  width: 45px;
+  height: 45px;
+}
+
+.username_top_right{
+  color:white;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.username_top_right a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.tu_bt{
+  display:inline-block;
+  margin-bottom: -2cm;
+  background-color: transparent;
+  height: 30px;
+  width: 40px;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: rgb(207, 207, 207);
+}
+
+.t_bt{
+  display:inline-block;
+  margin-bottom: -2cm;
+  background-color: transparent;
+  height: 30px;
+  width: 42px;
+  border: none;
+  color: rgb(207, 207, 207);
+  margin-left: 47px;
+  margin-top: 5px;
+}
+
+.tbt{
+  font-size: 15px;
+  display:inline-block;
+}
+
+.post_body{
+  margin-top: 10px;
+  color: rgb(207, 207, 207);
+  padding-bottom: 10px;
+}
+.profile-pic-post{
+  margin-top: -8px;
+}
+
+.profile_link{
+  display: inline-block;
+  margin-top: -10px;
+  margin-left:5px;
+  font-size: large;
+}
+
+.profile_link > a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+.interaction{
+  width: 30%;
+  margin-left: 70%;
+}
+
+.topnav-right.form-control{
+  background-color:aqua;
+}
+
+.topnav-pic{
+  margin-top: 8px;
+}
+
+.form-co{
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border:none;
+  margin-right: 0.08cm;
+  background-color: #1d2e4e8a;
+  font-size: 20px;
+}
+.input-group input{
+  color: rgb(194, 194, 194);
+}
+.fa-search{
+  color: rgb(211, 211, 211);
+  width: 35px;
+  height: 30px;
+  margin-right: 4cm;
+  margin-top: 15px;
+  font-size: 25px;
+}
+.input-group-text{
+  margin-top: 10px;
+  background-color: #1d2e4e8a;
+  color: rgb(202, 202, 202);
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+}

@@ -11,7 +11,7 @@ body{
 
 /*       Light color  */
 .profile_post_area, .post_area, .post_section{
-  background-color: #2F3142; 
+  background-color: #3e422f; 
 }
 
 .right_sidebar{
@@ -28,7 +28,7 @@ body{
 }
 
 .text_area_field, .profile_post_area{
-  background-color: #222433;
+  background-color: #1D2E4E;
 }
 .post_area{
   margin-top: 25px;
@@ -107,6 +107,13 @@ body{
   display: block;
   padding-left: 20px;
   transition: 0.3s;
+}
+
+.sidenav-title{
+  font-family: brightons;
+}
+.sidenav-title h1{
+  font-size: 35px;
 }
 
 .nav_user_profile{
@@ -226,15 +233,6 @@ article_title >a{
   text-decoration: none;
 }
 
-.profile_link{
-  display: inline-block;
-}
-
-.profile_link > a {
-  text-decoration: none;
-  color: #FFFFFF;
-  display: inline-block;
-}
 
 .Article_Section_Area{
   background-color: #2F3142;
