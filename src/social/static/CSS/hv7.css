@@ -192,6 +192,7 @@ body{
   font-size: 20px;
   padding: 2px;
   color: white;
+  text-align: center;
 }
 .newsletters_link a{
   text-decoration: none;
@@ -200,10 +201,12 @@ body{
   font-size: 20px;
   padding: 2px;
   color: white;
+  text-align: center;
 }
 .friends_title h3{
   margin-left: -0.5cm;
   color: rgb(191, 185, 185);
+  font-size: 25px;
 }
 
 .profile_post_area{
@@ -215,12 +218,17 @@ body{
   height: 45px;
 }
 
-.topnav-right.form-control{
-  color: red;
-}
-
 .username_top_right{
-  margin-left: 4.5cm;
+  color:white;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.username_top_right a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 .tu_bt{
@@ -278,4 +286,42 @@ body{
 .interaction{
   width: 30%;
   margin-left: 70%;
+}
+
+.topnav-right.form-control{
+  background-color:aqua;
+}
+
+.topnav-pic{
+  margin-top: 8px;
+}
+
+.form-co{
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border:none;
+  margin-right: 0.08cm;
+  background-color: #1d2e4e8a;
+  font-size: 20px;
+}
+.input-group input{
+  color: rgb(194, 194, 194);
+}
+.fa-search{
+  color: rgb(211, 211, 211);
+  width: 35px;
+  height: 30px;
+  margin-right: 4cm;
+  margin-top: 15px;
+  font-size: 25px;
+}
+.input-group-text{
+  margin-top: 10px;
+  background-color: #1d2e4e8a;
+  color: rgb(202, 202, 202);
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
 }
