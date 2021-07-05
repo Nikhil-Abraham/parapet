@@ -25,16 +25,24 @@
              <img src="{{ profile.profile_pic.url }}" alt="" width="100" height="100" />
              </div>
 
-             
 
-             <div class="user_setting_button">
 
               {% if profile.username %}
-              <h3 class="udf_username">{{ profile.name }}</h3>
+              <div class="udf_username">{{ profile.name }}</div><br>
+              <div class="udf_username-tag">@{{profile.username}}</div>
               {% endif %}
-              
+
+             <div class="social-count">
+              <div class="social-block">
+                <div>{{ number_of_followers }}</div>
+                <div class="count-text">Followers</div>
+              </div> 
+              <div class="social-block">
+                <div>{{ number_of_following }}</div>
+                <div class="count-text">Following</div>
+              </div> 
               {% if profile.pk == request.user.pk %}
-              <a class="setting_icon" href="{% url 'social:settings' %}"><i class="fa fa-cog fa-sm"></i></a>
+              <a class="setting_icon " href="{% url 'social:settings' %}"><i class="fa fa-cog fa-sm"></i></a>
               {% else %}
                 {% if is_following %}
                   <form action="{% url 'social:removeFollower' profile.pk %}" method="post">
@@ -44,21 +52,14 @@
                 {% else %}
                   <form action="{% url 'social:addFollower' profile.pk %}" method="post">
                     {% csrf_token %}
-                    <button class="follow-button" type="submit">Follow</button>
+                    <button class="follow-button " type="submit">Follow</button>
                   </form>           
                 {% endif %}
                {% endif %}
-             
-             </div>
-
-             <div class="followers">
-               <p>Followers: {{ number_of_followers }}</p>
-             </div>
+            </div>
 
              <div class="udf_bio">
-               <p><span class="udf_fullname">{{profile.username}}</span><br>
               {{profile.bio}}
-              </p>
              </div>
           </div>
 

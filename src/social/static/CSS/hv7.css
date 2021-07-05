@@ -143,3 +143,8 @@ body{
   width: 100%;
   display: block;
 }
+
+.message-receiver{
+  display: flex;
+}
+

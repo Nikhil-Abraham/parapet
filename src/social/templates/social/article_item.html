@@ -27,11 +27,11 @@
 
       <p class="post_author">@{{ article_item.author }}  {{ article_item.created_on }}</p>
       {% if article_item.article_pic %}
-            <div class="article_picture">
-              <img class="" src="{{article_item.article_pic.url}}">
+            <div>
+              <img class="article_picture" src="{{article_item.article_pic.url}}">
             </div>
             {% endif %}
-      <p class="article_body">{{ article_item.body }}</p>
+      <div class="article_body">{{ article_item.body }}</div>
     {% else %}
     <p>Error article not found</p>
     {% endif %}

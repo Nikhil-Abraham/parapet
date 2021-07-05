@@ -17,6 +17,8 @@ class Parapet_User(models.Model):
   date_created = models.DateTimeField(auto_now_add=True, null=True)
   bio = CharField(max_length=100, null=True )
   followers = ManyToManyField(User, blank = True, related_name = 'followers')
+  following = ManyToManyField(User, blank = True, related_name = 'following')
+  
 
   def __str__(self):
     return self.name 

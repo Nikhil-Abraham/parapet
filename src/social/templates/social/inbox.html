@@ -34,18 +34,25 @@
         <div class="profile_post_area">
         <form method="POST" class="post_form" action="{% url 'social:create-thread' %}">
           {% csrf_token %}
-          <button class="btn" type="submit"><i class="fa fa-paper-plane fa-lg post_btn"></i></button>
+          <button class="btn new-message" type="submit">New Message<i class="fa fa-paper-plane fa-lg post_btn"></i></button>
         </form>
       </div>   
       </div>
       {% for thread in threads.all %}
         <div class="  post_section">
-          <div class=" feed_article position-relative">
-            <h4>{{ thread.user }}-{{ thread.receiver }}</h4>
-            <a class="stretched-link" href="{% url 'social:thread' thread.pk %}"></a>
+          <div class=" feed_article position-relative message-card ">
+            <img class="profile-pic-post" src="{{thread.receiver.parapet_user.profile_pic.url}}">
+            <span class="post_author">
+              <div class="profile_link">
+                <a href="{% url 'social:thread' thread.pk %}">
+                {{ thread.receiver }}
+              </a>
+              </div>
+            </span>
           </div>
         </div>
       {% endfor %}
+      <div class="end-article"></div>
     </div>
 
 

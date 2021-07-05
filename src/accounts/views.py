@@ -16,9 +16,9 @@ def register(request):
     first_name = request.POST["first_name"]
     last_name = request.POST["last_name"]
     email = request.POST["email"]
+    username = request.POST["username"]
     password1 = request.POST["password1"]
     password2 = request.POST["password2"]
-    username = email
 
     if password1 == password2:
       if User.objects.filter(username=username).exists():
@@ -31,7 +31,7 @@ def register(request):
           user=user,
           name=user.first_name+" "+user.last_name,
           email=user.email,
-          username=user.email
+          username=user.username
         )
         return redirect('accounts:login')  
     else:

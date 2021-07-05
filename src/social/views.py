@@ -113,6 +113,7 @@ def user_profile(request, pk):
   posts = Post.objects.filter(author=profile).order_by('-created_on')
 
   followers = profile.followers.all()
+  following = profile.following.all()
 
   if len(followers) == 0:
       is_following = False
@@ -125,12 +126,14 @@ def user_profile(request, pk):
           is_following = False
 
   number_of_followers = len(followers)
+  number_of_following = len(following)
 
   context = {
       'user': user,
       'profile': profile,
       'post_list': posts,
       'number_of_followers': number_of_followers,
+      'number_of_following': number_of_following,
       'is_following': is_following,
   }
   return render(request, 'social/user_profile.html', context)
@@ -207,12 +210,20 @@ def topStories(request):
 
 def addFollower(request,pk):
   profile = Parapet_User.objects.get(pk = pk)
+  p_user = Parapet_User.objects.get(pk = request.user.pk)
+  print(p_user.user)
+  print(profile.user)
+
+  p_user.following.add(profile.user)
   profile.followers.add(request.user)
   
   return redirect('social:user_profile', pk=profile.pk)
 
 def removeFollower(request,pk):
   profile = Parapet_User.objects.get(pk = pk)
+  p_user = Parapet_User.objects.get(pk = request.user.pk)
+
+  p_user.following.remove(profile.user)
   profile.followers.remove(request.user)
 
   return redirect('social:user_profile', pk=profile.pk)
@@ -314,7 +325,7 @@ def createThread(request):
         print('thread created')
         thread.save()
         print('thread saved')
-        return redirect('thread', pk=thread.pk)
+        return redirect('social:thread', pk=thread.pk)
       print('inside try statement')
     except:
       print('inside except statement')
@@ -350,13 +361,6 @@ class CreateMessage(View):
         receiver = thread.user
     else:
         receiver = thread.receiver
-
-    # message = MessageModel(
-    #   thread=thread,
-    #   sender_user=request.user,
-    #   receiver_user=receiver,
-    #   body=request.POST.get('body')
-    # )
     if form.is_valid():
       print('form is valid')
       message = form.save(commit=False)

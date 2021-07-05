@@ -1,3 +1,4 @@
+
 from django import forms
 from django.forms.widgets import Widget
 from .models import Post, PostArticle, Comment, ThreadModel, MessageModel
@@ -33,9 +34,13 @@ class PostArticleForm(forms.ModelForm):
     widget=forms.Textarea(attrs={
       'rows' : '10',
       'placeholder' : 'Say Something...',
-      'class' : 'text_area_field',
+      'class' : 'article_area_field',
     })
   )
+  article_pic = forms.ImageField(
+    label='',
+  )
+
   class Meta:
     model = PostArticle
     fields = ['title','body','article_pic']
@@ -66,7 +71,12 @@ class ThreadForm(forms.Form):
     username = forms.CharField(label='', max_length=100)
 
 class MessageForm(forms.ModelForm):
-    body = forms.CharField(label='', max_length=1000)
+    body = forms.CharField(label='', max_length=1000,
+    widget=forms.TextInput(attrs={
+      'placeholder':'Mesaage ...',
+      'class':'message-input-area'
+    })
+    )
 
 
     class Meta:

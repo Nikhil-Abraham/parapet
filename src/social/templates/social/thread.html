@@ -28,36 +28,43 @@
 </div>
 
     <div class="container feed_area">
-      <div class="post_area">
+      <div class="post_area new-tone">
         {% if thread.receiver == request.user %}
-          <h4>@{{ thread.user }}</h4>
+        <div class="message-user">
+          <img class="profile-pic-post" src="{{thread.user.parapet_user.profile_pic.url}}">
+          <div class="receiver-user">@{{ thread.user }}</div>
+        </div>
         {% else %}
-        <h4>@{{ thread.receiver }}</h4>
+        <div class="message-user">
+          <img class="profile-pic-post" src="{{thread.receiver.parapet_user.profile_pic.url}}">
+          <div class="receiver-user">@{{ thread.receiver }}</div>
+          </div>
         {% endif %}
-      </div>
+      
 
       {% if message_list.all.count == 0 %}
 
-      <div class="  post_section">
+      <div class="  post_section new-tone">
         <div class=" feed_article position-relative">
           <h4>No Messages</h4>
         </div>
       </div>
 
       {% endif %}
-      <div class="chat-area">
+      <div class="chat-area new-tone">
       {% for message in message_list %}
         <div class="chat-message">
             {% if message.sender_user == request.user %}
             <div class="sent-message">
-              <h5>@{{message.sender_user}}</h5>
-              <p>{{ message.body }}</p>
+              <div class="message-body">{{ message.body }}</div>
             </div>
             {% elif message.receiver_user == request.user %}
             <div class="receive-message">
-              <h5>@{{message.sender_user}}</h5>
-              <p>{{ message.body }}</h5>
+              <img class="profile-pic-post message-pic" src="{{message.sender_user.parapet_user.profile_pic.url}}">
+              <div class="message-body">{{ message.body }}</div>
+              
             </div>
+            
             {% endif %}
         </div>
       {% endfor %}
@@ -72,6 +79,9 @@
       </div>   
 
     </div>
+      <div class="end-article"></div>
+
+  </div>
 
 
 
