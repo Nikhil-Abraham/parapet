@@ -26,7 +26,6 @@ def socialHome(request):
       new_post = form.save(commit=False)
       new_post.author = Parapet_User.objects.get(user = request.user)
       new_post.save()
-
     return HttpResponseRedirect(request.path)
 
   else:
