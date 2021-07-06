@@ -1,0 +1,65 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="blurred-wrapper">
+  <div class="color-layer">
+    {% include 'social/nav.html' %}
+    {% include 'social/top-nav.html' %}
+    <div class="container feed_area">
+      <div class="post_area new-tone">
+        {% if thread.receiver == request.user %}
+          <div class="message-user">
+            <img class="profile-pic-post" src="{{thread.user.parapet_user.profile_pic.url}}">
+            <div class="receiver-user">@{{ thread.user }}</div>
+          </div>
+        {% else %}
+          <div class="message-user">
+            <img class="profile-pic-post" src="{{thread.receiver.parapet_user.profile_pic.url}}">
+            <div class="receiver-user">@{{ thread.receiver }}</div>
+          </div>
+        {% endif %}
+        {% if message_list.all.count == 0 %}
+          <div class="  post_section new-tone">
+            <div class=" feed_article position-relative no-message">
+              <h4>No Messages</h4>
+            </div>
+          </div>
+        {% endif %}
+        <div class="chat-area new-tone">
+          {% for message in message_list %}
+          <div class="chat-message">
+            {% if message.sender_user == request.user %}
+            <div class="sent-message">
+              <div class="message-body">{{ message.body }}</div>
+            </div>
+            {% elif message.receiver_user == request.user %}
+            <div class="receive-message">
+              <img class="profile-pic-post message-pic" src="{{message.sender_user.parapet_user.profile_pic.url}}">
+              <div class="message-body">{{ message.body }}</div>
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        <div class="profile_post_area">
+          <form method="POST" class="post_form" action="{% url 'social:create-message' thread.pk %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn" type="submit"><i class="fa fa-paper-plane fa-lg post_btn"></i></button>
+          </form>
+        </div>   
+      </div>
+      <div class="end-article"></div>
+    </div>
+    {% include 'social/right-sidebar.html' %}
+  </div>
+</div>
+{% endblock content %}

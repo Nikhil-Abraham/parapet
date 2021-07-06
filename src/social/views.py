@@ -130,6 +130,7 @@ def user_profile(request, pk):
 
   number_of_followers = len(followers)
   number_of_following = len(following)
+  users = Parapet_User.objects.all()
 
   context = {
       'user': user,
@@ -138,6 +139,7 @@ def user_profile(request, pk):
       'number_of_followers': number_of_followers,
       'number_of_following': number_of_following,
       'is_following': is_following,
+      'list':users,
   }
   return render(request, 'social/user_profile.html', context)
 
@@ -293,9 +295,11 @@ def dislike(request, pk):
 
 def listThreads(request):
   threads = ThreadModel.objects.filter(Q(user=request.user) | Q(receiver=request.user))
+  users = Parapet_User.objects.all()
 
   context = {
     'threads':threads,
+    'list':users,
   }
 
   return render(request,'social/inbox.html', context)
@@ -337,9 +341,11 @@ def createThread(request):
 
   else:
     form = ThreadForm()
+    users = Parapet_User.objects.all()
 
     context = {
-        'form': form
+        'form': form,
+        'list':users
     }
     return render(request, 'social/create_thread.html', context)
 
@@ -348,10 +354,12 @@ def threadView(request, pk):
   form = MessageForm()
   thread = ThreadModel.objects.get(pk=pk)
   message_list = MessageModel.objects.filter(thread__pk__contains=pk)
+  users = Parapet_User.objects.all()
   context = {
     'thread': thread,
     'form': form,
     'message_list':message_list,
+    'list':users,
   }
 
   return render(request, 'social/thread.html', context)

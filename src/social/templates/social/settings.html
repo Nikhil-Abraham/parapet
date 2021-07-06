@@ -34,15 +34,7 @@
       </div>
     </div>
     </div>
-      {% for post in post_list %}
-        <div class="  post_section">
-          <div class=" feed_article">
-              <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
-            <span class="post_author">{{ post.author.name }}</span><span class="post_author username">@{{ post.author.username }}</span>   <span class="datetime">{{ post.created_on }}</span>
-            <p class="post_body">{{ post.body }}</p>
-          </div>
-        </div>
-      {% endfor %}
+      
     </div>
 
 

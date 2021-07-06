@@ -1,0 +1,36 @@
+
+
+<div class="d-flex flex-row interaction">
+  <form action="{% url 'social:like' post.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.path }}">
+    <button class="t_bt" type="submit">
+      <i class="far fa-thumbs-up fa-sm">
+        {% if post.likes.all.count == 0 %}
+        {% else %}
+        <span class="tbt">{{ post.likes.all.count }}</span>
+        {% endif %}
+      </i>
+    </button>
+  </form>
+
+  <form class="thumbs_up" action="{% url 'social:dislike' post.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.path }}"> 
+    <button class="tu_bt" type="submit">
+      <i class="far fa-thumbs-down fa-sm">
+        {% if post.dislikes.all.count == 0 %}
+        {% else %}
+        <div class="tbt">{{ post.dislikes.all.count }}</div>
+        {% endif %}
+      </i>
+    </button>
+  </form>
+
+  <form action="{% url 'social:postDetail' post.pk %}" method="POST">
+    {% csrf_token %}
+    <button class="tu_bt" type="submit">
+      <i class="far fa-comment fa-sm"></i>
+    </button>
+  </form>
+</div>

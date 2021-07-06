@@ -6,160 +6,31 @@
   Parapet.org
 {% endblock title %}
 
-
 {% block content %}
-
-<div class="blurred-wrapper">
-<div class="color-layer">
-
-{% include 'social/nav.html' %}
-
-<div class="header-wrapper">
-  <div class="topnav-right">
-
-    <form class="d-flex" method="GET" action="{% url 'social:profile-search' %}">
-      <div class="input-group">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input type="text" class="form-co" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="query" value="{{ request.GET.query }}">
-        <button style="border: none; background-color: transparent; box-shadow: none" type="submit"><i class="fas fa-search"></i></button>
-      </div>
-    </form>
-
-    
-    <div class="username_top_right">
-      <a href="{% url 'social:settings' %}">
-       {{request.user.parapet_user.name}}
-      </a>
-    </div>
-    <a href="{% url 'social:settings' %}">
-      <img class="profile-pic-post topnav-pic" src="{{request.user.parapet_user.profile_pic.url}}">
-    </a>
-  </div>
- </div>
-
-    <div class="container feed_area">
-      <div class="post_area">
-
-        <img class="profile-pic" src="{{request.user.parapet_user.profile_pic.url}}">
-        <div class="profile_post_area">
-        <form method="POST" class="post_form">
-          {% csrf_token %}
-          {{ form }}
-          <button class="btn new-post-btn" type="submit"><i class="fa fa-paper-plane fa-lg post_btn"></i></button>
-        </form>
-      </div>   
-      </div>
-      {% if post_list.all.count == 0 %}
-
-      <div class="no-post">
-        No Recent Posts
-      </div>
-
-      {% endif %}
-      {% for post in post_list %}
-        <div class="post_section">
-          <div class=" feed_article position-relative">
-            <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
-            <div class="profile_link">
-              <a href="{% url 'social:user_profile' post.author.pk %}">
-                {{ post.author.name }}
-              </a>
-            </div>
-            <div class="datetime">{{ post.created_on }}</div>
-            <div class="post_body">{{ post.body }}</div>
-<<<<<<< HEAD
-            <div class="d-flex flex-row">
-              <form action="{% url 'social:like' post.pk %}" method="POST">
+  <div class="blurred-wrapper">
+    <div class="color-layer">
+      {% include 'social/nav.html' %}
+      {% include 'social/top-nav.html' %}
+        <div class="container feed_area">
+          <div class="post_area">
+            <img class="profile-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+            <div class="profile_post_area">
+              <form method="POST" class="post_form">
                 {% csrf_token %}
-                <input type="hidden" name="next" value="{{ request.path }}">
-                <button type="submit">
-                  <i class="far fa-thumbs-up "> <span>{{ post.likes.all.count }}</span></i>
-                </button>
+                {{ form }}
+                <button class="btn new-post-btn" type="submit"><i class="fa fa-paper-plane fa-lg post_btn"></i></button>
               </form>
-
-              <form action="{% url 'social:dislike' post.pk %}" method="POST">
-                {% csrf_token %}
-                <input type="hidden" name="next" value="{{ request.path }}"> 
-                <button type="submit">
-                  <i class="far fa-thumbs-down "><span>{{ post.dislikes.all.count }}</span></i>
-=======
-            <div class="d-flex flex-row interaction">
-              <form action="{% url 'social:like' post.pk %}" method="POST">
-                {% csrf_token %}
-                <input type="hidden" name="next" value="{{ request.path }}">
-                <button class="t_bt" type="submit">
-                  <i class="far fa-thumbs-up fa-sm"><span class="tbt">{{ post.likes.all.count }}</span></i>
-                </button>
-              </form>
-
-              <form class="thumbs_up" action="{% url 'social:dislike' post.pk %}" method="POST">
-                {% csrf_token %}
-                <input type="hidden" name="next" value="{{ request.path }}"> 
-                <button class="tu_bt" type="submit">
-                  <i class="far fa-thumbs-down fa-sm"><div class="tbt">{{ post.dislikes.all.count }}</div></i>
->>>>>>> Abhinav
-                </button>
-              </form>
-
-              <form action="{% url 'social:postDetail' post.pk %}" method="POST">
-                {% csrf_token %}
-<<<<<<< HEAD
-                <button type="submit">
-                  <i class="far fa-comment"></i>
-=======
-                <button class="tu_bt" type="submit">
-                  <i class="far fa-comment fa-sm"></i>
->>>>>>> Abhinav
-                </button>
-              </form>
-            </div>
-            
+            </div>   
           </div>
+          {% if post_list.all.count == 0 %}
+            <div class="no-post">
+              No Recent Posts
+            </div>
+          {% endif %}
+          {% include 'social/post-list.html' %}
+          <div class="end-post"></div>
         </div>
-<<<<<<< HEAD
-       
-=======
-        <div class="end-post">
-
-        </div>
->>>>>>> Abhinav
-      {% endfor %}
-      <div class="end-post">
-
-      </div>
+      {% include 'social/right-sidebar.html' %}
     </div>
-
-
-
-
-    <!-- GLOBAL CHAT SECTION -->
-
-    <div class="right_sidebar">
-      <div class="friends_title"><h3>Friends List</h3></div>
-        <div class="friend_list_area">
-          <div class="friends">
-            {% for user in list %}
-            <a href="{% url 'social:user_profile' pk=user.pk %}">
-              <img scr="{{user.parapet_user.profile_pic.url}}">
-             <h4>{{ user.username }}</h4>
-            <!-- <img src="{%if user.parapet_user.profile_pic%}{{user.parapet_user.profile_pic.url}}{%endif%}"> -->
-            </a>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="top_stories_link">
-        <a href="{% url 'social:topStories' %}">
-          <h4>Top Stories</h4>
-        </a>
-      </div>
-      <div class="newsletters_link">
-        <a href="{% url 'social:newsletter' %}">
-          <h4>Newsletters</h4>
-        </a>
-      </div>
-    </div>
-
-
   </div>
-</div>
 {% endblock content %}

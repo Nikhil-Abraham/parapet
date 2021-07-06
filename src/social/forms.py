@@ -10,7 +10,7 @@ class PostFeedForm(forms.ModelForm):
     label='',
     widget=forms.TextInput(attrs={
       'placeholder' : 'Say Something...',
-      'class' : 'text_area_field',
+      'class' : 'message-field',
     })
   )
 
@@ -68,7 +68,12 @@ class CommentForm(forms.ModelForm):
 
 
 class ThreadForm(forms.Form):
-    username = forms.CharField(label='', max_length=100)
+    username = forms.CharField(label='',
+    widget=forms.TextInput(attrs={
+      'placeholder':'Username',
+      'class':'message-field'
+    }),
+    max_length=100)
 
 class MessageForm(forms.ModelForm):
     body = forms.CharField(label='', max_length=1000,
@@ -77,7 +82,6 @@ class MessageForm(forms.ModelForm):
       'class':'message-input-area'
     })
     )
-
 
     class Meta:
         model = MessageModel

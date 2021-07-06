@@ -1,0 +1,72 @@
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Parapet.org
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="blurred-wrapper">
+<div class="color-layer">
+
+  {% include 'social/nav.html' %}
+  
+
+  <div class="header-wrapper">
+    <div class="topnav-right">
+  
+      <form class="d-flex" method="GET" action="{% url 'social:profile-search' %}">
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">@</span>
+          <input type="text" class="form-co" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="query" value="{{ request.GET.query }}">
+          <button style="border: none; background-color: transparent; box-shadow: none" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+  
+      
+      <div class="username_top_right">
+        <a href="{% url 'social:settings' %}">
+         {{request.user.parapet_user.name}}
+        </a>
+      </div>
+      <a href="{% url 'social:settings' %}">
+        <img class="profile-pic-post topnav-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+      </a>
+    </div>
+   </div>
+
+    <div class="container feed_area">
+      <div class="post_area">
+
+        <img class="profile-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+        <div class="profile_post_area">
+        <form method="POST" class="post_form">
+          {% csrf_token %}
+          {{ form }}
+          <button class="btn" type="submit"><i class="fa fa-paper-plane fa-lg post_btn"></i></button>
+        </form>
+      </div>   
+      </div>
+      {% for thread in threads.all %}
+        <div class="  post_section">
+          <div class=" feed_article position-relative">
+            <h4>{{ thread.user }}-{{ thread.receiver }}</h4>
+            <a class="stretched-link" href="{% url 'social:thread-link' %}"></a>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="end-article"></div>
+    </div>
+
+
+
+    <!-- GLOBAL CHAT SECTION -->
+    {% include 'social/right-sidebar.html' %}
+
+
+  </div>
+</div>
+{% endblock content %}

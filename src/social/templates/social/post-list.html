@@ -1,0 +1,18 @@
+
+
+{% for post in post_list %}
+<div class="post_section">
+  <div class=" feed_article position-relative">
+    <img class="profile-pic-post" src="{{post.author.profile_pic.url}}">
+    <div class="profile_link">
+      <a href="{% url 'social:user_profile' post.author.pk %}">
+        {{ post.author.name }}
+      </a>
+    </div>
+    <div class="datetime">{{ post.created_on }}</div>
+    <div class="post_body">{{ post.body }}</div>
+    
+    {% include 'social/post-actions.html' %}
+  </div>
+</div>
+{% endfor %}
