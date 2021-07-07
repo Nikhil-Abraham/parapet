@@ -41,8 +41,6 @@
 
 }
 .article_body{
-  overflow: hidden;
-  height: 100px;
   white-space: normal;
 }
 
