@@ -217,3 +217,11 @@
   height: 60px;
   overflow: hidden;
 }
+
+.post_form > ul{
+  display: none;
+}
+
+.comment_section{
+  background-color: #222433;
+}

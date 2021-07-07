@@ -70,11 +70,14 @@ def postDetail(request, pk):
     post = Post.objects.get(pk=pk)
     form = CommentForm()
     comments = Comment.objects.filter(post=post).order_by('-created_on')
+    p_user = Parapet_User.objects.all()
+
 
     context = {
       'post':post,
       'form':form,
       'comments':comments,
+      'list': p_user
     }
     return render(request, 'social/post_detail.html', context)
 
