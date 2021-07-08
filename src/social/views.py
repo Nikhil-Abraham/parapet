@@ -81,11 +81,12 @@ def postDetail(request, pk):
 class PostEditView(UpdateView):
   model = Post
   fields = ['body']
+  # form_class = 'ItemForm'
   template_name = 'social/post_edit.html'
 
   def get_success_url(self):
-      pk = self.kwargs['pk']
-      return reverse_lazy('social:postDetail', kwargs={'pk':pk})
+    pk = self.kwargs['pk']
+    return reverse_lazy('social:postDetail', kwargs={'pk':pk})
 
 
 class PostDeleteView(DeleteView):
@@ -352,7 +353,7 @@ def createThread(request):
 def threadView(request, pk):
   form = MessageForm()
   thread = ThreadModel.objects.get(pk=pk)
-  message_list = MessageModel.objects.filter(thread__pk__contains=pk)
+  message_list = MessageModel.objects.filter(thread_pk_contains=pk)
   users = Parapet_User.objects.all()
   context = {
     'thread': thread,
@@ -388,7 +389,7 @@ class UserSearch(View):
   def get(self, request, *args, **kwargs):
     query = self.request.GET.get('query')
     profile_list = Parapet_User.objects.filter(
-      Q(user__username__icontains=query)
+      Q(user_username_icontains=query)
     )
 
     context = {

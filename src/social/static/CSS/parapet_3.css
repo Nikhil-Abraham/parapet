@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
 .social-count{
   display: flex;
   margin-left: 40%;
@@ -218,3 +220,12 @@
   overflow: hidden;
 }
 
+.post_form_edit{
+  display: inline-block;
+  padding-left: 20px;
+  width: 100%;
+  height: 20%;
+}
+.post_form_edit >textarea{
+  height: 100px;
+}

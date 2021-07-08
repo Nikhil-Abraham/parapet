@@ -9,6 +9,7 @@ class PostFeedForm(forms.ModelForm):
   body = forms.CharField(
     label='',
     widget=forms.TextInput(attrs={
+      'row':'3',
       'placeholder' : 'Say Something...',
       'class' : 'message-field',
     })
