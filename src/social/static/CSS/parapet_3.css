@@ -227,5 +227,17 @@
   height: 20%;
 }
 .post_form_edit >textarea{
-  height: 100px;
+  height: 50px;
+  border: none;
+  padding: 15px;
+}
+.post_form_edit >label{
+  display: none;
+}
+textarea#id_body{
+  height:30%;
+  background-color: #1D2E4E;
+  color: rgb(200, 200, 200);
+  font-size: large;
+
 }

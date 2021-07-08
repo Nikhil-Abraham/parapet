@@ -1,7 +1,10 @@
 
 
 <div class="right_sidebar">
+  {% if list.all.count > 1 %}
   <div class="friends_title"><h4>Friends List</h4></div>
+  
+ 
     <div class="friend_list_area">
       <div class="friends">
         {% for p_user in list %}
@@ -15,6 +18,7 @@
       {% endfor %}
     </div>
   </div>
+  {% endif %}
   <div class="top_stories_link">
     <a href="{% url 'social:topStories' %}">
       <h4>Top Stories</h4>
