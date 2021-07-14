@@ -28,18 +28,22 @@
       </div>   
       </div>
       {% for thread in threads.all %}
-        <div class="  post_section message-user">
-          <div class=" feed_article position-relative message-card ">
-            <img class="profile-pic-post" src="{{thread.receiver.parapet_user.profile_pic.url}}">
-            <span class="post_author">
-              <div class="profile_link">
-                <a href="{% url 'social:thread' thread.pk %}">
-                {{ thread.receiver }}
-              </a>
-              </div>
-            </span>
-          </div>
+      <div class="  post_section message-user">
+        <div class=" feed_article position-relative message-card ">
+          <!-- {% if thread.receiver.id == reqest.user.id %}
+          <img class="profile-pic-post" src="{{thread.user.parapet_user.profile_pic.url}}">
+          {% else %}
+          <img class="profile-pic-post" src="{{thread.receiver.parapet_user.profile_pic.url}}">
+          {% endif %} -->
+          <span class="post_author">
+            <div class="profile_link">
+              <a href="{% url 'social:thread' thread.pk %}">
+              {{ thread.user }} to {{ thread.receiver }}
+            </a>
+            </div>
+          </span>
         </div>
+      </div>
       {% endfor %}
       <div class="end-article"></div>
     </div>
