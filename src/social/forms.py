@@ -57,7 +57,7 @@ class CommentForm(forms.ModelForm):
   comment = forms.CharField(
     label='',
     widget=forms.TextInput(attrs={
-     'placeholder' :'Add Comment ...',
+     'placeholder' :'Add Comment...',
      'class' : 'text_area_field',
     })
   )

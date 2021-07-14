@@ -239,5 +239,11 @@ textarea#id_body{
   background-color: #1D2E4E;
   color: rgb(200, 200, 200);
   font-size: large;
+}
+.post_form > ul{
+  display: none;
+}
 
+.comment_section{
+  background-color: #222433;
 }
