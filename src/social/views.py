@@ -356,7 +356,7 @@ def createThread(request):
 def threadView(request, pk):
   form = MessageForm()
   thread = ThreadModel.objects.get(pk=pk)
-  message_list = MessageModel.objects.filter(thread_pk_contains=pk)
+  message_list = MessageModel.objects.filter(thread__pk__contains=pk)
   users = Parapet_User.objects.all()
   context = {
     'thread': thread,
@@ -392,7 +392,7 @@ class UserSearch(View):
   def get(self, request, *args, **kwargs):
     query = self.request.GET.get('query')
     profile_list = Parapet_User.objects.filter(
-      Q(user_username_icontains=query)
+      Q(user__username__icontains=query)
     )
 
     context = {
