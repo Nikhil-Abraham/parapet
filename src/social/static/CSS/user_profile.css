@@ -153,14 +153,6 @@ img{
   margin: 20px;
 
 }
-
-.article_post_area{
-  background-color: aqua;
-}
-textarea#id_body{
-  height:30%;
-  background-color: #1D2E4E;
-  color: rgb(200, 200, 200);
-  font-size: large;
-
+.setting_form >input{
+  background-color: #2F4168;
 }

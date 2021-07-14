@@ -8,12 +8,13 @@
 
 {% block content %}
 
-{% include 'social/nav.html' %}
-
-
-    <div class="container feed_area">
-      <div class="profile_parent">
-      <div class="profile_settings_area ">
+<div class="blurred-wrapper">
+  <div class="color-layer">
+    {% include 'social/nav.html' %}
+    {% include 'social/top-nav.html' %}
+    <div class="containerarea news_area">
+    
+     
         <div class="settings_image">
           <img class="profile-pic setting_pic" src="{{request.user.parapet_user.profile_pic.url}}">
         </div>
@@ -25,26 +26,16 @@
         </div>
       
       <div class="setting_update">
-        <form method="post" action="" enctype="multipart/form-data">
+        <form class="settings_form" method="post" action="" enctype="multipart/form-data">
           {% csrf_token %}
           {{ form.as_p }}
 
           <input type="submit" value="Update" class="btn btn-info">
         </form>
       </div>
-    </div>
-    </div>
-      
+  
     </div>
 
-
-
-    <!-- GLOBAL CHAT SECTION -->
-
-    <div class="chat_area">
-      <h3>Global Chat</h3>
-    </div>
-
-
-
+  </div>
+</div>
 {% endblock content %}
