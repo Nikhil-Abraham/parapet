@@ -115,10 +115,11 @@
   overflow-x: hidden;
 }
 
-.receiver-user{
+.receiver-username{
   font-size: 15px;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: -2cm;
+  margin-left: 2cm;
+  color:azure;
 }
 
 .message-user{
@@ -190,7 +191,7 @@
 .message-field{
   background-color: #1D2E4E;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   width: 85%;
 }
@@ -238,7 +239,7 @@ textarea#id_body{
   height:30%;
   background-color: #1D2E4E;
   color: rgb(200, 200, 200);
-  font-size: large;
+  font-size: 45px;
 }
 .post_form > ul{
   display: none;

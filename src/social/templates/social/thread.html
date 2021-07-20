@@ -18,12 +18,12 @@
         {% if thread.receiver == request.user %}
           <div class="message-user">
             <img class="profile-pic-post" src="{{thread.user.parapet_user.profile_pic.url}}">
-            <div class="receiver-user">@{{ thread.user }}</div>
+            <div class="sender-user">@{{ thread.user }}</div>
           </div>
         {% else %}
           <div class="message-user">
             <img class="profile-pic-post" src="{{thread.receiver.parapet_user.profile_pic.url}}">
-            <div class="receiver-user">@{{ thread.receiver }}</div>
+            <div class="receiver-username">@{{ thread.receiver }}</div>
           </div>
         {% endif %}
         {% if message_list.all.count == 0 %}
