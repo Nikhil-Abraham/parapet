@@ -273,3 +273,10 @@ textarea#id_body{
   color: rgb(175, 175, 175);
   font-size: 22px;
 }
+
+.news_area{
+  width: 60%;
+  margin-right: 7te00px;
+  float: none;
+  margin-bottom: 20%;
+}
