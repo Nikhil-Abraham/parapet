@@ -49,7 +49,7 @@ class PostArticleForm(forms.ModelForm):
 class UserForm(forms.ModelForm):
   class Meta:
     model = Parapet_User
-    fields = ['name','username','profile_pic','phone','bio']
+    fields = ['name','username','phone','bio','profile_pic']
     exclude = ['user']
 
 

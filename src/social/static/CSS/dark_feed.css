@@ -81,7 +81,7 @@ body{
 .post_btn{
   color: #e0e0e0;
   width: 30px;
-  font-size: 30px;
+  font-size: 23px;
   margin-right: 1cm;
 }
 
@@ -258,8 +258,9 @@ article_title >a{
   size: 20px;
 }
 
-.post_btn{
-  height: 10px;
-  width: 10px;
-  margin-bottom: 10px;
+.post_btn_inbox{
+  margin-left: 0.3cm;
+}
+.new-message{
+  margin-left: 4.2cm;
 }

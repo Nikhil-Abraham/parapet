@@ -14,16 +14,14 @@
     {% include 'social/top-nav.html' %}
     <div class="containerarea news_area">
     
-     
+      <div class="user_info">
         <div class="settings_image">
           <img class="profile-pic setting_pic" src="{{request.user.parapet_user.profile_pic.url}}">
         </div>
         <div class=" post_area_title settings_name">
           {{ user.name }}
         </div>
-        <div class=" username">
-          @{{ user.username }}
-        </div>
+      </div>
       
       <div class="setting_update">
         <form class="settings_form" method="post" action="" enctype="multipart/form-data">
@@ -35,7 +33,7 @@
       </div>
   
     </div>
-
+    <div class="end-article"></div>
   </div>
 </div>
 {% endblock content %}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
 .social-count{
   display: flex;
   margin-left: 40%;
@@ -246,4 +247,29 @@ textarea#id_body{
 
 .comment_section{
   background-color: #222433;
+}
+
+.user_info{
+  display:flex;
+  padding: 20px;
+}
+
+.settings_name{
+  padding-left: 20px;
+  font-size: 30px;
+}
+
+.settings_form > p > input{
+  background-color: #1d273f;
+  border: none;
+  color: rgb(201, 201, 201);
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.settings_form > p > label {
+  color: rgb(175, 175, 175);
+  font-size: 22px;
 }
