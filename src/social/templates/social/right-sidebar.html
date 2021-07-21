@@ -8,7 +8,7 @@
         {% for p_user in list %}
         {% if p_user == request.user.parapet_user %}
         {% else %}
-        <a href="{% url 'social:user_profile' pk=user.pk %}" class="friends-list">
+        <a href="{% url 'social:user_profile' pk=p_user.pk %}" class="friends-list">
         <img class="profile-pic" src="{{p_user.profile_pic.url}}">
         <div class="friends-list-name">{{ p_user.username }}</div>
         </a>
