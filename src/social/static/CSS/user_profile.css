@@ -95,7 +95,7 @@ img{
 }
 
 .feed_section,.Article_Section_Area{
-  background-color: #30436bd2;
+  background-color: #1c446490;
   margin-top: 10px;
 }
  .article_title >a,.article_title{
@@ -110,6 +110,10 @@ img{
 .article_body{
   font-size: medium;
   margin: 20px;
+  width: 95%;
+  height: 120%;
+  overflow:auto;
+  /* white-space: pre-wrap; */
 }
 .btn-success{
   margin-top: 10px;

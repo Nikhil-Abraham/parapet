@@ -30,8 +30,7 @@
       {% for article in article_list %}
         <div class="feed_section">
          
-          <div class="feed_article">
-                    
+          <div class="feed_article">       
             <p class="article_title"><a href="{% url 'social:article' pk=article.id %}">{{ article.title }}</a></p> 
             <p class="post_author">@{{ article.author }}  {{ article.created_on }}</p>
             <p class="article_body">{{ article.body }}</p>
