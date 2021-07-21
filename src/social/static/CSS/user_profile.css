@@ -3,25 +3,25 @@
   padding: 5px;
 }
 
-.follow-button{
+.follow-button {
   color: #1664b3;
   font-family: "Helvetica";
   font-size: 10pt;
   width: 80px;
-  border:none ;
+  border: none;
   height: 30px;
   display: inline-block;
   margin-top: 25px;
   margin-left: 40px;
   cursor: hand;
-  background-color:rgb(233, 230, 230);
+  background-color: rgb(233, 230, 230);
 }
 
-img{
+img {
   display: block;
 }
 
-.user_details_field{
+.user_details_field {
   display: block;
   margin-top: 10px;
 }
@@ -37,41 +37,37 @@ img{
   border-radius: 50%;
 }
 
-
 .udf_username {
   display: inline-block;
-  font-size:23px;
+  font-size: 23px;
   margin-bottom: 0;
   font-weight: bold;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: rgb(194, 194, 194);
-
 }
 
-.udf_bio{
+.udf_bio {
   margin-left: 22%;
-  background-color: #2F4168;
+  background-color: #2f4168;
   padding: 10px;
   margin-bottom: 15px;
   width: 78%;
-
 }
 
 .udf_username-tag {
   display: inline-block;
-  font-size:12px;
+  font-size: 12px;
   padding: 0;
   margin-top: 0;
   margin: 0;
   font-weight: bold;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: rgb(194, 194, 194);
-
 }
 
-.udf_bio{
+.udf_bio {
   display: inline-block;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: rgb(194, 194, 194);
   font-size: 15px;
 }
@@ -82,80 +78,84 @@ img{
   margin-left: 10px;
   margin-top: 5px;
 }
-.user_search >a{
+.user_search > a {
   color: white;
   margin-left: 5px;
   text-decoration: none;
-
 }
-.user_search >p{
+.user_search > p {
   color: rgb(194, 194, 194);
   font-size: small;
   margin-left: 40px;
 }
 
-.feed_section,.Article_Section_Area{
+.feed_section,
+.Article_Section_Area {
   background-color: #1c446490;
   margin-top: 10px;
 }
- .article_title >a,.article_title{
-   color: white;
-   text-decoration: none;
-
- }
-.post_author{
-  color:rgb(153, 151, 151) ;
-
+.article_title > a,
+.article_title {
+  color: white;
+  text-decoration: none;
 }
-.article_body{
+.post_author {
+  color: rgb(153, 151, 151);
+}
+.article_body {
   font-size: medium;
   margin: 20px;
   width: 95%;
   height: 110%;
-  overflow:auto;
+  overflow: auto;
 }
-.btn-success{
+.btn-success {
   margin-top: 10px;
   margin-left: 3px;
 }
-.search_box{
-  background-color:rgb(209, 208, 208) ;
+.search_box {
+  background-color: transparent;
+  color: white;
   border: none;
   width: 250px;
   height: 30px;
   margin-left: 4px;
   box-shadow: none;
 }
-.search_box::placeholder{
+.search-placeholder {
+  font-size: 18px;
+  color: rgb(223, 223, 223);
+}
+.search_box::placeholder {
   color: #30436ba8;
   font-size: medium;
   margin-left: 15px;
   font-weight: bold;
 }
 
-.news_area{
+.news_area {
   margin-right: 70px;
   float: right;
-  background-color:#30436bd2;
+  background-color: #30436bd2;
   border: none;
 }
-.newsltr-title{
+.newsltr-title {
   color: white;
 }
-.header ,.card{
-  background-color: #30436bd2 ;
+.header,
+.card {
+  background-color: #30436bd2;
 }
-.card >p{
+.card > p {
   color: rgb(165, 164, 164);
   font-size: large;
 }
 
-.article_picture{
+.article_picture {
   width: 50%;
   height: 50%;
   margin: 20px;
-
 }
-.setting_form >input{
-  background-color: #2F4168;
+.setting_form > input {
+  background-color: #2f4168;
 }

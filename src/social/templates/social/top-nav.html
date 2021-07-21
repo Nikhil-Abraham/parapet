@@ -14,11 +14,11 @@
 
     
     <div class="username_top_right">
-      <a href="{% url 'social:settings' %}">
+      <a href="{% url 'social:user_profile'  request.user.id%}">
         {{request.user.parapet_user.name}}
       </a>
     </div>
-    <a href="{% url 'social:settings' %}">
+    <a href="{% url 'social:user_profile'  request.user.id %}">
       <img class="profile-pic-post topnav-pic" src="{{request.user.parapet_user.profile_pic.url}}">
     </a>
   </div>

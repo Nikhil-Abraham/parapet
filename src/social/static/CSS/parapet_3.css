@@ -1,38 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap");
 
-.social-count{
+.social-count {
   display: flex;
   margin-left: 40%;
 }
 
-.social-block{
+.social-block {
   text-align: center;
   font-size: 20px;
   padding: 20px;
 }
 
-.count-text{
+.count-text {
   font-size: 10px;
 }
 
-.follow-button-2{
+.follow-button-2 {
   width: 20%;
   margin-left: 0;
   display: inline-block;
   background-color: lawngreen;
 }
 
-.setting_icon{
+.setting_icon {
   color: white;
   margin-top: 20px;
 }
-.setting_icon:hover{
+.setting_icon:hover {
   color: white;
 }
 
-.title_field{
-
+.title_field {
   background-color: #222433;
   border: none;
   color: white;
@@ -41,7 +40,7 @@
   padding: 15px;
 }
 
-.article_area_field{
+.article_area_field {
   background-color: #222433;
   border: none;
   color: white;
@@ -54,31 +53,30 @@
   margin-left: 10px;
 }
 
-.form > label{
+.form > label {
   font-size: 15px;
   color: aqua;
 }
 
-#id_article_pic{
+#id_article_pic {
   font-size: 15px;
   margin-left: 10%;
   margin-top: 15px;
 }
-.post-article-btn{
+.post-article-btn {
   display: inline;
   float: right;
   margin-right: 20px;
-
 }
-.article-feed-area{
+.article-feed-area {
   width: 65%;
 }
 
-.search_box{
+.search_box {
   width: 80%;
 }
 
-.post_area_field{
+.post_area_field {
   background-color: #222433;
   border: none;
   color: white;
@@ -86,43 +84,42 @@
   padding-left: 10px;
 }
 
-.post_area{
+.post_area {
   display: block;
 }
 
-.post_area_field > .new-post-btn{
+.post_area_field > .new-post-btn {
   display: inline;
   float: right;
   margin-left: 60%;
-
 }
 
-.new-message{
+.new-message {
   color: white;
   padding-right: 30px;
 }
 
-.new-message:hover{
+.new-message:hover {
   color: white;
 }
-.post_btn{
+.post_btn {
   padding-left: 20px;
 }
 
-.chat-area{
+.chat-area {
   height: 50vh;
   padding: 20px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-.receiver-user{
+.receiver-user {
   font-size: 15px;
   margin-top: 20px;
   margin-left: 20px;
 }
 
-.message-user{
+.message-user {
   width: 100%;
   display: flex;
   padding: 10px;
@@ -130,53 +127,45 @@
   overflow: auto;
 }
 
-.receive-message{
+.receive-message {
   width: 46%;
   border-radius: 30px;
   margin-top: 0;
   padding-top: 0;
   display: flex;
-  background-image: linear-gradient(20deg, #8A243C 0%, #045881 100%);
+  background-image: linear-gradient(20deg, #8a243c 0%, #045881 100%);
   padding: 10px;
   margin-bottom: 15px;
-
 }
-.sent-message{
+.sent-message {
   width: 46%;
   border-radius: 30px;
   margin-top: 0;
   padding-top: 0;
   display: flex;
   padding: 10px;
-  background-image: linear-gradient(-20deg, #8A243C 0%, #045881 100%);
+  background-image: linear-gradient(-20deg, #8a243c 0%, #045881 100%);
   margin-bottom: 15px;
   margin-left: 54%;
 }
 
-
-
-
-
-.message-pic{
+.message-pic {
   margin-top: 0;
   width: 30px;
   height: 30px;
 }
 
-.message-body{
+.message-body {
   margin-top: 3px;
   margin-left: 20px;
   color: white;
 }
 
-.chat-message{
+.chat-message {
   width: 100%;
 }
 
-
-
-
-.message-input-area{
+.message-input-area {
   font-size: 15px;
   width: 84%;
   background-color: #222433;
@@ -184,82 +173,81 @@
   color: white;
 }
 
-.new-tone{
+.new-tone {
   background-color: #1b253b;
 }
 
-.message-field{
-  background-color: #1D2E4E;
+.message-field {
+  background-color: #1d2e4e;
   color: white;
   font-size: 20px;
   border: none;
   width: 85%;
 }
-.message-input-area{
-  background-color: #1D2E4E;
+.message-input-area {
+  background-color: #1d2e4e;
 }
 
-.no-message{
+.no-message {
   height: 30%;
 }
 
-.friends-list{
+.friends-list {
   display: flex;
   font-size: 20px;
   padding-left: 20px;
-
 }
 
-.friends-list-name{
+.friends-list-name {
   margin-top: 5px;
   margin-left: 25px;
   color: rgb(200, 200, 200);
 }
 
-.message-user{
+.message-user {
   height: 60px;
   overflow: hidden;
 }
 
-.post_form_edit{
+.post_form_edit {
   display: inline-block;
   padding-left: 20px;
   width: 100%;
   height: 20%;
 }
-.post_form_edit >textarea{
+.post_form_edit > textarea {
   height: 50px;
   border: none;
   padding: 15px;
 }
-.post_form_edit >label{
+.post_form_edit > label {
   display: none;
 }
-textarea#id_body{
-  height:30%;
-  background-color: #1D2E4E;
+textarea#id_body {
+  height: 30%;
+  background-color: #1d2e4e;
   color: rgb(200, 200, 200);
   font-size: large;
 }
-.post_form > ul{
+.post_form > ul {
   display: none;
 }
 
-.comment_section{
+.comment_section {
   background-color: #222433;
 }
 
-.user_info{
-  display:flex;
+.user_info {
+  display: flex;
   padding: 20px;
 }
 
-.settings_name{
+.settings_name {
   padding-left: 20px;
   font-size: 30px;
 }
 
-.settings_form > p > input{
+.settings_form > p > input {
   background-color: #1d273f;
   border: none;
   color: rgb(201, 201, 201);
@@ -274,9 +262,18 @@ textarea#id_body{
   font-size: 22px;
 }
 
-.news_area{
-  width: 60%;
-  margin-right: 7te00px;
-  float: none;
+.news_area {
   margin-bottom: 20%;
+}
+
+.article_body_area {
+  overflow: hidden;
+}
+
+.title_field {
+  background-color: #1d2e4e;
+}
+
+.receiver-user {
+  margin-top: 5px;
 }

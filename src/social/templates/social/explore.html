@@ -18,9 +18,10 @@
     <div class="container feed_area article-feed-area">
       <div class="post_area">
           
-        <form class="d-flex" method="GET" action="{% url 'social:article-search' %}">
+        <form class="d-flex artilce_search_form" method="GET" action="{% url 'social:article-search' %}">
           <div class="search_col">
-            <input type="text" class="search_box" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" name="query" value="{{ request.GET.query }}">
+            <span class="search-placeholder"> Search:</span>
+            <input type="text" class="search_box" aria-label="Username" aria-describedby="basic-addon1" name="query" value="{{ request.GET.query }}">
             <button style="border: none; background-color: transparent; box-shadow: none" type="submit"><i class="fas fa-search"></i></button>
           </div>
         </form>
@@ -34,7 +35,7 @@
                     
             <p class="article_title"><a href="{% url 'social:article' pk=article.id %}">{{ article.title }}</a></p> 
             <p class="post_author">@{{ article.author }}  {{ article.created_on }}</p>
-            <p class="article_body">{{ article.body }}</p>
+            <p class="article_body article_body_area">{{ article.body }}</p>
           </div>
         </div>
       {% endfor %}
