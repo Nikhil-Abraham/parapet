@@ -1,22 +1,6 @@
 
 
 <div class="right_sidebar">
-  {% if list.all.count > 1 %}
-  <div class="friends_title mb-3"><h5>People you may know ...</h5></div>
-    <div class="friend_list_area">
-      <div class="friends">
-        {% for p_user in list %}
-        {% if p_user == request.user.parapet_user %}
-        {% else %}
-        <a href="{% url 'social:user_profile' pk=p_user.pk %}" class="friends-list">
-        <img class="profile-pic" src="{{p_user.profile_pic.url}}">
-        <div class="friends-list-name">{{ p_user.username }}</div>
-        </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
   <div class="top_stories_link">
     <a href="{% url 'social:topStories' %}">
       <h4>Top Stories</h4>
@@ -27,4 +11,21 @@
       <h4>Newsletters</h4>
     </a>
   </div>
+  {% if list.all.count > 1 %}
+  <div class="friends_title mb-3"><h5>People you may know ...</h5></div>
+    <div class="friend_list_area">
+        {% for p_user in list %}
+        <div class="friends mat-3">
+        {% if p_user == request.user.parapet_user %}
+        {% else %}
+        <a href="{% url 'social:user_profile' pk=p_user.pk %}" class="friends-list mt-3">
+        <img class="profile-pic" src="{{p_user.profile_pic.url}}">
+        <div class="friends-list-name">{{ p_user.username }}</div>
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+  </div>
+  {% endif %}
+ 
 </div>
